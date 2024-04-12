@@ -100,7 +100,7 @@ nav[id="nav-background"] a:hover {
     border: 2px solid;
 }
 
-
+/* The div to help position the anchor tag for the hotel's site to the left, within the nav element */
 
 #nav-hotel {
     position: absolute;
@@ -111,11 +111,15 @@ nav[id="nav-background"] a:hover {
     align-items: center;
 }
 
+/* The div to help aligning the anchor element for the hotel */
+
 #align-n-hotel {
     display: inline-flex;
     justify-content: space-evenly;
     align-items: center;
 }
+
+/* The div to help position the anchor tag for the restaurant's site to the left, within the nav element */
 
 #nav-restaurant {
     position: absolute;
@@ -126,6 +130,8 @@ nav[id="nav-background"] a:hover {
     justify-content: space-around;
     align-items: center;
 }
+
+/* The div to help aligning the anchor element for the restaurant */
 
 #align-n-restaurant {
     display: inline-flex;
@@ -160,6 +166,8 @@ nav[id="nav-background"] a:hover {
     clear: both;
 }
 
+/* media query for handheld devices, activating at the tested breaking point */
+
 @media only screen and (max-width: 465px) {
     #nav-background {
         font-size: medium;
@@ -187,6 +195,8 @@ header {
     display: flex;
     z-index: 4;
 }
+
+/* The animation set up with the help of the keyframes to be applied to the images placed within the header element */
 
 header img {
     animation-name: header-zoom;
