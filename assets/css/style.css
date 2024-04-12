@@ -21,7 +21,7 @@ html {
     background-color: #222831;
 }
 
-/* The nav element */
+/* ---------------------------------------- nav element setup starts here ------------------------------------ */
 
 #nav-background {
     position: fixed;
@@ -91,7 +91,7 @@ nav[id="nav-background"] a:nth-of-type(1n) {
 }
 
 
-/* Anchor tags within the #top-nav change when hovered over */
+/* Anchor tags within the #top-nav change when they are hovered over */
 
 nav[id="nav-background"] a:hover {
     background-color: #e4e9ea;
@@ -99,6 +99,8 @@ nav[id="nav-background"] a:hover {
     font-size: 1.05em;
     border: 2px solid;
 }
+
+
 
 #nav-hotel {
     position: absolute;
@@ -115,7 +117,6 @@ nav[id="nav-background"] a:hover {
     align-items: center;
 }
 
-/* Link to take the user to the location section */
 #nav-restaurant {
     position: absolute;
     display: inline-flex;
@@ -133,12 +134,14 @@ nav[id="nav-background"] a:hover {
 }
 
 /* The left-hand side link in the nav, that takes the user to the hotel's booking page.*/
+
 #nav-hotel-page {
     width: 33%;
     height: 100%;
 }
 
 /* The right-hand side link in the nav, that takes the user to the restaurant's reservation page.*/
+
 #nav-restaurant-page {
     position: absolute;
     display: inline-flex;
@@ -149,6 +152,7 @@ nav[id="nav-background"] a:hover {
 }
 
 /* Middle link in the nav, that takes user back to the home page. */
+
 #nav-home-page {
     width: 70%;
     height: 100%;
@@ -167,9 +171,7 @@ nav[id="nav-background"] a:hover {
     }
 }
 
-/* ---------------------------------------- NAV SETUP ENDS HERE ------------------------------------ */
-/* ---------------------------------------- NAV SETUP ENDS HERE -------------------------------------- */
-/* ---------------------------------------- NAV SETUP ENDS HERE ---------------------------------------- */
+/* ---------------------------------------- Header element setup starts here ------------------------------------ */
 
 header {
     background-color: #3e5d5e;
@@ -251,9 +253,7 @@ h1 {
     border: 1px #222831 solid;
 }
 
-/* ---------------------------------------- HEADER SETUP ENDS HERE ------------------------------------ */
-/* ---------------------------------------- HEADER SETUP ENDS HERE -------------------------------------- */
-/* ---------------------------------------- HEADER SETUP ENDS HERE ---------------------------------------- */
+/* ---------------------------------------- The main part of the page starts here ---------------------------------------- */
 
 main {
     position: absolute;
