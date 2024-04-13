@@ -274,3 +274,39 @@ main {
     min-width: 100vw;
     background-color: red;
 }
+
+#main-sections {
+    float: left;
+    width: 80dvw;
+}
+
+#hotel {
+    background-color: chartreuse;
+}
+
+#restaurant {
+    background-color: blue;
+}
+
+#offers {
+    background-color: #EEEEEE;
+    float: right;
+    width: 20dvw;
+    position: sticky;
+    top: 70px;
+}
+
+/* ---------------------------------------- Footer set up starts here ---------------------------------------- */
+
+footer {
+
+}
+
+#location {
+    float: clear;
+    background-color: blue;
+}
+
+#contacts {
+    float: clear;
+}
