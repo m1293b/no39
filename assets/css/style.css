@@ -23,6 +23,10 @@ html {
 
 /* ---------------------------------------- nav element setup starts here ------------------------------------ */
 
+body {
+    overflow-x: hidden;
+}
+
 #nav-background {
     position: fixed;
     font-size: large;
@@ -170,7 +174,7 @@ nav[id="nav-background"] a:hover {
 
 @media only screen and (max-width: 465px) {
     #nav-background {
-        font-size: medium;
+        font-size: small;
     }
 
     div[id="nav-box-home"] a {
@@ -237,10 +241,15 @@ header img {
 }
 
 h1 {
+    margin-top: 25px;
     line-height: 20px;
     font-weight: 800px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-decoration: underline;
+}
+
+header p {
+    margin-top: 3%;
 }
 
 #header-restaurant {
@@ -265,14 +274,19 @@ h1 {
 
 /* ---------------------------------------- The main part of the page starts here ---------------------------------------- */
 
-main {
+#main-setup {
     position: absolute;
     display: flex;
     top: 232px;
     left: 0;
     min-height: 100dvh;
     min-width: 100vw;
-    background-color: red;
+    z-index: 4;
+    margin-top: 2rem;
+}
+
+main[id="main-setup"] a {
+    background-color: #3e5d5e;
 }
 
 #main-sections {
@@ -294,6 +308,21 @@ main {
     width: 20dvw;
     position: sticky;
     top: 70px;
+}
+
+.offers {
+    padding-left: 25%;
+}
+
+.video-fit {
+    max-width: 70%;
+    border-radius: 10px;
+    margin-left: 15%;
+}
+
+.book-now {
+    width: 40%;
+    margin-left: 30%;
 }
 
 /* ---------------------------------------- Footer set up starts here ---------------------------------------- */
