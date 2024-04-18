@@ -47,13 +47,13 @@
     <header id="the-head">
         <div id="header-hotel">
             <a href="./hotel.html" aria-label="link to go to the Hotel's site">
-            <picture class="head-left-pic">
-                <source srcset="./assets/hotel_room.jpg" media="(min-width: 660px)"
-                    aria-label="A nicely made double bed in a hotel room.">
-                <source srcset="./assets/hotel_icon.png" media="(max-width: 660px)" aria-label="Yellow hotel icon.">
-                <img src="./assets/hotel_room.jpg" alt="" class=""
-                    aria-label="A picture as a link to the description of the hotel and room reservations.">
-            </picture>
+                <picture class="head-left-pic">
+                    <source srcset="./assets/hotel_room.jpg" media="(min-width: 660px)"
+                        aria-label="A nicely made double bed in a hotel room.">
+                    <source srcset="./assets/hotel_icon.png" media="(max-width: 660px)" aria-label="Yellow hotel icon.">
+                    <img src="./assets/hotel_room.jpg" alt="" class=""
+                        aria-label="A picture as a link to the description of the hotel and room reservations.">
+                </picture>
             </a>
         </div>
         <div id="header-text">
@@ -78,22 +78,222 @@
         </div>
     </header>
     <main id="main-setup">
-        <div class="container-fluid z-index-1 mr-3">
-            <div class="row sticky-top">
-                <div class="col-12">
-                    <div class="form-group">
-                        
+        <div class="container-fluid ml-1 mr-2">
+            <div class="row">
+                <div class="col-12 col-lg-8 col-md-7">
+                    <div class="jumbotron justify-content-center align-items-middle display-flex">
+                        <h3 class="display-4 font-weight-bold text-center"><u>No. 39 : The Hotel</u></h3>
+                        <p class="lead text-center"><i>Our uniqely designed boutique hotel offers a comfortable retreat
+                                after a
+                                long work day, a spa like experience with a rolltop bath tub in the bedroom, or a
+                                night-stop on your family vacation.</i></p>
+                        <hr class="my-4">
+                        <video controls="" autoplay="" muted="" loop="" class="video-fit">
+                            <source src="./assets/hotel-roll.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <p class="text-center">Click on the button below to reserve a room.</p>
+                        <a class="btn btn-secondary btn-lg book-now" href="./hotel.html" role="button">Book now<br><i
+                                class="fa-solid fa-bed"></i></a>
                     </div>
+                </div>
+                <div class="col-12 col-lg-4 col-md-5 mb-2 rounded" id="offers-for-hotel">
+                    <div class="col-12 pt-4" id="rest-menu">
+                        <div class="row">
+                            <div class="col"></div>
+                            <div class="col-8">
+                                <h2 class="text-center border-bottom">Offers for...</h2>
+                            </div>
+                            <div class="col"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col"></div>
+                            <div class="col-8">
+                                <h3 class="mt-5 text-center">Couples</h3>
+                            </div>
+                            <div class="col"></div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col"></div>
+                            <div class="col-8">
+                                <ul>
+                                    <li>Dinner, Bed &amp; Breakfast</li>
+                                    <li>Sushi Experience</li>
+                                    <li>Shop &amp; stay</li>
+                                </ul>
+                            </div>
+                            <div class="col"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col"></div>
+                            <div class="col-8">
+                                <h3 class="mt-4 text-center">Businesses</h3>
+                            </div>
+                            <div class="col"></div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col"></div>
+                            <div class="col-8">
+                                <ul>
+                                    <li>Corporate Bed &amp; Breakfast</li>
+                                    <li>The Meeting</li>
+                                    <li>Staff party</li>
+                                </ul>
+                            </div>
+                            <div class="col"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col"></div>
+                            <div class="col-8">
+                                <h3 class="mt-4 text-center">Groups</h3>
+                            </div>
+                            <div class="col"></div>
+                        </div>
+                        <div class="row mt-2 mb-5">
+                            <div class="col"></div>
+                            <div class="col-8">
+                                <ul>
+                                    <li>Wedding</li>
+                                    <li>Birthday party</li>
+                                    <li>Glass bar</li>
+                                </ul>
+                            </div>
+                            <div class="col"></div>
+                        </div>
+                    </div>
+                    <em>*select option when booking</em>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-lg-8 col-md-7">
+                    <div class="jumbotron">
+                        <h3 class="display-4 font-weight-bold text-center"><u>No. 39 : The Restaurant</u></h3>
+                        <p class="lead text-center"><i>Start the day with a Full English and a coffee, have a meeting in
+                                our
+                                private dining room at lunch time, or share a Chateaubriand and a bottle of Malbec
+                                with
+                                your partner in the evening.</i></p>
+                        <hr class="my-4">
+                        <video controls autoplay muted loop class="video-fit">
+                            <source src="./assets/rest-roll.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <p class="text-center">Click on the button below to reserve a table.</p>
+                        <a class="btn btn-secondary btn-lg book-now" href="./rest.html" role="button">Book now<br><i
+                                class="fa-solid fa-utensils"></i></a>
+
+                    </div>
+                </div>
+                <div class="col-12 col-lg-4 col-md-5 rounded" id="offers-for-restaurant">
+                    <div class="col-12 pt-4" id="rest-menu">
+                        <div class="row">
+                            <div class="col"></div>
+                            <div class="col-8">
+                                <h2 class="text-center border-bottom">Offers for...</h2>
+                            </div>
+                            <div class="col"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col"></div>
+                            <div class="col-8">
+                                <h3 class="mt-5 text-center">Couples</h3>
+                            </div>
+                            <div class="col"></div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col"></div>
+                            <div class="col-8">
+                                <ul>
+                                    <li>Romantic dinner</li>
+                                    <li>Wine-flight-tasting</li>
+                                    <li>Picnic</li>
+                                </ul>
+                            </div>
+                            <div class="col"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col"></div>
+                            <div class="col-8">
+                                <h3 class="mt-4 text-center">Businesses</h3>
+                            </div>
+                            <div class="col"></div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col"></div>
+                            <div class="col-8">
+                                <ul>
+                                    <li>All-day meeting</li>
+                                    <li>The Hideout</li>
+                                    <li>Christmas party</li>
+                                </ul>
+                            </div>
+                            <div class="col"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col"></div>
+                            <div class="col-8">
+                                <h3 class="mt-4 text-center">Groups</h3>
+                            </div>
+                            <div class="col"></div>
+                        </div>
+                        <div class="row mt-2 mb-5">
+                            <div class="col"></div>
+                            <div class="col-8">
+                                <ul>
+                                    <li>Wedding</li>
+                                    <li>Private dinning</li>
+                                    <li>Glass bar</li>
+                                </ul>
+                            </div>
+                            <div class="col"></div>
+                        </div>
+                    </div>
+                    <em>*select option when booking</em>
+                </div>
+                        <em>*select option when booking</em>
                 </div>
             </div>
         </div>
     </main>
     <footer>
-        <section id="location">
+        <section class="border-top border-bottom" id="location">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-6 text-center card mt-1 mb-2">
+                        <h5 class="mt-3 mt-md-5"><i><u>If you don't yet know where to find us:
 
+                                </u></i></h5>
+                        <p class="mt-3 mt-md-5">
+                            No. 39<br>
+                            39 Church St,<br> Weybridge<br> KT13 8DG
+                        </p>
+                    </div>
+                    <div class="col-12 col-md-6 mt-1 mb-1">
+                        <iframe class="map-fit"
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d622.6870943262516!2d-0.4628715!3d51.3709223!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487675dc166b4b85%3A0x7316018a93ed7dad!2sNo%2039%20Bar!5e0!3m2!1sen!2suk!4v1713453814716!5m2!1sen!2suk"
+                            width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">Your browser does not support iframes</iframe>
+                    </div>
+                </div>
+            </div>
         </section>
-        <section id="contacts">
-
+        <section class="border-top" id="contacts">
+            <div class="container">
+                <div class="row">
+                    <div class="col"></div>
+                    <div class="col-12 col-md-7 card mt-1 mb-1 align-items-center">
+                        <h5 class="mt-3 mt-md-5"><i><u>Contact us:</u></i></h5>
+                        <p class="mt-3 mt-md-5">
+                        <ul>
+                            <li>Email: info@no39.com</li>
+                            <li>Phone: 01243005442</li>
+                            <li>Instagram: no39hotrest</li>
+                        </ul>
+                        </p>
+                    </div>
+                    <div class="col"></div>
+                </div>
+            </div>
         </section>
     </footer>
 </body>
