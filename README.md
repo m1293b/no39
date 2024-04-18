@@ -20,7 +20,7 @@
 
   - ## Wireframes
 
-
+    ![A picture of the Lighthous results for the mobile version](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Lighthouse test for mobiles")
 
 
 2. # Features
@@ -46,15 +46,15 @@
 
   - Bootstrap
 
-4. # Testing
+4. # Bugs
 
    ***
 
-    <p>It felt quite difficult to understand how the positioning works. The Chrome developer tool proved to be quite useful, as taught, and helped me solved the issues I had in the nav element quite quickly.
+    It felt quite difficult to understand how the positioning works. The Chrome developer tool proved to be quite useful, as taught, and helped me solved the issues I had in the nav element quite quickly.
     I also tried to make this links and the div they are in responsive. Some of the solutions were creater without the need of a media quiery, then I found it to be useful for other parts.
 
     I spent quite some time solving the issue with the positioning of the links in the nav element. I found wraping each anchor tag in a div makes it easier to position them. The final issue with the positioning of the anchor tags was aligning them. This is when Chrome's developer tool came in handy, as with the display attribute, it gave me the option to try out different values via a little button next to it.
-    This got me the solution with the justify-content and align-items being set with the correct values.</p>
+    This got me the solution with the justify-content and align-items being set with the correct values.
 
     As I did not want to paste in all of the section from the css file, this is an example how I managed to display the anchor tags in a way that fit the design:
 
@@ -68,7 +68,18 @@
         } 
     -->
 
-5. # Credits
+5. # Testing    
+
+    ***
+
+      - ![A picture of the Lighthous results for the mobile version](./assets/testing/mobile.png "Lighthouse test for the mobile version of the site.")
+      - ![A picture of the Lighthous results for the desktop version](./assets/testing/desktop.png "Lighthouse test for the desktop version of the website.")
+
+      It seems to me that the biggest improvement could be done by downloading the bootstrap css, adding it to the assets folder and link it to the html file that way. Less loading time. I will include this solution in my next project.
+
+      ### I had to download the css files, as while testing the live website, the css file would not load.
+
+6. # Credits
    
    ***
 
@@ -79,6 +90,8 @@
     2. ## Media
 
      - [The picture of the hotel room was found on Pexels.com. Direct link to the page I downloaded the picture from](https://www.pexels.com/photo/black-and-grey-bedspread-on-bed-and-pillow-164595/): 
+     - [The video that is playing in the hotel's section, was downloaded from Pexels.com](https://www.pexels.com/video/elevators-going-up-and-down-855191/)
+     - [The video that is playing in the restaurant's section, was downloaded from Pexels.com](https://www.pexels.com/video/people-eating-a-meal-at-the-restaurant-5101342/)
      - [The picture of the wineglass held up was found on Pexels.com. Direct link to the page I downloaded the picture from](https://www.pexels.com/photo/wine-glass-on-restaurant-table-225228/)
      - [The icon for the hotel was found on flaticon.com](https://www.flaticon.com/free-icon/bed_1786937?term=hotel+room&page=1&position=23&origin=search&related_id=1786937)
      - [The icon for the hotel was found on flaticon.com](https://www.flaticon.com/free-icon/dinner_9954957?term=restaurant&page=1&position=48&origin=search&related_id=9954957)
@@ -91,3 +104,4 @@
     3. ## Code
    
      - I've got the idea of margin: 0 auto; from the "I love running" project. It is an easy way to devide the width of the screen by 3 equaly sized sections.
+     - I've used form-group from Bootstrap's website as a template for my booking forms.
