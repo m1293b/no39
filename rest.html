@@ -8,35 +8,265 @@
         content="Late night partying, a romantic dinner or a family trip away - all good reasons to visit us at No. 39.">
     <meta name="keywords" content="clubbing, bar, hotel, restaurant, family">
     <meta name="author" content="Máté Balla">
-    <title>No. 39</title>
-    <link href="style.css" rel="stylesheet">
+    <title>No. 39 : The Restaurant</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link href="./assets/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 <body>
-    <nav id="top-nav">
-        <a href="./hotel.html" aria-label="link to go to the Hotel's site">Hotel</a>
-        <a href="./main.html">Main page</a>
-        <a href="./rest.html">Restaurant</a>
+    <nav id="nav-background">
+        <div id="nav-hotel">
+            <div id="align-n-hotel">
+                <a href="./hotel.html" aria-label="link to go to the Hotel's page"><i class="fa-solid fa-bed"></i>
+                    Hotel</a>
+            </div>
+        </div>
+        <div id="nav-box">
+            <div id="nav-box-contacts">
+                <a href="#contacts" aria-label="link to take the user to the contacts section"><i
+                        class="fa-solid fa-phone"></i> Contacts</a>
+            </div>
+            <div id="nav-box-home">
+                <a href="./main.html" aria-label="link to take the user to the main page"><i
+                        class="fa-solid fa-house"></i> Main page</a>
+            </div>
+            <div id="nav-box-location">
+                <a href="#location" aria-label="A link to take the user to the locaion section"><i
+                        class="fa-solid fa-location-dot"></i> Location</a>
+            </div>
+        </div>
+        <div id="nav-restaurant">
+            <div id="align-n-restaurant">
+                <a href="./rest.html" aria-label="link to take the user to the Restaurant's page"><i
+                        class="fa-solid fa-utensils"></i> Restaurant</a>
+            </div>
+        </div>
     </nav>
-    <header id="the-head" class="dark">
-        <picture class="head-left-pic">
-            <source srcset="./assets/hotel_room.jpg" media="(min-width: 660px)" aria-label="A nicely made double bed in a hotel room.">
-            <source srcset="./assets/hotel_icon.png" media="(max-width: 660px)" aria-label="Yellow hotel icon.">
-            <img src="./assets/hotel_room.jpg" alt="" class="" aria-label="A picture as a link to the description of the hotel and room reservations.">
-        </picture>
-        <h1>No. 39</h1>
-        <br>
-        <p>
-            The place
-            <br>
-            <i>where you can</i> <em>just be</em><i>...</i>
-        </p>
-        <picture class="head-right-pic">
-            <source srcset="./assets/wine_glass.jpg" media="(min-width: 660px)" aria-label="A nicely made double bed in a hotel room.">
-            <source srcset="./assets/restaurant_icon.png" media="(max-width: 660px)" aria-label="black and white little icon of a restaurant table with two chairs">
-            <img src="./assets/wine_glass.jpg" alt="" aria-label="A picture as a link to the desciption of the restaurant and table bookings.">
-        </picture>
+    <header id="the-head">
+        <div id="header-hotel">
+            <a href="./hotel.html" aria-label="link to go to the Hotel's site">
+                <picture class="head-left-pic">
+                    <source srcset="./assets/hotel_room.jpg" media="(min-width: 660px)"
+                        aria-label="A nicely made double bed in a hotel room.">
+                    <source srcset="./assets/hotel_icon.png" media="(max-width: 660px)" aria-label="Yellow hotel icon.">
+                    <img src="./assets/hotel_room.jpg" alt="" class=""
+                        aria-label="A picture as a link to the description of the hotel and room reservations.">
+                </picture>
+            </a>
+        </div>
+        <div id="header-text">
+            <h1>No. 39</h1>
+            <p>
+                The place
+                <br>
+                <i>where you can</i> <em>just be</em><i>...</i>
+            </p>
+        </div>
+        <div id="header-restaurant">
+            <a href="./rest.html" aria-label="link to take the user to the Restaurant's page">
+                <picture class="head-right-pic">
+                    <source srcset="./assets/wine_glass.jpg" media="(min-width: 660px)"
+                        aria-label="A nicely made double bed in a hotel room.">
+                    <source srcset="./assets/restaurant_icon.png" media="(max-width: 660px)"
+                        aria-label="black and white little icon of a restaurant table with two chairs">
+                    <img src="./assets/wine_glass.jpg" alt=""
+                        aria-label="A picture as a link to the desciption of the restaurant and table bookings.">
+                </picture>
+            </a>
+        </div>
     </header>
+    <main id="main-setup">
+        <div class="container mb-3">
+            <div class="row">
+                <div class="col-md-6 col-12 bg-light rounded booking-form mb-2">
+                    <form action="https://formdump.codeinstitute.net/" method="post" class="bg-light">
+                        <div class="form-group border rounded p-2 mt-4">
+                            <h3 class="text-center">Contact details</h3>
+                            <label for="email" class="mt-2">Email address</label>
+                            <input type="email" class="form-control mb-2 mr-2 mt-2 text-center" id="email"
+                                placeholder="name@no39.com" name="email" required>
+                            <label for="phone" class="mt-2">Phone number</label>
+                            <input type="tel" class="form-control mb-2 mr-2 mt-2 text-center" id="phone" name="phone" required>
+                            <label for="fname" class="mt-2">First name</label>
+                            <input type="text" class="form-control mb-2 mr-2 mt-2 text-center" id="fname" name="fname" required>
+                            <label for="lname" class="mt-2">Last name</label>
+                            <input type="text" class="form-control mb-2 mr-2 mt-2 text-center" id="lname" name="lname" required>
+                        </div>
+                        <div class="form-group border rounded p-2 mt-4">
+                            <h3 class="text-center">Booking details</h3>
+                            <label for="num-guests" class="mt-2">Number of guests</label>
+                            <select class="form-control mt-2 text-center" id="num-guests" name="num-guests">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                            </select>
+                            <label for="offer" class="mt-3">Would you like to go with an offer?</label>
+                            <select class="form-control mt-2 text-center" id="offer" name="offer">
+                                <option value="none">--- None ---</option>
+                                <option value="none">-- Couples --</option>
+                                <option value="dinnerfortwo">Romantic dinner</option>
+                                <option value="wineflight">Wine-flight-tasting</option>
+                                <option value="picnic">Picnic</option>
+                                <option value="none">-- Businesses --</option>
+                                <option value="allday">All-day meeting</option>
+                                <option value="hideout">The Hideout</option>
+                                <option value="christmas">Christmas party</option>
+                                <option value="none">-- Groups --</option>
+                                <option value="wedding">All-day meeting</option>
+                                <option value="hideout">The Hideout</option>
+                                <option value="christmas">Christmas party</option>
+                            </select>
+                        </div>
+                        <div class="form-group border rounded p-2 mt-4">
+                            <label for="notes">
+                                <strong>Additional notes</strong><br>
+                                <p class="font-weight-light mt-1"><i>e.g. allergies, special occasions</i></p>
+                            </label>
+                            <textarea class="form-control" id="notes" rows="5"></textarea>
+                        </div>
+                        <div class="row">
+                            <div class="col-2"></div>
+                            <div class="col-8 text-center"><button type="submit" class="btn btn-primary mb-3" id="book-table">Book table</button></div>
+                            <div class="col-2"></div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-6 col-12 bg-light mb-2 rounded" id="rest-menu">
+                    <div class="row">
+                        <div class="col"></div>
+                        <div class="col-8">
+                            <h2 class="mt-4 mt-lg-5 p-lg-5 text-center border-bottom">Menu</h2>
+                        </div>
+                        <div class="col"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col"></div>
+                        <div class="col-8">
+                            <h3 class="mt-5 text-center">Starters</h3>
+                        </div>
+                        <div class="col"></div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col"></div>
+                        <div class="col-8">
+                            <ul>
+                                <li>BITTERLEAF SALAD (Pb)</li>
+                                <li>BAKED ISLE OF WIGHT TOMATOES (Pb)</li>
+                                <li>DEVILLED LAMBS KIDNEYS</li>
+                            </ul>
+                        </div>
+                        <div class="col"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col"></div>
+                        <div class="col-8">
+                            <h3 class="mt-4 text-center">Mains</h3>
+                        </div>
+                        <div class="col"></div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col"></div>
+                        <div class="col-8">
+                            <ul>
+                                <li>POACHED LOCH DUART SALMON</li>
+                                <li>PAPPARDELLE OF RABBIT</li>
+                                <li>RISOTTO OF COURGETTES (Pb)</li>
+                            </ul>
+                        </div>
+                        <div class="col"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col"></div>
+                        <div class="col-8">
+                            <h3 class="mt-4 text-center">Puddings</h3>
+                        </div>
+                        <div class="col"></div>
+                    </div>
+                    <div class="row mt-2 mb-5">
+                        <div class="col"></div>
+                        <div class="col-8">
+                            <ul>
+                                <li>BEENLEIGH BLUE CHEESE</li>
+                                <li>BUTTERMILK PUDDING</li>
+                                <li>DARK CHOCOLATE POT (Pb)</li>
+                            </ul>
+                        </div>
+                        <div class="col"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row bg-light mt-4 rounded p-3">
+                <div class="col-1"></div>
+                <div class="col-10 text-center">
+                    <h2>Opening times:</h2>
+                </div>
+                <div class="col-1"></div>
+            </div>
+            <div class="row bg-light border-top border-secondary rounded-top text-center p-3">
+                <div class="col border-right border-info"><b>Service</b></div>
+                <div class="col border-right border-info"><b>Monday - Thursday</b></div>
+                <div class="col border-right border-info"><b>Friday</b></div>
+                <div class="col"><b>Saturday - Sunday</b></div>
+            </div>
+            <div class="row bg-light border-top text-center p-3">
+                <div class="col-3 border-right border-info"><b>Breakfast</b></div>
+                <div class="col-6 border-right border-info"><b>07:30 - 11:00</b></div>
+                <div class="col"><b>07:30 - 12:00</b></div>
+            </div>
+            <div class="row bg-light border-top rounded-bottom text-center p-3">
+                <div class="col-3 border-right border-info"><b>A La Carte</b></div>
+                <div class="col-3 border-right border-info"><b>12:00 - 21:00</b></div>
+                <div class="col border-right border-info"><b>12:00 - 22:00</b></div>
+            </div>
+        </div>
+
+    </main>
+    <footer>
+        <section class="border-top border-bottom" id="location">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-6 text-center card mt-1 mb-2">
+                        <h5 class="mt-3 mt-md-5"><i><u>If you don't yet know where to find us:
+
+                                </u></i></h5>
+                        <p class="mt-3 mt-md-5">
+                            No. 39<br>
+                            39 Church St,<br> Weybridge<br> KT13 8DG
+                        </p>
+                    </div>
+                    <div class="col-12 col-md-6 mt-1 mb-1">
+                        <iframe class="map-fit"
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d622.6870943262516!2d-0.4628715!3d51.3709223!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487675dc166b4b85%3A0x7316018a93ed7dad!2sNo%2039%20Bar!5e0!3m2!1sen!2suk!4v1713453814716!5m2!1sen!2suk"
+                            width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">Your browser does not support iframes</iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="border-top" id="contacts">
+            <div class="container">
+                <div class="row">
+                    <div class="col"></div>
+                    <div class="col-12 col-md-7 card mt-1 mb-1 align-items-center">
+                        <h5 class="mt-3 mt-md-5"><i><u>Contact us:</u></i></h5>
+                        <p class="mt-3 mt-md-5">
+                        <ul>
+                            <li>Email: info@no39.com</li>
+                            <li>Phone: 01243005442</li>
+                            <li>Instagram: no39hotrest</li>
+                        </ul>
+                        </p>
+                    </div>
+                    <div class="col"></div>
+                </div>
+            </div>
+        </section>
+    </footer>
 </body>
 
 </html>
