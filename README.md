@@ -20,7 +20,12 @@
 
   - ## Wireframes
 
-    ![A picture of the Lighthous results for the mobile version](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Lighthouse test for mobiles")
+    ![A picture of the index.html desktop version.](./assets/wireframes/Main-page-desktop.png "Desktop version of index.html")
+    ![A picture of the index.html tablet version.](./assets/wireframes/Main-page-tablet.png "Tablet version of index.html")
+    ![A picture of the hotel.html desktop version.](./assets/wireframes/Hotel-page-desktop.png "Desktop version of hotel.html")
+    ![A picture of the hotel.html tablet version.](./assets/wireframes/Hotel-page-tablet.png "Tablet version of hotel.html")
+    ![A picture of the rest.html desktop version.](./assets/wireframes/Restaurant-page-desktop.png "Desktop version of rest.html")
+    ![A picture of the rest.html tablet version.](./assets/wireframes/Restaurant-page-tablet.png "Tablet version of rest.html")
 
 
 2. # Features
