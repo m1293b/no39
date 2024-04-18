@@ -25,6 +25,7 @@ html {
 
 body {
     overflow-x: hidden;
+    background-color: #222831;
 }
 
 #nav-background {
@@ -189,10 +190,9 @@ header {
     background-color: #3e5d5e;
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
-    position: absolute;
     text-align: center;
     color: #EEEEEE;
-    top: 82px;
+    margin-top: 82px;
     left: 0px;
     height: 150px;
     width: 100vw;
@@ -275,7 +275,7 @@ header p {
 /* ---------------------------------------- The main part of the page starts here ---------------------------------------- */
 
 #main-setup {
-    position: absolute;
+    background-color:#222831;
     display: flex;
     top: 232px;
     left: 0;
@@ -289,31 +289,6 @@ main[id="main-setup"] a {
     background-color: #3e5d5e;
 }
 
-#main-sections {
-    float: left;
-    width: 80dvw;
-}
-
-#hotel {
-    background-color: chartreuse;
-}
-
-#restaurant {
-    background-color: blue;
-}
-
-#offers {
-    background-color: #EEEEEE;
-    float: right;
-    width: 20dvw;
-    position: sticky;
-    top: 70px;
-}
-
-.offers {
-    padding-left: 25%;
-}
-
 .video-fit {
     max-width: 70%;
     border-radius: 10px;
@@ -325,17 +300,63 @@ main[id="main-setup"] a {
     margin-left: 30%;
 }
 
+.offers {
+    padding-left: 25%;
+}
+
+#offers-for-hotel {
+    background-color: #e9ecef;
+}
+
+#offers-for-restaurant {
+    background-color: #e9ecef;
+}
+
 /* ---------------------------------------- Footer set up starts here ---------------------------------------- */
 
 footer {
-
+    background-color: #76ABAE;
 }
 
-#location {
-    float: clear;
-    background-color: blue;
+.map-fit {
+    border-radius: 10px;
 }
 
 #contacts {
-    float: clear;
+    background-color: #3e5d5e;
+    clear: both;
+}
+
+/* Booking form design */
+
+#book-table {
+    background-color: #3e5d5e;
+    border-color: #76ABAE;
+}
+
+button[id="book-table"]:hover {
+    background-color: #222831 !important;
+    border-color: #3e5d5e !important;
+}
+
+#book-room {
+    background-color: #3e5d5e;
+    border-color: #76ABAE;
+}
+
+button[id="book-room"]:hover {
+    background-color: #222831 !important;
+    border-color: #3e5d5e !important;
+}
+
+div[id="rest-menu"] li {
+    border-bottom: #222831 solid 1px;
+    text-align: center;
+    line-height: 39px; 
+}
+
+div[class="main-offers"] li {
+    border-bottom: #222831 solid 1px;
+    text-align: center;
+    line-height: 20px; 
 }
