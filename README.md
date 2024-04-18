@@ -80,8 +80,8 @@
 
     ***
 
-      - ![A picture of the Lighthous results for the mobile version](./assets/testing/mobile.png "Lighthouse test for the mobile version of the site.")
-      - ![A picture of the Lighthous results for the desktop version](./assets/testing/desktop.png "Lighthouse test for the desktop version of the website.")
+      - A picture of the Lighthous results for the mobile version: ![A picture of the Lighthous results for the mobile version](./assets/testing/mobile.png "Lighthouse test for the mobile version of the site.")
+      - A picture of the Lighthous results for the desktop version: ![A picture of the Lighthous results for the desktop version](./assets/testing/desktop.png "Lighthouse test for the desktop version of the website.")
 
       It seems to me that the biggest improvement could be done by downloading the bootstrap css, adding it to the assets folder and link it to the html file that way. Less loading time. I will include this solution in my next project.
 
