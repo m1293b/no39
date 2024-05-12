@@ -1,0 +1,362 @@
+/* Colours that I use for the website
+.darkest { 
+	background: #222831; 
+}
+
+.dark { 
+	background: #31363F; 
+}
+
+.blueish { 
+	background: #76ABAE; 
+}
+
+.light { 
+	background: #EEEEEE; 
+}
+*/
+
+html {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: #222831;
+}
+
+/* ---------------------------------------- nav element setup starts here ------------------------------------ */
+
+body {
+    overflow-x: hidden;
+    background-color: #222831;
+}
+
+#nav-background {
+    position: fixed;
+    font-size: large;
+    top: 0;
+    left: 0;
+    height: 90px;
+    width: 100vw;
+    background-color: #222831;
+    z-index: 5;
+    border-bottom: double 1px #EEEEEE;
+}
+
+/* The div element that wraps the main section of the nav element, including the links for Contacts, Main page and Location */
+
+#nav-box {
+    position: relative;
+    display: inline-flex;
+    height: 90px;
+    width: 50%;
+    left: 25%;
+    margin: 0 auto;
+}
+
+/* Every anchor tag within the nav element */
+
+nav[id="nav-background"] a:nth-of-type(1n) {
+    text-decoration: none;
+    color: #e4e9ea;
+    border-radius: 5px;
+    line-height: 25px;
+    border-radius: 15px;
+    border:outset 1px #222831;
+    min-width: fit-content;
+    max-width: 150px;
+    width: 15vw;
+    text-align: center;
+}
+
+/* Link to take the user to the contacts section */
+
+#nav-box-contacts {
+    display: inline-flex;
+    width: 33%;
+    float: left;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* Link to take the user to the locations section */
+
+#nav-box-location {
+    display: inline-flex;
+    float: right;
+    width: 33%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* Link to take the user to the main page */
+
+#nav-box-home {
+    display: inline-flex;
+    width: 34%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+/* Anchor tags within the #top-nav change when they are hovered over */
+
+nav[id="nav-background"] a:hover {
+    background-color: #e4e9ea;
+    color: #222831;
+    font-size: 1.05em;
+    border: 2px solid;
+}
+
+/* The div to help position the anchor tag for the hotel's site to the left, within the nav element */
+
+#nav-hotel {
+    position: absolute;
+    display: inline-flex;
+    height: 100%;
+    width: 25%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* The div to help aligning the anchor element for the hotel */
+
+#align-n-hotel {
+    display: inline-flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* The div to help position the anchor tag for the restaurant's site to the left, within the nav element */
+
+#nav-restaurant {
+    position: absolute;
+    display: inline-flex;
+    height: 100%;
+    width: 25%;
+    right: 0;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* The div to help aligning the anchor element for the restaurant */
+
+#align-n-restaurant {
+    display: inline-flex;
+    top: 20%;
+    right: 25%;
+}
+
+/* The left-hand side link in the nav, that takes the user to the hotel's booking page.*/
+
+#nav-hotel-page {
+    width: 33%;
+    height: 100%;
+}
+
+/* The right-hand side link in the nav, that takes the user to the restaurant's reservation page.*/
+
+#nav-restaurant-page {
+    position: absolute;
+    display: inline-flex;
+    top: 0;
+    right: 0%;
+    width: 33%;
+    height: 100%;
+}
+
+/* Middle link in the nav, that takes user back to the home page. */
+
+#nav-home-page {
+    width: 70%;
+    height: 100%;
+    margin: 0 auto;
+    clear: both;
+}
+
+/* media query for handheld devices, activating at the tested breaking point */
+
+@media only screen and (max-width: 465px) {
+    #nav-background {
+        font-size: small;
+    }
+
+    div[id="nav-box-home"] a {
+        border-left: 1px solid #4a576b;
+        border-right: 1px solid #4a576b;
+    }
+}
+
+/* ---------------------------------------- Header element setup starts here ------------------------------------ */
+
+header {
+    background-color: #3e5d5e;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    text-align: center;
+    color: #EEEEEE;
+    margin-top: 82px;
+    left: 0px;
+    height: 150px;
+    width: 100vw;
+    display: flex;
+    z-index: 4;
+}
+
+/* The animation set up with the help of the keyframes to be applied to the images placed within the header element */
+
+header img {
+    animation-name: header-zoom;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes header-zoom {
+    from{
+        transform: scale(0.9);
+    }
+    to{
+        transform: scale(1);
+    }
+}
+
+#header-hotel {
+    position: relative;
+    height: 100%;
+    width: 25%;
+    float: left;
+}
+
+#header-hotel img {
+    position: absolute;
+    border-radius: 10px;
+    max-height: 80%;
+    max-width: 90%;
+    top: 10%;
+    left: 3%;
+}
+
+#header-text {
+    position: relative;
+    height: 100%;
+    width: 50%;
+    margin: 0 auto;
+}
+
+h1 {
+    margin-top: 25px;
+    line-height: 20px;
+    font-weight: 800px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-decoration: underline;
+}
+
+header p {
+    margin-top: 3%;
+}
+
+#header-restaurant {
+    position: relative;
+    height: 100%;
+    width: 25%;
+    float: right;
+}
+
+#header-restaurant img {
+    position: absolute;
+    border-radius: 10px;
+    max-height: 80%;
+    max-width: 90%;
+    top: 10%;
+    right: 3%;
+}
+
+#header-restaurant img:hover, #header-hotel img:hover {
+    border: 1px #222831 solid;
+}
+
+/* ---------------------------------------- The main part of the page starts here ---------------------------------------- */
+
+#main-setup {
+    background-color:#222831;
+    display: flex;
+    top: 232px;
+    left: 0;
+    min-height: 100dvh;
+    min-width: 100vw;
+    z-index: 4;
+    margin-top: 2rem;
+}
+
+main[id="main-setup"] a {
+    background-color: #3e5d5e;
+}
+
+.video-fit {
+    max-width: 70%;
+    border-radius: 10px;
+    margin-left: 15%;
+}
+
+.book-now {
+    width: 40%;
+    margin-left: 30%;
+}
+
+.offers {
+    padding-left: 25%;
+}
+
+#offers-for-hotel {
+    background-color: #e9ecef;
+}
+
+#offers-for-restaurant {
+    background-color: #e9ecef;
+}
+
+/* ---------------------------------------- Footer set up starts here ---------------------------------------- */
+
+footer {
+    background-color: #76ABAE;
+}
+
+.map-fit {
+    border-radius: 10px;
+}
+
+#contacts {
+    background-color: #3e5d5e;
+    clear: both;
+}
+
+/* Booking form design */
+
+#book-table {
+    background-color: #3e5d5e;
+    border-color: #76ABAE;
+}
+
+button[id="book-table"]:hover {
+    background-color: #222831 !important;
+    border-color: #3e5d5e !important;
+}
+
+#book-room {
+    background-color: #3e5d5e;
+    border-color: #76ABAE;
+}
+
+button[id="book-room"]:hover {
+    background-color: #222831 !important;
+    border-color: #3e5d5e !important;
+}
+
+div[id="rest-menu"] li {
+    border-bottom: #222831 solid 1px;
+    text-align: center;
+    line-height: 39px; 
+}
+
+div[class="main-offers"] li {
+    border-bottom: #222831 solid 1px;
+    text-align: center;
+    line-height: 20px; 
+}
