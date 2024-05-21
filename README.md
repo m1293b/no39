@@ -1,6 +1,28 @@
-1. # UX
+# UX
 
    ***
+
+  - ## User stories
+
+   ***
+  
+    1.  First time visitor goals:
+  
+      - As a first time visitor, I would like to be able to understand what is the purpose of the website.
+      - As a first time visitor, I would like to be able to easily navigate through the pages.
+      - As a first time visitor, I would like to be able to find the location information.
+
+    2.  Returning visitor goals:
+
+      - As a returning visitor, I would like to be able to comfortably find the previously visited sites.
+      - As a returning visitor, I would like to be able to be able to find the contact details, regardless which page I am viewing.
+      - As a returning visitor, I would like to be able to find other experiences the venue offers.
+  
+    3.  Frequent visitor goals:
+
+      - As a frequent visitor, I would like to be able to easily find out if there are any updates on the packages.
+      - As a frequent visitor, I would like to be able to see the restaurant opening times.
+      - As a frequent visitor, I would like to be able to easily book a room or a table for my party.
 
   - ## Project goals
     
@@ -20,18 +42,18 @@
 
   - ## Wireframes
 
-    - A picture of the index.html desktop version: ![A picture of the index.html desktop version.](./assets/wireframes/Main-page-desktop.png "Desktop version of index.html")
-    - A picture of the index.html tablet version: ![A picture of the index.html tablet version.](./assets/wireframes/Main-page-tablet.png "Tablet version of index.html")
-    - A picture of the index.html mobile version: ![A picture of the index.html mobile version.](./assets/wireframes/Main-page-mobile.png "Mobile version of index.html")
-    - A picture of the hotel.html desktop version: ![A picture of the hotel.html desktop version.](./assets/wireframes/Hotel-page-desktop.png "Desktop version of hotel.html")
-    - A picture of the hotel.html tablet version: ![A picture of the hotel.html tablet version.](./assets/wireframes/Hotel-page-tablet.png "Tablet version of hotel.html")
-    - A picture of the hotel.html mobile version: ![A picture of the hotel.html mobile version.](./assets/wireframes/Main-page-mobile.png "Mobile version of index.html")
-    - A picture of the rest.html desktop version: ![A picture of the rest.html desktop version.](./assets/wireframes/Restaurant-page-desktop.png "Desktop version of rest.html")
-    - A picture of the rest.html tablet version: ![A picture of the rest.html tablet version.](./assets/wireframes/Restaurant-page-tablet.png "Tablet version of rest.html")
-    - A picture of the rest.html mobile version: ![A picture of the rest.html Mobile version.](./assets/wireframes/Main-page-mobile.png "Mobile version of index.html")
+    ![A picture of the index.html desktop version.](./assets/wireframes/Main-page-desktop.png "Desktop version of index.html")
+    ![A picture of the index.html tablet version.](./assets/wireframes/Main-page-tablet.png "Tablet version of index.html")
+    ![A picture of the index.html mobile version.](./assets/wireframes/Main-page-mobile.png "Mobile version of index.html")
+    ![A picture of the hotel.html desktop version.](./assets/wireframes/Hotel-page-desktop.png "Desktop version of hotel.html")
+    ![A picture of the hotel.html tablet version.](./assets/wireframes/Hotel-page-tablet.png "Tablet version of hotel.html")
+    ![A picture of the hotel.html mobile version.](./assets/wireframes/Main-page-mobile.png "Mobile version of index.html")
+    ![A picture of the rest.html desktop version.](./assets/wireframes/Restaurant-page-desktop.png "Desktop version of rest.html")
+    ![A picture of the rest.html tablet version.](./assets/wireframes/Restaurant-page-tablet.png "Tablet version of rest.html")
+    ![A picture of the rest.html Mobile version.](./assets/wireframes/Main-page-mobile.png "Mobile version of index.html")
 
 
-2. # Features
+# Features
    
    ***
 
@@ -47,16 +69,28 @@
     
     * A database, to process and store data that the user sent via the booking form.
     * Dynamic menu system - which will be adding more quality to UX.
+  
 
-3. # Technologies used
+# Technologies used
+
+   ***
+
+  1. Languages used:
+
+      - HTML
+      - CSS
+
+  2. Frameworks, Libraries & Programs Used:
+
+  - Bootstrap - Used to create boxes for the main and footer sections.
+  - GitHub - Used for making my files available on the web.
+  - FontAwesome - Used for decorating the navigation buttons
+
+# Bugs
 
    ***
 
-  - Bootstrap
-
-4. # Bugs
-
-   ***
+    I had to download the css files, as while testing the live website, the css file would not load properly.
 
     It felt quite difficult to understand how the positioning works. The Chrome developer tool proved to be quite useful, as taught, and helped me solved the issues I had in the nav element quite quickly.
     I also tried to make this links and the div they are in responsive. Some of the solutions were creater without the need of a media quiery, then I found it to be useful for other parts.
@@ -66,28 +100,116 @@
 
     As I did not want to paste in all of the section from the css file, this is an example how I managed to display the anchor tags in a way that fit the design:
 
-    <!--
-    #nav-box-contacts { 
+    
+    <!-- #nav-box-contacts { 
         display: inline-flex;
         width: 33%;
         float: left;
         justify-content: space-evenly;
         align-items: center;
-        } 
-    -->
+        }  -->
+    
 
-5. # Testing    
+# Testing    
 
+  ***
+
+  1. ## Testing with validators
+   
     ***
 
-      - A picture of the Lighthous results for the mobile version: ![A picture of the Lighthous results for the mobile version](./assets/testing/mobile.png "Lighthouse test for the mobile version of the site.")
-      - A picture of the Lighthous results for the desktop version: ![A picture of the Lighthous results for the desktop version](./assets/testing/desktop.png "Lighthouse test for the desktop version of the website.")
+    1. Lighthouse
+      
+      <!-- - ![A screenshot of the Lighthouse results for the mobile version](./assets/testing/ "Lighthouse test for the mobile version of the site.") -->
+      <!-- - ![A screenshot of the Lighthouse results for the desktop version](./assets/testing/ "Lighthouse test for the desktop version of the website.")  -->
+  
+    2. W3C HTML
+  
+      - ![A screenshot of the initial W3C testing result. 6 x errors that needed to be addressed.](./assets/testing/W3C/first_W3C_testing_result.png "Initial testing HTML of my website with W3C.")
 
-      It seems to me that the biggest improvement could be done by downloading the bootstrap css, adding it to the assets folder and link it to the html file that way. Less loading time. I will include this solution in my next project.
+      - After the initial testing, I went through the HTML files and corrected errors shown by the W3C test result.
 
-      ### I had to download the css files, as while testing the live website, the css file would not load.
+      - ![A screenshot of the testing result after correcting 6 x errors that needed to be addressed.](./assets/testing/W3C/W3C_after_correction.png "Testing HTML of my website with W3C after corrections were applied.")
 
-6. # Credits
+    3. W3C CSS(Jigsaw)
+  
+      <!-- - ![A screenshot of the initial W3C testing result. 6 x errors that needed to be addressed.](./assets/testing/Jigsaw/first_jigsaw_testing_result.png "Initial testing HTML of my website with W3C.") -->
+
+      <!-- - After the initial testing, I went through the HTML files and corrected errors shown by the Jigsaw test result. -->
+
+      <!-- - ![A screenshot of the testing result after correcting 6 x errors that needed to be addressed.](./assets/testing/Jigsaw/jigsaw_after_correction.png "Testing HTML of my website with W3C after corrections were applied.") -->
+  
+  2. ## Manual testing
+
+    ***
+    
+    - User stories
+
+      1.  First time visitor goals:
+  
+      - As a first time visitor, I would like to be able to understand what is the purpose of the website.
+
+        - As I arrive to the website's main page, it is apparent that it offers accommodation and has a restaurant on-site as well.
+  
+      - As a first time visitor, I would like to be able to easily navigate through the pages.
+
+        - The navigation bar is clear and visible regardless how much the user scrolled down.
+
+      - As a first time visitor, I would like to be able to find the location information.
+
+        - If someone just searches for "restaurants nearby" and opens my website, they would not know how nearby the venue us. For this very reason, I have included a "Location" button to take the user to the iframe that accommodates Google Maps with the venue's location set as default.
+
+    2.  Returning visitor goals:
+
+      - As a returning visitor, I would like to be able to comfortably find the previously visited sites.
+
+        - The navigation bar is fixed to the top of the page, so it is available all the time.
+
+      - As a returning visitor, I would like to be able to be able to find the contact details, regardless which page I am viewing.
+
+        - For this reason, there is a button in the navigation section that takes the user to the contact details, regardless which page they are viewing.
+
+      - As a returning visitor, I would like to be able to find other experiences the venue offers.
+
+        - Both the hotel's and the restaurant's short introduction is located on the main page, which makes it easier for the user to, as an example, book a table for the day of their arrival to the hotel.
+
+  
+    3.  Frequent visitor goals:
+
+      - As a frequent visitor, I would like to be able to easily find out if there are any updates on the packages.
+
+        - All the offer's names show up on the main page, following the appropriate venues short introduction.
+
+      - As a frequent visitor, I would like to be able to see the restaurant opening times.
+
+        - The opening times sections follows the booking form, which makes it convenient for the user to have a look while booking their next visit.
+
+      - As a frequent visitor, I would like to be able to easily book a room or a table for my party.
+
+        - On the main page, there are a couple of options to get to the booking forms. The user could click on the button in the navigation bar, click on the picture that represents the desired venue or click on the button in the short introduction section.
+
+    - Restaurant booking form
+
+      1. Checking mandatory fields. Goal: To have a message box popping up to tell the user they have missed to fill out a required field.
+
+        <!-- - ![A screenshot of the testing result after correcting 6 x errors that needed to be addressed.](./assets/testing/W3C/first_W3C_testing_result.png "Testing HTML of my website with W3C after corrections were applied.") -->
+
+      2. Checking if email field was filled out with the correct format. Goal: To have a message box popping up to tell the user they have given an invalid email address.
+
+        <!-- - ![A screenshot of the testing result after correcting 6 x errors that needed to be addressed.](./assets/testing/W3C/first_W3C_testing_result.png "Testing HTML of my website with W3C after corrections were applied.") -->
+
+    - Hotel booking form
+
+      <!-- 1. Checking mandatory fields. Goal: To have a message box popping up to tell the user they have missed to fill out a required field. -->
+
+        <!-- - ![A screenshot of the testing result after correcting 6 x errors that needed to be addressed.](./assets/testing/W3C/first_W3C_testing_result.png "Testing HTML of my website with W3C after corrections were applied.") -->
+
+      <!-- 2. Checking if email field was filled out with the correct format. Goal: To have a message box popping up to tell the user they have given an invalid email address. -->
+
+        <!-- - ![A screenshot of the testing result after correcting 6 x errors that needed to be addressed.](./assets/testing/W3C/first_W3C_testing_result.png "Testing HTML of my website with W3C after corrections were applied.") -->   
+
+
+# Credits
    
    ***
 
