@@ -1,4 +1,4 @@
-/* Colours that I use for the website
+/* Colours that I used for the website
 .darkest { 
 	background: #222831; 
 }
@@ -243,7 +243,7 @@ header img {
 h1 {
     margin-top: 25px;
     line-height: 20px;
-    font-weight: 800px;
+    font-weight: 800;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-decoration: underline;
 }
@@ -349,7 +349,7 @@ button[id="book-room"]:hover {
     border-color: #3e5d5e !important;
 }
 
-div[id="rest-menu"] li {
+div[class="menu"] li {
     border-bottom: #222831 solid 1px;
     text-align: center;
     line-height: 39px; 
