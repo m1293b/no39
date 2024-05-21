@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<!-- The header is mostly set up the same for all three HTML files, with the exception of the title. -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,11 +12,16 @@
     <title>No. 39 : The Restaurant</title>
     <link rel="stylesheet" href="./assets/css/fontawesome.min.css">
     <link rel="stylesheet" href="./assets/css/solid.min.css">
-    <link rel="stylesheet" href="./assets/css/bootstrap.min.css" rel="stylesheet">
-    <link href="./assets/css/style.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
+<!-- In the body element I have reused the nav and header elements to keep the design consistent, changing only the content of the main element to display site-appropriate content. -->
+
 <body>
+    <!-- I had a few colours to choose from, and I went with the darker one for the background, and the lighter colours for the content. I thought this might catch the user's eyes easier.
+            At this point I haven't familiariesed myself with bootstrap, so I had to find a way to construct the fixed nav bar and a header that is offset from the top of the page. -->
     <nav id="nav-background">
         <div id="nav-hotel">
             <div id="align-n-hotel">
@@ -44,6 +50,9 @@
             </div>
         </div>
     </nav>
+
+    <!-- This is where the header starts, which is offset from the top to allow itself to show underneath the nav section as the user loads the page initially. -->
+
     <header id="the-head">
         <div id="header-hotel">
             <a href="./hotel.html" aria-label="link to go to the Hotel's site">
@@ -77,8 +86,14 @@
             </a>
         </div>
     </header>
+
+    <!-- This is where the main element accommodates the restaurant booking form, the menu for the restaurant and the opening times. -->
+
     <main id="main-setup">
         <div class="container mb-3">
+
+            <!-- The booking form and the menu are in the same row, as on a wide screen, they are next to eachother, but on a smaller device the menu follows the form. -->
+
             <div class="row">
                 <div class="col-md-6 col-12 bg-light rounded booking-form mb-2">
                     <form action="https://formdump.codeinstitute.net/" method="post" class="bg-light">
@@ -140,6 +155,9 @@
                         </div>
                     </form>
                 </div>
+
+                <!-- This is where the menu is set up. -->
+
                 <div class="col-md-6 col-12 bg-light mb-2 rounded" id="rest-menu">
                     <div class="row">
                         <div class="col"></div>
@@ -203,6 +221,9 @@
                         <div class="col"></div>
                     </div>
                 </div>
+
+                <!-- And from here the opening times set up -->
+                
             </div>
             <div class="row bg-light mt-4 rounded p-3">
                 <div class="col-1"></div>
@@ -230,6 +251,9 @@
         </div>
 
     </main>
+
+    <!-- This is where the footer set up starts, to accommodate the "location" and "contacts" sections. -->
+
     <footer>
         <section class="border-top border-bottom" id="location">
             <div class="container">
@@ -247,7 +271,7 @@
                         <iframe class="map-fit"
                             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d622.6870943262516!2d-0.4628715!3d51.3709223!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487675dc166b4b85%3A0x7316018a93ed7dad!2sNo%2039%20Bar!5e0!3m2!1sen!2suk!4v1713453814716!5m2!1sen!2suk"
                             width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade">Your browser does not support iframes</iframe>
+                            referrerpolicy="no-referrer-when-downgrade" title="Location of No. 131 showcased with the help of Google Maps"></iframe>
                     </div>
                 </div>
             </div>
