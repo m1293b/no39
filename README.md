@@ -86,6 +86,15 @@
   - GitHub - Used for making my files available on the web.
   - FontAwesome - Used for decorating the navigation buttons
 
+  3. Websites used
+
+    - [The website I used to check if my website is responsive. I also included a screenshot in the testing section.](https://ui.dev/)
+    - [I used Bootstrap's website a lot, especially to get a better idea how to align items.](https://getbootstrap.com/)
+    - [I used this website to find the colour I felt comfortable using with eachother.](https://colorhunt.co)
+    - [I used Pexels to find appropriate photos and videos to fit in the subject of my website.](https://www.pexels.com)
+    - [I used FontAwesome to find lttle icons to decorate the buttons in the nav bar.](https://fontawesome.com)
+    - [I used Flaticon to find lttle icons to replace the bigger pictures in the header once they would be too big on a smaller screen.](https://www.flaticon.com)
+
 # Bugs
 
    ***
@@ -120,24 +129,28 @@
 
     1. Lighthouse
       
-      <!-- - ![A screenshot of the Lighthouse results for the mobile version](./assets/testing/ "Lighthouse test for the mobile version of the site.") -->
-      <!-- - ![A screenshot of the Lighthouse results for the desktop version](./assets/testing/ "Lighthouse test for the desktop version of the website.")  -->
+      - ![A screenshot of the Lighthouse results for the mobile version](./assets/testing/lighthouse_mobile.png "Lighthouse test for the mobile version of the site.")
+      - ![A screenshot of the Lighthouse results for the desktop version](./assets/testing/lighthouse_desktop.png "Lighthouse test for the desktop version of the website.") 
   
     2. W3C HTML
   
-      - ![A screenshot of the initial W3C testing result. 6 x errors that needed to be addressed.](./assets/testing/W3C/first_W3C_testing_result.png "Initial testing HTML of my website with W3C.")
-
+      - ![A screenshot of the initial W3C testing result. 6 x errors shown, 4 x to be corrected.](./assets/testing/W3C/first_W3C_testing_result.png "Initial testing HTML of my website with W3C.")
+      
       - After the initial testing, I went through the HTML files and corrected errors shown by the W3C test result.
 
-      - ![A screenshot of the testing result after correcting 6 x errors that needed to be addressed.](./assets/testing/W3C/W3C_after_correction.png "Testing HTML of my website with W3C after corrections were applied.")
+      - ![A screenshot of the testing result after correcting 4 x errors that needed to be addressed. The other 2 errors are not causeing any issues. The percentage simbol is essential in that case, and in fact there is a paragraph that is being closed by that end tag.](./assets/testing/W3C/W3C_after_correction.png "Testing HTML of my website with W3C after corrections were applied.")
 
     3. W3C CSS(Jigsaw)
   
-      <!-- - ![A screenshot of the initial W3C testing result. 6 x errors that needed to be addressed.](./assets/testing/Jigsaw/first_jigsaw_testing_result.png "Initial testing HTML of my website with W3C.") -->
+      - ![A screenshot of the initial Jigsaw(W3C) testing result. 1 x error that needed to be addressed.](./assets/testing/Jigsaw/first_jigsaw_testing_result.png "Initial testing CSS of my website with W3C.")
 
-      <!-- - After the initial testing, I went through the HTML files and corrected errors shown by the Jigsaw test result. -->
+      - After the initial testing, I went through the CSS file and corrected errors shown by the Jigsaw test result.
 
-      <!-- - ![A screenshot of the testing result after correcting 6 x errors that needed to be addressed.](./assets/testing/Jigsaw/jigsaw_after_correction.png "Testing HTML of my website with W3C after corrections were applied.") -->
+      - ![A screenshot of the testing result after correction was applied. I have deleted the unused CSS files to save space.](./assets/testing/Jigsaw/jigsaw_after_correction.png "Testing CSS of my website with W3C after corrections were applied.")
+
+    4. Final website
+
+      - ![A screenshot of my website on different screen sizes.](./assets/testing/final_screens.png "A screenshot of my website on different screen sizes.")
   
   2. ## Manual testing
 
@@ -159,7 +172,7 @@
 
         - If someone just searches for "restaurants nearby" and opens my website, they would not know how nearby the venue us. For this very reason, I have included a "Location" button to take the user to the iframe that accommodates Google Maps with the venue's location set as default.
 
-    2.  Returning visitor goals:
+    1.  Returning visitor goals:
 
       - As a returning visitor, I would like to be able to comfortably find the previously visited sites.
 
