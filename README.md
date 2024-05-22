@@ -207,17 +207,17 @@
   
   3.  Frequent visitor goals:
 
-    - As a frequent visitor, I would like to be able to easily find out if there are any updates on the packages.
+  - As a frequent visitor, I would like to be able to easily find out if there are any updates on the packages.
 
-    - All the offer's names show up on the main page, following the appropriate venues short introduction.
+  - All the offer's names show up on the main page, following the appropriate venues short introduction.
 
-    - As a frequent visitor, I would like to be able to see the restaurant opening times.
+  - As a frequent visitor, I would like to be able to see the restaurant opening times.
 
-    - The opening times sections follows the booking form, which makes it convenient for the user to have a look while booking their next visit.
+  - The opening times sections follows the booking form, which makes it convenient for the user to have a look while booking their next visit.
 
-    - As a frequent visitor, I would like to be able to easily book a room or a table for my party.
+  - As a frequent visitor, I would like to be able to easily book a room or a table for my party.
 
-    - On the main page, there are a couple of options to get to the booking forms. The user could click on the button in the navigation bar, click on the picture that represents the desired venue or click on the button in the short introduction section.
+  - On the main page, there are a couple of options to get to the booking forms. The user could click on the button in the navigation bar, click on the picture that represents the desired venue or click on the button in the short introduction section.
 
 ## Restaurant booking form testing
 
