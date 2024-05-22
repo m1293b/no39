@@ -123,24 +123,24 @@
 # Bugs
 
 
-    I had to download the css files, as while testing the live website, the css file would not load properly.
+  I had to download the css files, as while testing the live website, the css file would not load properly.
 
-    It felt quite difficult to understand how the positioning works. The Chrome developer tool proved to be quite useful, as taught, and helped me solved the issues I had in the nav element quite quickly.
-    I also tried to make this links and the div they are in responsive. Some of the solutions were creater without the need of a media quiery, then I found it to be useful for other parts.
+  It felt quite difficult to understand how the positioning works. The Chrome developer tool proved to be quite useful, as taught, and helped me solved the issues I had in the nav element quite quickly.
+  I also tried to make this links and the div they are in responsive. Some of the solutions were creater without the need of a media quiery, then I found it to be useful for other parts.
 
-    I spent quite some time solving the issue with the positioning of the links in the nav element. I found wraping each anchor tag in a div makes it easier to position them. The final issue with the positioning of the anchor tags was aligning them. This is when Chrome's developer tool came in handy, as with the display attribute, it gave me the option to try out different values via a little button next to it.
-    This got me the solution with the justify-content and align-items being set with the correct values.
+  I spent quite some time solving the issue with the positioning of the links in the nav element. I found wraping each anchor tag in a div makes it easier to position them. The final issue with the positioning of the anchor tags was aligning them. This is when Chrome's developer tool came in handy, as with the display attribute, it gave me the option to try out different values via a little button next to it.
+  This got me the solution with the justify-content and align-items being set with the correct values.
 
-    As I did not want to paste in all of the section from the css file, this is an example how I managed to display the anchor tags in a way that fit the design:
+  As I did not want to paste in all of the section from the css file, this is an example how I managed to display the anchor tags in a way that fit the design:
 
     
-    <!-- #nav-box-contacts { 
-        display: inline-flex;
-        width: 33%;
-        float: left;
-        justify-content: space-evenly;
-        align-items: center;
-        }  -->
+  <!-- #nav-box-contacts { 
+      display: inline-flex;
+      width: 33%;
+      float: left;
+      justify-content: space-evenly;
+      align-items: center;
+      }  -->
     
 
 # Testing
