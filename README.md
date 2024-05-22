@@ -180,44 +180,44 @@
   
   - As a first time visitor, I would like to be able to understand what is the purpose of the website.
 
-  - As I arrive to the website's main page, it is apparent that it offers accommodation and has a restaurant on-site as well.
+    - As I arrive to the website's main page, it is apparent that it offers accommodation and has a restaurant on-site as well.
   
   - As a first time visitor, I would like to be able to easily navigate through the pages.
 
-  - The navigation bar is clear and visible regardless how much the user scrolled down.
+    - The navigation bar is clear and visible regardless how much the user scrolled down.
 
   - As a first time visitor, I would like to be able to find the location information.
 
-  - If someone just searches for "restaurants nearby" and opens my website, they would not know how nearby the venue us. For this very reason, I have included a "Location" button to take the user to the iframe that accommodates Google Maps with the venue's location set as default.
+    - If someone just searches for "restaurants nearby" and opens my website, they would not know how nearby the venue us. For this very reason, I have included a "Location" button to take the user to the iframe that accommodates Google Maps with the venue's location set as default.
 
   2.  Returning visitor goals:
 
   - As a returning visitor, I would like to be able to comfortably find the previously visited sites.
 
-  - The navigation bar is fixed to the top of the page, so it is available all the time.
+    - The navigation bar is fixed to the top of the page, so it is available all the time.
 
   - As a returning visitor, I would like to be able to be able to find the contact details, regardless which page I am viewing.
 
-  - For this reason, there is a button in the navigation section that takes the user to the contact details, regardless which page they are viewing.
+    - For this reason, there is a button in the navigation section that takes the user to the contact details, regardless which page they are viewing.
 
   - As a returning visitor, I would like to be able to find other experiences the venue offers.
 
-  - Both the hotel's and the restaurant's short introduction is located on the main page, which makes it easier for the user to, as an example, book a table for the day of their arrival to the hotel.
+    - Both the hotel's and the restaurant's short introduction is located on the main page, which makes it easier for the user to, as an example, book a table for the day of their arrival to the hotel.
 
   
   3.  Frequent visitor goals:
 
   - As a frequent visitor, I would like to be able to easily find out if there are any updates on the packages.
 
-  - All the offer's names show up on the main page, following the appropriate venues short introduction.
+    - All the offer's names show up on the main page, following the appropriate venues short introduction.
 
   - As a frequent visitor, I would like to be able to see the restaurant opening times.
 
-  - The opening times sections follows the booking form, which makes it convenient for the user to have a look while booking their next visit.
+    - The opening times sections follows the booking form, which makes it convenient for the user to have a look while booking their next visit.
 
   - As a frequent visitor, I would like to be able to easily book a room or a table for my party.
 
-  - On the main page, there are a couple of options to get to the booking forms. The user could click on the button in the navigation bar, click on the picture that represents the desired venue or click on the button in the short introduction section.
+    - On the main page, there are a couple of options to get to the booking forms. The user could click on the button in the navigation bar, click on the picture that represents the desired venue or click on the button in the short introduction section.
 
 ## Restaurant booking form testing
 
