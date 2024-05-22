@@ -134,13 +134,13 @@
   As I did not want to paste in all of the section from the css file, this is an example how I managed to display the anchor tags in a way that fit the design:
 
     
-  <!-- #nav-box-contacts { 
+  #nav-box-contacts { 
       display: inline-flex;
       width: 33%;
       float: left;
       justify-content: space-evenly;
       align-items: center;
-      }  -->
+      }
     
 
 # Testing
