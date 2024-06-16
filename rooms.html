@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- The header is mostly set up the same for all three HTML files, with the exception of the title. -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Late night partying, a romantic dinner or a family trip away - all good reasons to visit us at No. 39.">
+    <meta name="keywords" content="clubbing, bar, hotel, restaurant, family">
+    <meta name="author" content="Máté Balla">
+    <title>No. 39 : The Restaurant</title>
+    <link rel="stylesheet" href="./assets/css/fontawesome.min.css">
+    <link rel="stylesheet" href="./assets/css/solid.min.css">
+
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<!-- In the body element I have reused the nav and header elements to keep the design consistent, changing only the content of the main element to display site-appropriate content. -->
+
+<body>
+    <!-- I had a few colours to choose from, and I went with the darker one for the background, and the lighter colours for the content. I thought this might catch the user's eyes easier.
+            At this point I haven't familiariesed myself with bootstrap, so I had to find a way to construct the fixed nav bar and a header that is offset from the top of the page. -->
+    <nav id="nav-background">
+        <div id="nav-hotel">
+            <div id="align-n-hotel">
+                <a href="./hotel.html" aria-label="link to go to the Hotel's page"><i class="fa-solid fa-bed"></i>
+                    Hotel</a>
+            </div>
+        </div>
+        <div id="nav-box">
+            <div id="nav-box-contacts">
+                <a href="#contacts" aria-label="link to take the user to the contacts section"><i
+                        class="fa-solid fa-phone"></i> Contacts</a>
+            </div>
+            <div id="nav-box-home">
+                <a href="./index.html" aria-label="link to take the user to the main page"><i
+                        class="fa-solid fa-house"></i> Main page</a>
+            </div>
+            <div id="nav-box-location">
+                <a href="#location" aria-label="A link to take the user to the locaion section"><i
+                        class="fa-solid fa-location-dot"></i> Location</a>
+            </div>
+        </div>
+        <div id="nav-restaurant">
+            <div id="align-n-restaurant">
+                <a href="./rest.html" aria-label="link to take the user to the Restaurant's page"><i
+                        class="fa-solid fa-utensils"></i> Restaurant</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- This is where the header starts, which is offset from the top to allow itself to show underneath the nav section as the user loads the page initially. -->
+
+    <header id="the-head">
+        <div id="header-hotel">
+            <a href="./hotel.html" aria-label="link to go to the Hotel's site">
+                <picture class="head-left-pic">
+                    <source srcset="./assets/hotel_room.jpg" media="(min-width: 660px)"
+                        aria-label="A nicely made double bed in a hotel room.">
+                    <source srcset="./assets/hotel_icon.png" media="(max-width: 660px)" aria-label="Yellow hotel icon.">
+                    <img src="./assets/hotel_room.jpg" alt="" class=""
+                        aria-label="A picture as a link to the description of the hotel and room reservations.">
+                </picture>
+            </a>
+        </div>
+        <div id="header-text">
+            <h1>No. 39</h1>
+            <p>
+                The place
+                <br>
+                <i>where you can</i> <em>just be</em><i>...</i>
+            </p>
+        </div>
+        <div id="header-restaurant">
+            <a href="./rest.html" aria-label="link to take the user to the Restaurant's page">
+                <picture class="head-right-pic">
+                    <source srcset="./assets/wine_glass.jpg" media="(min-width: 660px)"
+                        aria-label="A nicely made double bed in a hotel room.">
+                    <source srcset="./assets/restaurant_icon.png" media="(max-width: 660px)"
+                        aria-label="black and white little icon of a restaurant table with two chairs">
+                    <img src="./assets/wine_glass.jpg" alt=""
+                        aria-label="A picture as a link to the desciption of the restaurant and table bookings.">
+                </picture>
+            </a>
+        </div>
+    </header>
+
+    <!-- This is where the main element accommodates the restaurant booking form, the menu for the restaurant and the opening times. -->
+
+    <main id="main-setup">
+        
+
+    </main>
+
+    <!-- This is where the footer set up starts, to accommodate the "location" and "contacts" sections. -->
+
+    <footer>
+        <section class="border-top border-bottom" id="location">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-6 text-center card mt-1 mb-2">
+                        <h5 class="mt-3 mt-md-5"><i><u>If you don't yet know where to find us:
+
+                                </u></i></h5>
+                        <p class="mt-3 mt-md-5">
+                            No. 39<br>
+                            39 Church St,<br> Weybridge<br> KT13 8DG
+                        </p>
+                    </div>
+                    <div class="col-12 col-md-6 mt-1 mb-1">
+                        <iframe class="map-fit"
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d622.6870943262516!2d-0.4628715!3d51.3709223!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487675dc166b4b85%3A0x7316018a93ed7dad!2sNo%2039%20Bar!5e0!3m2!1sen!2suk!4v1713453814716!5m2!1sen!2suk"
+                            width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade" title="Location of No. 131 showcased with the help of Google Maps"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="border-top" id="contacts">
+            <div class="container">
+                <div class="row">
+                    <div class="col"></div>
+                    <div class="col-12 col-md-7 card mt-1 mb-1 align-items-center">
+                        <h5 class="mt-3 mt-md-5"><i><u>Contact us:</u></i></h5>
+                        <p class="mt-3 mt-md-5">
+                        <ul>
+                            <li>Email: info@no39.com</li>
+                            <li>Phone: 01243005442</li>
+                            <li>Instagram: no39hotrest</li>
+                        </ul>
+                        </p>
+                    </div>
+                    <div class="col"></div>
+                </div>
+            </div>
+        </section>
+    </footer>
+</body>
+
+</html>
