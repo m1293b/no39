@@ -59,7 +59,7 @@ nav[id="nav-background"] a:nth-of-type(1n) {
     border-radius: 5px;
     line-height: 25px;
     border-radius: 15px;
-    border:outset 1px #222831;
+    border: outset 1px #222831;
     min-width: fit-content;
     max-width: 150px;
     width: 15vw;
@@ -209,10 +209,11 @@ header img {
 }
 
 @keyframes header-zoom {
-    from{
+    from {
         transform: scale(0.9);
     }
-    to{
+
+    to {
         transform: scale(1);
     }
 }
@@ -268,14 +269,15 @@ header p {
     right: 3%;
 }
 
-#header-restaurant img:hover, #header-hotel img:hover {
+#header-restaurant img:hover,
+#header-hotel img:hover {
     border: 1px #222831 solid;
 }
 
 /* ---------------------------------------- The main part of the page starts here ---------------------------------------- */
 
 #main-setup {
-    background-color:#222831;
+    background-color: #222831;
     display: flex;
     top: 232px;
     left: 0;
@@ -352,11 +354,17 @@ button[id="book-room"]:hover {
 div[class="menu"] li {
     border-bottom: #222831 solid 1px;
     text-align: center;
-    line-height: 39px; 
+    line-height: 39px;
 }
 
 div[class="main-offers"] li {
     border-bottom: #222831 solid 1px;
     text-align: center;
-    line-height: 20px; 
+    line-height: 20px;
+}
+
+/*  */
+
+#rooms-setup {
+    max-width: 80%;
 }
