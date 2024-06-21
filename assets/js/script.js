@@ -12,7 +12,7 @@ function catMIn(event) {
 
 function catMOut(event) {
     this.children[0].style.borderRadius = "8%";
-    this.children[0].style.border = "0";
+    this.children[0].style.border = "thin solid white";
 };
 
 // The room categories setup starts here. These objects contain the room numbers, amenities, description of the rooms and the service it comes with,
