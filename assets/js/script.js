@@ -30,6 +30,12 @@ let rooms = [
 "Iron and Ironing Board: Ensure you always look your best with the provided iron and ironing board, perfect for quick touch-ups before important meetings.\n" +
 "Designed with the business traveler in mind, the Cosy Room offers a serene environment where you can relax, recharge, and remain productive. Enjoy the perfect balance of comfort and convenience, making your stay both pleasant and efficient.",
         priceFrom: '£120',
+        upsells: [
+            {
+                item: '24/7 Room Service',
+                price: '£10',
+            },
+        ],
     },
     excellent = {
         numbers: [5,6,7,8],
@@ -61,17 +67,54 @@ let rooms = [
 "<b>24/7 Room Service:</b> Take advantage of our 24/7 room service, offering a diverse menu of gourmet dishes and beverages delivered directly to your room at any hour.\n"+
 "<i>Designed with the executive business traveler in mind, the Excellent Room provides a seamless blend of comfort, convenience, and luxury. Whether you're here for business or pleasure, our top-tier amenities and services ensure a stay that exceeds your expectations.</i>",
         priceFrom: '£180',
+        upsells: [
+            {
+                item: 'Meeting Room Rentals',
+                price: 'Customised discounted rates',
+            },
+        ],
     },
     family = {
         numbers: [9,10,11,12],
-        features: ['Super King bed', '2x single beds', 'Walk-in shower', 'Seating area with board games', ''],
-        description: '',
-        priceFrom: '',
+        features: ['Super King bed',
+            '2x single beds',
+            'Walk-in shower',
+            'Seating area with board games'],
+        description: `Welcome to our spacious Family Room, the ideal haven for families seeking comfort, privacy, and fun. This thoughtfully designed suite offers everything you need for a memorable family stay.
+
+Sleeping Arrangements
+Enjoy a restful night's sleep in the luxurious Super King bed, located in the main room, ensuring parents have a tranquil retreat. Adjacent to this is a separate, connected room featuring two comfortable single beds, perfect for children. A door between the rooms allows for privacy when needed, giving everyone their own space to unwind.
+
+Modern Amenities
+Begin your day with a refreshing experience in our modern walk-in shower. The bathroom is equipped with complimentary toiletries and soft, fluffy towels, ensuring your stay is as convenient and comfortable as possible.
+
+Family-Friendly Features
+Spend quality time together in the inviting seating area, designed with families in mind. Engage in friendly competition or collaborative fun with our selection of board games, perfect for creating cherished memories during your stay.
+
+Our Family Room offers a blend of comfort, privacy, and entertainment, making it the ideal choice for families looking to enjoy a home away from home. Book your stay today and create lasting memories with your loved ones!`,
+        priceFrom: '£240',
+        upsells: [],
     },
     superior = {
         numbers: [12,14,15,16],
-        features: ['Emperor bed', 'Roll-top bath', 'Double Walk-in shower', 'Balcony', 'Minibar'],
-        description: '',
-        priceFrom: '',
+        features: ['Emperor bed',
+            'Roll-top bath',
+            'Double Walk-in shower',
+            'Balcony',
+            'Minibar'],
+        description: `Experience unparalleled luxury and comfort in our Superior Suites, the perfect retreat for couples seeking an unforgettable getaway.
+
+Sumptuous Sleeping Arrangements
+Relax and rejuvenate in the lavish Emperor bed, draped in the finest linens and designed to provide the ultimate sleeping experience. Wake up refreshed and ready to embrace the day in this spacious and beautifully appointed suite.
+
+Luxurious Bathing Experience
+Indulge in the elegance of the roll-top bath, ideal for unwinding with a long, soothing soak. The suite also features a double walk-in shower, offering a spacious and invigorating start to your day, complete with premium toiletries and plush towels.
+
+Modern Amenities
+Step out onto your private balcony to enjoy serene views, whether you're sipping your morning coffee or toasting the evening with a glass of wine. Enhance your stay with our well-stocked minibar, offering a selection of premium beverages and snacks for your convenience.
+
+Our Superior Suites blend luxury, comfort, and style, making them the perfect choice for couples seeking a sophisticated and romantic escape. Book your stay today and indulge in the ultimate luxury experience.`,
+        priceFrom: '£260',
+        upsells: [],
     }
 ]
