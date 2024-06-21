@@ -5,14 +5,14 @@ function onLoad() {
 // This function will be executed when the user hovers over one of the divs that contains a picture of a room in that specific category
 
 function catMIn(event) {
-    this.style.fontSize = 'x-large';
-    this.style.fontStyle = 'italic';
-    document.getElementById('family').style.backgroundImage = 'url("./assets/hotel_icon.png")';
+    this.children[0].style.borderRadius = "30%";
+    this.children[0].style.border = "thin solid #222831";
+    this.appendChild
 };
 
 function catMOut(event) {
-    this.style.fontSize = 'large';
-    this.style.fontStyle = 'clear';
+    this.children[0].style.borderRadius = "8%";
+    this.children[0].style.border = "0";
 };
 
 // The room categories setup starts here. These objects contain the room numbers, amenities, description of the rooms and the service it comes with,
@@ -180,7 +180,7 @@ let booking = [];
 
 // This is an Event Listener for hovering over
 
-let categories = document.getElementsByClassName('categories');
+let categories = document.getElementsByClassName('rooms-categories');
 
 for (let i = 0; i < categories.length; i++) {
     categories[i].addEventListener('mouseover', catMIn);

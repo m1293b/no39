@@ -2,6 +2,7 @@
 <html lang="en">
 
 <!-- The header is mostly set up the same for all three HTML files, with the exception of the title. -->
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -59,7 +60,8 @@
                 <picture class="head-left-pic">
                     <source srcset="./assets/images/header/hotel_room.jpg" media="(min-width: 660px)"
                         aria-label="A nicely made double bed in a hotel room.">
-                    <source srcset="./assets/images/header/hotel_icon.png" media="(max-width: 660px)" aria-label="Yellow hotel icon.">
+                    <source srcset="./assets/images/header/hotel_icon.png" media="(max-width: 660px)"
+                        aria-label="Yellow hotel icon.">
                     <img src="./assets/images/header/hotel_room.jpg" alt="" class=""
                         aria-label="A picture as a link to the description of the hotel and room reservations.">
                 </picture>
@@ -90,17 +92,33 @@
     <!-- This is where the main element accommodates the restaurant booking form, the menu for the restaurant and the opening times. -->
 
     <main id="main-setup">
-        
+
         <div class="container text-center" id="rooms-setup">
             <div class="row">
-                <div class="col mt-3 p-2 bg-light rounded" id="cosy"><div class="categories"></div></div>
-                <div class="col mt-3 ml-2 p-2 bg-light rounded" id="excellent"><div class="categories"></div></div>
-                <div class="col mt-3 ml-2 p-2 bg-light rounded" id="family"><div class="categories">HAHO</div></div>
-                <div class="col mt-3 ml-2 p-2 bg-light rounded" id="superior"><div class="categories"></div></div>
+                <div class="col mt-3 p-2 bg-light rounded">
+                    <div class="rooms-categories" id="cosy-select">
+                        <img src="./assets/images/cosy_rooms/pexels-jonathanborba-3144580.jpg" alt="A picture of one of the Cosy rooms">
+                    </div>
+                </div>
+                <div class="col mt-3 ml-2 p-2 bg-light rounded">
+                    <div class="rooms-categories" id="excellent-select">
+                        <img src="./assets/images/excellent_rooms/pexels-heyho-6284232.jpg" alt="A picture of one of the Cosy rooms">
+                    </div>
+                </div>
+                <div class="col mt-3 ml-2 p-2 bg-light rounded">
+                    <div class="rooms-categories" id="family-select">
+                        <img src="./assets/images/family_rooms/pexels-enginakyurt-3688261.jpg" alt="A picture of one of the Cosy rooms">
+                    </div>
+                </div>
+                <div class="col mt-3 ml-2 p-2 bg-light rounded">
+                    <div class="rooms-categories" id="superior-select">
+                        <img src="./assets/images/superior_suites/pexels-heyho-6585757.jpg" alt="A picture of one of the Cosy rooms">
+                    </div>
+                </div>
             </div>
             <div class="row mt-2">
-                <div class="col p-2 bg-light rounded">pictures</div>
-                <div class="col ml-2 p-2 bg-light rounded">description</div>
+                <div class="col p-2 bg-light rounded" id="rooms-picture">pictures</div>
+                <div class="col ml-2 p-2 bg-light rounded" id="rooms-description">description</div>
             </div>
         </div>
 
@@ -125,7 +143,8 @@
                         <iframe class="map-fit"
                             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d622.6870943262516!2d-0.4628715!3d51.3709223!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487675dc166b4b85%3A0x7316018a93ed7dad!2sNo%2039%20Bar!5e0!3m2!1sen!2suk!4v1713453814716!5m2!1sen!2suk"
                             width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade" title="Location of No. 131 showcased with the help of Google Maps"></iframe>
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="Location of No. 131 showcased with the help of Google Maps"></iframe>
                     </div>
                 </div>
             </div>

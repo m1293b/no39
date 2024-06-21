@@ -369,6 +369,15 @@ div[class="main-offers"] li {
     max-width: 80%;
 }
 
-#cosy {
-    background-image: url('.assets');
+.rooms-categories img {
+    border-radius: 8%;
+}
+
+.rooms-categories {
+    min-height: fit-content;
+}
+
+.rooms-categories img {
+    max-width: 90%;
+    height: auto;
 }
