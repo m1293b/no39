@@ -1,3 +1,20 @@
+function onLoad() {
+
+};
+
+// This function will be executed when the user hovers over one of the divs that contains a picture of a room in that specific category
+
+function catMIn(event) {
+    this.style.fontSize = 'x-large';
+    this.style.fontStyle = 'italic';
+    document.getElementById('family').style.backgroundImage = 'url("./assets/hotel_icon.png")';
+};
+
+function catMOut(event) {
+    this.style.fontSize = 'large';
+    this.style.fontStyle = 'clear';
+};
+
 // The room categories setup starts here. These objects contain the room numbers, amenities, description of the rooms and the service it comes with,
 // and the starting price.
 // These information are then used to fill out the divs when the user selects a specific room category.
@@ -34,6 +51,12 @@ let rooms = [
             {
                 item: '24/7 Room Service',
                 price: '£10',
+                description: "",
+            },
+            {
+                item: 'Tech Kits:',
+                price: '£8',
+                description: "Chargers, adapters, and HDMI cables for connecting devices to the room’s TV.",
             },
         ],
     },
@@ -71,6 +94,12 @@ let rooms = [
             {
                 item: 'Meeting Room Rentals',
                 price: 'Customised discounted rates',
+                description: "Discounted rates for on-site meeting room bookings.",
+            },
+            {
+                item: 'Airport Transfers',
+                price: '£80',
+                description: "Luxury car services for airport pick-ups and drop-offs.",
             },
         ],
     },
@@ -93,7 +122,18 @@ Spend quality time together in the inviting seating area, designed with families
 
 Our Family Room offers a blend of comfort, privacy, and entertainment, making it the ideal choice for families looking to enjoy a home away from home. Book your stay today and create lasting memories with your loved ones!`,
         priceFrom: '£240',
-        upsells: [],
+        upsells: [
+            {
+                item: 'Local Experience Packages',
+                price: '£95',
+                description: "Tickets to nearby attractions, theme parks, or family-friendly tours.",
+            },
+            {
+                item: 'Kids Club',
+                price: '£20 per child',
+                description: "Access to the hotel's kids club or supervised play area with organized activities.",
+            },
+        ],
     },
     superior = {
         numbers: [12,14,15,16],
@@ -115,6 +155,34 @@ Step out onto your private balcony to enjoy serene views, whether you're sipping
 
 Our Superior Suites blend luxury, comfort, and style, making them the perfect choice for couples seeking a sophisticated and romantic escape. Book your stay today and indulge in the ultimate luxury experience.`,
         priceFrom: '£260',
-        upsells: [],
+        upsells: [
+            {
+                item: 'In-Room Spa Services',
+                price: '£140',
+                description: 'Couples massages, facials, or private yoga sessions in the comfort of their suite.'
+            },
+            {
+                item: 'Private Dining Experience',
+                price: '180',
+                description: 'Romantic in-room dining with a personalized menu curated by the hotel’s chef.'
+            },
+        ],
     }
 ]
+
+// Next, an array is getting declared, which will be used to store all the information about the experience the user is choosing while going through this page
+
+let booking = [];
+
+// This is the part that is calling for the "onLoad" function that makes loading up the page a bit more interesting.
+
+//window.onload(onLoad());
+
+// This is an Event Listener for hovering over
+
+let categories = document.getElementsByClassName('categories');
+
+for (let i = 0; i < categories.length; i++) {
+    categories[i].addEventListener('mouseover', catMIn);
+    categories[i].addEventListener('mouseleave', catMOut);
+}

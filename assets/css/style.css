@@ -368,3 +368,7 @@ div[class="main-offers"] li {
 #rooms-setup {
     max-width: 80%;
 }
+
+#cosy {
+    background-image: url('.assets');
+}
