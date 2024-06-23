@@ -17,23 +17,22 @@ function catMOut(event) {
 };
 
 function catClick(event) {
-    let picturesHTML = ``;
-    switch (this.whichOne) {
-        case 0:
-            picturesHTML
-            break;
-        case 1:
-            // code block
-            break;
-        case 2:
-            // code block
-            break;
-        case 3:
-            // code block
-            break;
-        default:
-        roomsPictures.innerHTML = `NO`;
-    };
+    
+    let insNumbers = rooms[this.whichOne].numbers.slice();
+    let insFeatures = rooms[this.whichOne].features.slice();
+    let insDescription = rooms[this.whichOne].description;
+    let insPriceFrom = rooms[this.whichOne].priceFrom;
+
+    let descriptionHTML = `<h2><u>Details of the category</u></h2>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    ${insNumbers}\n\n${insDescription}
+    `
+    roomsDescription.innerHTML = descriptionHTML;
 }
 
 // The room categories setup starts here. These objects contain the room numbers, amenities, description of the rooms and the service it comes with,
@@ -42,14 +41,14 @@ function catClick(event) {
 
 let rooms = [
     cosy = {
-        numbers: [1, 2, 3, 4],
+        numbers: ["1", " 2", " 3", " 4"],
         features: [
             'King bed',
-            'Walk-in shower',
-            'Minibar',
-            'Wallet safe',
-            'Wired and Wireless internet connection',
-            'In-Room Coffee and Tea'],
+            ' Walk-in shower',
+            ' Minibar',
+            ' Wallet safe',
+            ' Wired and Wireless internet connection',
+            ' In-Room Coffee and Tea'],
         description: "Welcome to the Cosy Room, your perfect retreat after a busy day. Tailored specifically for the discerning business traveler, this room offers a harmonious blend of comfort and functionality.\n\n" +
 
             "Room Features:\n\n" +
@@ -90,15 +89,15 @@ let rooms = [
             'Laptop safe',
             'Wired and Wireless internet connection',
             'Complimentary coffee and tea'],
-        description: "<i>Experience unparalleled comfort and luxury in our Excellent Room, meticulously designed for the executive business traveler. This room category combines sophisticated amenities with elegant design to create an ideal environment for both relaxation and productivity.</i>\n\n" +
+        description: "<p><i>Experience unparalleled comfort and luxury in our Excellent Room, meticulously designed for the executive business traveler. This room category combines sophisticated amenities with elegant design to create an ideal environment for both relaxation and productivity.</i></p>" +
 
-            "<b>Room Features:</b>\n\n" +
+            "<h5>Room Features:</h5>" +
 
             "<b>Super King Bed:</b> Sink into the lavish super king bed, adorned with premium linens and a selection of pillows to ensure an exceptional sleep experience. The spacious bed provides ample room for stretching out and enjoying a restful night.\n\n" +
 
             "<b>Walk-In Shower:</b> Start your day invigorated or unwind in the evening with our modern walk-in shower. Featuring a luxurious rainfall showerhead and high-end toiletries, it offers a refreshing, spa-like escape.\n\n" +
 
-            "<b>Amenities:</b>\n\n" +
+            "\n\n<b>Amenities:</b>\n\n" +
 
             "<b>Minibar:</b> Enjoy a selection of fine beverages and snacks from the well-stocked minibar, perfect for unwinding after a busy day or hosting a casual meeting in your room.\n" +
             "<b>Work Desk:</b> Enhance your productivity with a dedicated work desk, equipped with an ergonomic chair and ample lighting. The thoughtfully designed space ensures a comfortable and efficient working environment.\n" +
@@ -203,7 +202,7 @@ let booking = [];
 
 let categories = document.getElementsByClassName('rooms-categories');
 let roomsPictures = document.getElementById('rooms-picture');
-let roomsDescription = document.getElementById('rooms-picture');
+let roomsDescription = document.getElementById('rooms-description');
 categories.whichOne = 1;
 for (let i = 0; i < categories.length; i++) {
     categories[i].whichOne = i;
