@@ -1,6 +1,4 @@
-function onLoad() {
-
-};
+let roomsOrder = [];
 
 // This function will be executed when the user hovers over one of the divs that contains a picture of a room in that specific category
 
@@ -16,6 +14,7 @@ function catMOut(event) {
     this.children[0].style.cursor = "default";
 };
 
+
 function catClick(event) {
     
     let insNumbers = rooms[this.whichOne].numbers.slice();
@@ -26,19 +25,32 @@ function catClick(event) {
     let descriptionHTML = `${insDescription}<br><hr><br>
     <h4><u>Available extras</u></h4><br><hr style="width:50%;text-align:center;">
     <ul class = "extras-center">
-        <li><b>${rooms[this.whichOne].upsells[0].item}</b></li>
-        <li><i>${rooms[this.whichOne].upsells[0].price}</i></li>
+        <li><u><b>${rooms[this.whichOne].upsells[0].item}</b></u></li>
+        <li><i><b>${rooms[this.whichOne].upsells[0].price}</b></i></li>
         <li><i>${rooms[this.whichOne].upsells[0].description}</i></li>
+        <li><button type="button" class="btn btn-success" id="first-addon">Add</button></li>
     </ul>
     <br><hr style="width:50%;text-align:center;">
     <ul class = "extras-center">
-        <li><b>${rooms[this.whichOne].upsells[1].item}</b></li>
-        <li><i>${rooms[this.whichOne].upsells[1].price}</i></li>
+        <li><u><b>${rooms[this.whichOne].upsells[1].item}</b></u></li>
+        <li><i><b>${rooms[this.whichOne].upsells[1].price}</b></i></li>
         <li><i>${rooms[this.whichOne].upsells[1].description}</i></li>
+        <li><button type="button" class="btn btn-success" id="second-addon">Add</button></li>
     </ul>
     
     `
+    addEventListener();
     roomsDescription.innerHTML = descriptionHTML;
+};
+
+function addEventListener(){
+    first
+    .addEventListener('click', addExtra);
+    document.getElementById('second-addon').addEventListener('click', addExtra);
+}
+
+function addExtra(event) { 
+    roomsOrder.push();
 }
 
 // The room categories setup starts here. These objects contain the room numbers, amenities, description of the rooms and the service it comes with,
@@ -56,13 +68,13 @@ let rooms = [
             ' Wired and Wireless internet connection',
             ' In-Room Coffee and Tea'],
         description: `<h2><u>Cosy Room</u></h2><br>
-        <p>Our Cosy Room is designed to cater to the needs of business people, offering comfort and convenience at an affordable price. Perfect for the modern professional, this room provides everything you need for a productive and restful stay.</p>
+        <p><i>Our Cosy Rooms are designed to cater to the needs of business people, offering comfort and convenience at an affordable price. Perfect for the modern professional, this room provides everything you need for a productive and restful stay.</i></p>
         
-        <br><h3>Features</h4><br>
+        <br><h4>Features</h4><br>
         <h5>Sleeping Arrangements</h5>
         <p>Relax and unwind in the comfortable King bed, ensuring you get a good night's sleep to prepare for your busy day ahead.</p>
 
-        <h5>Modern Amenities</h5>
+        <br><h5>Modern Amenities</h5>
         <p>Start your day with a refreshing experience in the walk-in shower, equipped with premium toiletries.</p>
         <p>Keep your valuables secure in the in-room wallet safe, providing peace of mind during your stay.</p>
         <p>Stay connected with both wired and wireless internet connections, ideal for business travelers who need reliable internet access.</p>
@@ -73,15 +85,13 @@ let rooms = [
         <p>Prices start from: £120</p>
         
         <br><h5>Room Numbers</h5>
-        <p>Available rooms: 1, 2, 3, 4</p><br><br>
-
-        <p>Our Cosy Room is ideal for business people, offering the perfect blend of comfort, convenience, and functionality for the modern professional.</p>`,
+        <p>Available rooms: 1, 2, 3, 4</p><br><br>`,
         priceFrom: '£120',
         upsells: [
             {
                 item: '24/7 Room Service',
                 price: '£10',
-                description: "",
+                description: "Order anything, anytime.",
             },
             {
                 item: 'Tech Kits',
@@ -99,26 +109,26 @@ let rooms = [
             'Laptop safe',
             'Wired and Wireless internet connection',
             'Complimentary coffee and tea'],
-        description: "<p><i>Experience unparalleled comfort and luxury in our Excellent Room, meticulously designed for the executive business traveler. This room category combines sophisticated amenities with elegant design to create an ideal environment for both relaxation and productivity.</i></p>" +
+        description: `<h2><u>Excellent Room</u></h2><br>
+        <p><i>Our Excellent Rooms offer the ultimate in comfort and convenience, perfect for business professionals in high positions seeking a superior stay experience.</i></p>
+        
+        <br><h4>Features</h4><br>
+        <h5>Sleeping Arrangements</h5>
+        <p>Rest easy in the spacious and luxurious Super King bed, designed to provide you with a peaceful night's sleep.</p>
 
-            "<h5>Room Features:</h5>" +
+        <br><h5>Modern Amenities</h5>
+        <p>Refresh yourself with the walk-in shower, equipped with high-quality toiletries.</p>
+        <p>Enjoy a selection of beverages from the minibar, stocked with a variety of drinks and snacks.</p>
+        <p>Stay productive at the work desk, designed for business travelers who need a dedicated workspace.</p>
+        <p>Secure your valuables in the in-room laptop safe, giving you peace of mind during your stay.</p>
+        <p>Stay connected with both wired and wireless internet connections, ensuring reliable and high-speed access.</p>
+        <p>Complimentary coffee and tea are available in-room, providing you with a quick and convenient refreshment.</p>
 
-            "<b>Super King Bed:</b> Sink into the lavish super king bed, adorned with premium linens and a selection of pillows to ensure an exceptional sleep experience. The spacious bed provides ample room for stretching out and enjoying a restful night.\n\n" +
-
-            "<b>Walk-In Shower:</b> Start your day invigorated or unwind in the evening with our modern walk-in shower. Featuring a luxurious rainfall showerhead and high-end toiletries, it offers a refreshing, spa-like escape.\n\n" +
-
-            "\n\n<b>Amenities:</b>\n\n" +
-
-            "<b>Minibar:</b> Enjoy a selection of fine beverages and snacks from the well-stocked minibar, perfect for unwinding after a busy day or hosting a casual meeting in your room.\n" +
-            "<b>Work Desk:</b> Enhance your productivity with a dedicated work desk, equipped with an ergonomic chair and ample lighting. The thoughtfully designed space ensures a comfortable and efficient working environment.\n" +
-            "<b>Laptop Safe:</b> Keep your valuables and important documents secure in the in-room laptop safe, providing peace of mind during your stay.\n" +
-            "<b>Wired and Wireless Internet Connection:</b> Stay connected with both wired and wireless internet options, ensuring fast and reliable access for all your business and personal needs.\n\n" +
-            "<b>Complimentary Coffee and Tea:</b> Enjoy complimentary coffee and tea in your room, featuring a variety of premium selections to help you start your day or recharge during your busy schedule.\n\n" +
-            "<b>Additional Services:</b>\n\n" +
-
-            "<b>Executive Lounge Access:</b> Benefit from exclusive access to the Executive Lounge, where you can enjoy a range of complimentary refreshments, private meeting spaces, and personalized services designed to cater to your professional needs.\n" +
-            "<b>24/7 Room Service:</b> Take advantage of our 24/7 room service, offering a diverse menu of gourmet dishes and beverages delivered directly to your room at any hour.\n" +
-            "<i>Designed with the executive business traveler in mind, the Excellent Room provides a seamless blend of comfort, convenience, and luxury. Whether you're here for business or pleasure, our top-tier amenities and services ensure a stay that exceeds your expectations.</i>",
+        <br><h5>Pricing</h5>
+        <p>The price starts from £180.</p>
+        
+        <br><h5>Room Numbers</h5>
+        <p>Available rooms: 5, 6, 7, 8</p>`,
         priceFrom: '£180',
         upsells: [
             {
@@ -214,6 +224,7 @@ let booking = [];
 let categories = document.getElementsByClassName('rooms-categories');
 let roomsPictures = document.getElementById('rooms-picture');
 let roomsDescription = document.getElementById('rooms-description');
+
 categories.whichOne = 1;
 for (let i = 0; i < categories.length; i++) {
     categories[i].whichOne = i;
