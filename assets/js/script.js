@@ -23,13 +23,18 @@ function catClick(event) {
     let insDescription = rooms[this.whichOne].description;
     let insPriceFrom = rooms[this.whichOne].priceFrom;
 
-    let descriptionHTML = `${insDescription}<br><hr>
-    <h4>Details</h4>
-    <ul class = "features-center">
-        <li><b>Price from:</b>${insPriceFrom}</li>
-        <li>${insFeatures[1]}</li>
-        <li>${insFeatures[2]}</li>
-        <li>${insFeatures[3]}</li>
+    let descriptionHTML = `${insDescription}<br><hr><br>
+    <h4><u>Available extras</u></h4><br><hr style="width:50%;text-align:center;">
+    <ul class = "extras-center">
+        <li><b>${rooms[this.whichOne].upsells[0].item}</b></li>
+        <li><i>${rooms[this.whichOne].upsells[0].price}</i></li>
+        <li><i>${rooms[this.whichOne].upsells[0].description}</i></li>
+    </ul>
+    <br><hr style="width:50%;text-align:center;">
+    <ul class = "extras-center">
+        <li><b>${rooms[this.whichOne].upsells[1].item}</b></li>
+        <li><i>${rooms[this.whichOne].upsells[1].price}</i></li>
+        <li><i>${rooms[this.whichOne].upsells[1].description}</i></li>
     </ul>
     
     `
@@ -50,23 +55,27 @@ let rooms = [
             ' Wallet safe',
             ' Wired and Wireless internet connection',
             ' In-Room Coffee and Tea'],
-        description: "Welcome to the Cosy Room, your perfect retreat after a busy day. Tailored specifically for the discerning business traveler, this room offers a harmonious blend of comfort and functionality.<br><br>" +
+        description: `<h2><u>Cosy Room</u></h2><br>
+        <p>Our Cosy Room is designed to cater to the needs of business people, offering comfort and convenience at an affordable price. Perfect for the modern professional, this room provides everything you need for a productive and restful stay.</p>
+        
+        <br><h3>Features</h4><br>
+        <h5>Sleeping Arrangements</h5>
+        <p>Relax and unwind in the comfortable King bed, ensuring you get a good night's sleep to prepare for your busy day ahead.</p>
 
-            "Room Features:<br><br>" +
+        <h5>Modern Amenities</h5>
+        <p>Start your day with a refreshing experience in the walk-in shower, equipped with premium toiletries.</p>
+        <p>Keep your valuables secure in the in-room wallet safe, providing peace of mind during your stay.</p>
+        <p>Stay connected with both wired and wireless internet connections, ideal for business travelers who need reliable internet access.</p>
+        <p>Enjoy a selection of beverages with the in-room coffee and tea facilities, perfect for a quick refreshment anytime.</p>
+        <p>The room also includes a minibar stocked with a variety of drinks and snacks for your convenience.</p>
+        
+        <br><br><h5>Pricing</h5>
+        <p>Prices start from: £120</p>
+        
+        <br><h5>Room Numbers</h5>
+        <p>Available rooms: 1, 2, 3, 4</p><br><br>
 
-            "King-Sized Bed: Unwind in the embrace of our plush king-sized bed, designed to provide the utmost comfort and ensure a restful night's sleep. Crisp, high-quality linens and a selection of pillows cater to your personal preference for a truly relaxing experience.<br><br>" +
-
-            "Walk-In Shower: Refresh and rejuvenate in the modern walk-in shower, equipped with premium toiletries and soft, oversized towels. The spacious design and rainfall showerhead promise a spa-like experience to wash away the day's stresses.<br><br>" +
-
-            "<b>Amenities</b>:<br><br>" +
-
-            "<b>Work Desk:</b> A well-appointed workspace featuring a large desk, ergonomic chair, and ample lighting, ensuring productivity and comfort for your business needs.<br><br>" +
-            "<b>High-Speed Wi-Fi:</b> Stay connected with complimentary high-speed Wi-Fi, allowing you to work seamlessly or unwind with your favorite streaming services.<br><br>" +
-            "<b>Flat-Screen TV:</b> Enjoy a variety of local and international channels on the flat-screen TV, perfect for catching up on the news or unwinding with a movie.<br><br>" +
-            "<b>In-Room Coffee and Tea:</b> Kickstart your mornings or recharge during the day with the convenience of an in-room coffee and tea station, stocked with a selection of premium beverages.<br><br>" +
-            "<b>Secure Safe:</b> Keep your valuables secure with the in-room safe, providing peace of mind throughout your stay.<br><br>" +
-            "<b>Iron and Ironing Board:</b> Ensure you always look your best with the provided iron and ironing board, perfect for quick touch-ups before important meetings.<br><br>" +
-            "Designed with the business traveler in mind, the Cosy Room offers a serene environment where you can relax, recharge, and remain productive. Enjoy the perfect balance of comfort and convenience, making your stay both pleasant and efficient.",
+        <p>Our Cosy Room is ideal for business people, offering the perfect blend of comfort, convenience, and functionality for the modern professional.</p>`,
         priceFrom: '£120',
         upsells: [
             {
@@ -75,7 +84,7 @@ let rooms = [
                 description: "",
             },
             {
-                item: 'Tech Kits:',
+                item: 'Tech Kits',
                 price: '£8',
                 description: "Chargers, adapters, and HDMI cables for connecting devices to the room’s TV.",
             },
@@ -185,7 +194,7 @@ Our Superior Suites blend luxury, comfort, and style, making them the perfect ch
             },
             {
                 item: 'Private Dining Experience',
-                price: '180',
+                price: '£180',
                 description: 'Romantic in-room dining with a personalized menu curated by the hotel’s chef.'
             },
         ],

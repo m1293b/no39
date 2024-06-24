@@ -382,12 +382,12 @@ div[class="main-offers"] li {
     height: auto;
 }
 
-.features-center {
+.extras-center {
     padding: 0;
     line-height: 15px;
 }
 
-.features-center li {
+.extras-center li {
     list-style: none;
     line-height: 40px;
 }
