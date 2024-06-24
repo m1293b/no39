@@ -23,14 +23,15 @@ function catClick(event) {
     let insDescription = rooms[this.whichOne].description;
     let insPriceFrom = rooms[this.whichOne].priceFrom;
 
-    let descriptionHTML = `<h2><u>Details of the category</u></h2>
-    <ul>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
+    let descriptionHTML = `${insDescription}<br><hr>
+    <h4>Details</h4>
+    <ul class = "features-center">
+        <li><b>Price from:</b>${insPriceFrom}</li>
+        <li>${insFeatures[1]}</li>
+        <li>${insFeatures[2]}</li>
+        <li>${insFeatures[3]}</li>
     </ul>
-    ${insNumbers}\n\n${insDescription}
+    
     `
     roomsDescription.innerHTML = descriptionHTML;
 }
@@ -49,22 +50,22 @@ let rooms = [
             ' Wallet safe',
             ' Wired and Wireless internet connection',
             ' In-Room Coffee and Tea'],
-        description: "Welcome to the Cosy Room, your perfect retreat after a busy day. Tailored specifically for the discerning business traveler, this room offers a harmonious blend of comfort and functionality.\n\n" +
+        description: "Welcome to the Cosy Room, your perfect retreat after a busy day. Tailored specifically for the discerning business traveler, this room offers a harmonious blend of comfort and functionality.<br><br>" +
 
-            "Room Features:\n\n" +
+            "Room Features:<br><br>" +
 
-            "King-Sized Bed: Unwind in the embrace of our plush king-sized bed, designed to provide the utmost comfort and ensure a restful night's sleep. Crisp, high-quality linens and a selection of pillows cater to your personal preference for a truly relaxing experience.\n\n" +
+            "King-Sized Bed: Unwind in the embrace of our plush king-sized bed, designed to provide the utmost comfort and ensure a restful night's sleep. Crisp, high-quality linens and a selection of pillows cater to your personal preference for a truly relaxing experience.<br><br>" +
 
-            "Walk-In Shower: Refresh and rejuvenate in the modern walk-in shower, equipped with premium toiletries and soft, oversized towels. The spacious design and rainfall showerhead promise a spa-like experience to wash away the day's stresses.\n\n" +
+            "Walk-In Shower: Refresh and rejuvenate in the modern walk-in shower, equipped with premium toiletries and soft, oversized towels. The spacious design and rainfall showerhead promise a spa-like experience to wash away the day's stresses.<br><br>" +
 
-            "Amenities:\n\n" +
+            "<b>Amenities</b>:<br><br>" +
 
-            "Work Desk: A well-appointed workspace featuring a large desk, ergonomic chair, and ample lighting, ensuring productivity and comfort for your business needs.\n" +
-            "High-Speed Wi-Fi: Stay connected with complimentary high-speed Wi-Fi, allowing you to work seamlessly or unwind with your favorite streaming services.\n" +
-            "Flat-Screen TV: Enjoy a variety of local and international channels on the flat-screen TV, perfect for catching up on the news or unwinding with a movie.\n" +
-            "In-Room Coffee and Tea: Kickstart your mornings or recharge during the day with the convenience of an in-room coffee and tea station, stocked with a selection of premium beverages.\n" +
-            "Secure Safe: Keep your valuables secure with the in-room safe, providing peace of mind throughout your stay.\n" +
-            "Iron and Ironing Board: Ensure you always look your best with the provided iron and ironing board, perfect for quick touch-ups before important meetings.\n" +
+            "<b>Work Desk:</b> A well-appointed workspace featuring a large desk, ergonomic chair, and ample lighting, ensuring productivity and comfort for your business needs.<br><br>" +
+            "<b>High-Speed Wi-Fi:</b> Stay connected with complimentary high-speed Wi-Fi, allowing you to work seamlessly or unwind with your favorite streaming services.<br><br>" +
+            "<b>Flat-Screen TV:</b> Enjoy a variety of local and international channels on the flat-screen TV, perfect for catching up on the news or unwinding with a movie.<br><br>" +
+            "<b>In-Room Coffee and Tea:</b> Kickstart your mornings or recharge during the day with the convenience of an in-room coffee and tea station, stocked with a selection of premium beverages.<br><br>" +
+            "<b>Secure Safe:</b> Keep your valuables secure with the in-room safe, providing peace of mind throughout your stay.<br><br>" +
+            "<b>Iron and Ironing Board:</b> Ensure you always look your best with the provided iron and ironing board, perfect for quick touch-ups before important meetings.<br><br>" +
             "Designed with the business traveler in mind, the Cosy Room offers a serene environment where you can relax, recharge, and remain productive. Enjoy the perfect balance of comfort and convenience, making your stay both pleasant and efficient.",
         priceFrom: '£120',
         upsells: [
@@ -129,18 +130,19 @@ let rooms = [
             '2x single beds',
             'Walk-in shower',
             'Seating area with board games'],
-        description: `Welcome to our spacious Family Room, the ideal haven for families seeking comfort, privacy, and fun. This thoughtfully designed suite offers everything you need for a memorable family stay.
+        description: `<h2>Family Room</h2><br>
+        <i><p>Welcome to our spacious Family Room, the ideal haven for families seeking comfort, privacy, and fun. This thoughtfully designed suite offers everything you need for a memorable family stay.</p></i><br>
 
-Sleeping Arrangements
-Enjoy a restful night's sleep in the luxurious Super King bed, located in the main room, ensuring parents have a tranquil retreat. Adjacent to this is a separate, connected room featuring two comfortable single beds, perfect for children. A door between the rooms allows for privacy when needed, giving everyone their own space to unwind.
+        <h5>Sleeping Arrangements</h5>
+        <p>Enjoy a restful night's sleep in the luxurious Super King bed, located in the main room, ensuring parents have a tranquil retreat. Adjacent to this is a separate, connected room featuring two comfortable single beds, perfect for children. A door between the rooms allows for privacy when needed, giving everyone their own space to unwind.</p><br>
 
-Modern Amenities
-Begin your day with a refreshing experience in our modern walk-in shower. The bathroom is equipped with complimentary toiletries and soft, fluffy towels, ensuring your stay is as convenient and comfortable as possible.
+        <h5>Modern Amenities</h5>
+        <p>Begin your day with a refreshing experience in our modern walk-in shower. The bathroom is equipped with complimentary toiletries and soft, fluffy towels, ensuring your stay is as convenient and comfortable as possible.</p><br>
 
-Family-Friendly Features
-Spend quality time together in the inviting seating area, designed with families in mind. Engage in friendly competition or collaborative fun with our selection of board games, perfect for creating cherished memories during your stay.
+        <h5>Family-Friendly</h5>
+        <p>Spend quality time together in the inviting seating area, designed with families in mind. Engage in friendly competition or collaborative fun with our selection of board games, perfect for creating cherished memories during your stay.</p><br>
 
-Our Family Room offers a blend of comfort, privacy, and entertainment, making it the ideal choice for families looking to enjoy a home away from home. Book your stay today and create lasting memories with your loved ones!`,
+        <p>Our Family Room offers a blend of comfort, privacy, and entertainment, making it the ideal choice for families looking to enjoy a home away from home. Book your stay today and create lasting memories with your loved ones!</p>`,
         priceFrom: '£240',
         upsells: [
             {

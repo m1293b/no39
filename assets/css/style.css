@@ -380,5 +380,14 @@ div[class="main-offers"] li {
 .rooms-categories img {
     max-width: 90%;
     height: auto;
-    border: ;
+}
+
+.features-center {
+    padding: 0;
+    line-height: 15px;
+}
+
+.features-center li {
+    list-style: none;
+    line-height: 40px;
 }
