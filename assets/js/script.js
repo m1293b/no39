@@ -1,4 +1,4 @@
-// This function will be executed when the user hovers over one of the divs that contains a picture of a room in that specific category
+// This function will be executed when the user hovers over one of the divs that contains a picture of a room in that specific category.
 
 function catMIn(event) {
     this.children[0].style.borderRadius = "30%";
@@ -6,12 +6,16 @@ function catMIn(event) {
     this.children[0].style.cursor = "pointer";
 };
 
+// This function will be executed when the cursor leaves one of the divs that contains a picture of a room in that specific category.
+
 function catMOut(event) {
     this.children[0].style.borderRadius = "8%";
     this.children[0].style.border = "thin solid white";
     this.children[0].style.cursor = "default";
 };
 
+// This functions changes the innerHTML of the two column divs inside the container to showcase pictures of the selected room category,
+// and display more information about it.
 
 function catClick(event) {
 
@@ -56,7 +60,7 @@ function catClick(event) {
     `
     roomsDescription.innerHTML = descriptionHTML;
     const rndOrdNum = rooms[this.whichOne].numbers[Math.floor(Math.random() * 4)] + ':' + Math.floor((Math.random() * 10000) * 11);
-    roomsSetupNum = rooms[this.whichOne].code + rndOrdNum;
+    roomsSetupNum = rooms[this.whichOne].code + ":" + rndOrdNum;
 
     roomsExtras = `
     <div class="row mt-2">
@@ -80,10 +84,12 @@ function catClick(event) {
         <div class="col p-4 bg-light rounded" id="setup-confirmation"><i>This is where the user sees the booking confirmation.</i></div>
     </div>
     `
-    document.getElementById('select-room').addEventListener('click', nextPage);
+    document.getElementById('select-room').addEventListener('click', nextPageExtras);
 };
 
-function nextPage(event) {
+// This function controls what happens when the user selects the room category by clicking on the button at the bottom of the page.
+
+function nextPageExtras(event) {
 
     window.scrollTo({ top: 0, behavior: 'smooth' });
 
@@ -101,11 +107,14 @@ function nextPage(event) {
     <br><h4>Your booking reference number</h4>
 
     <br><p>${roomsSetupNum}</p>
+    <br><br>
+    <button type="button" class="btn btn-secondary mb-3" id="next-page-details" ;text-align:center; onclick="nextPageDetails(this);">Finalise booking</button>
     `
 }
 
 
-// UPDATE this to make the last section work
+// The functions below control what happens when the user clicks on one of the buttons to add an extra service to their booking.
+
 function addExtra1(event) {
     if (firstExtra === false) {
         roomsSetupNum += ':1e';
@@ -115,6 +124,8 @@ function addExtra1(event) {
     <br><h4>Your booking reference number</h4>
 
     <br><p>${roomsSetupNum}</p>
+    <br><br>
+    <button type="button" class="btn btn-secondary mb-3" id="next-page-details" ;text-align:center; onclick="nextPageDetails(this);">Finalise booking</button>
     `;
         this.style.backgroundColor = "red";
         this.textContent = "Remove";
@@ -131,6 +142,8 @@ function addExtra1(event) {
     <br><h4>Your booking reference number</h4>
 
     <br><p>${roomsSetupNum}</p>
+    <br><br>
+    <button type="button" class="btn btn-secondary mb-3" id="next-page-details" ;text-align:center; onclick="nextPageDetails(this);">Finalise booking</button>
     `;
         firstExtra = false;
     };
@@ -145,6 +158,8 @@ function addExtra2(event) {
     <br><h4>Your booking reference number</h4>
 
     <br><p>${roomsSetupNum}</p>
+    <br><br>
+    <button type="button" class="btn btn-secondary mb-3" id="next-page-details" ;text-align:center; onclick="nextPageDetails(this);">Finalise booking</button>
     `;
         this.style.backgroundColor = "red";
         this.textContent = "Remove";
@@ -160,9 +175,37 @@ function addExtra2(event) {
     <br><h4>Your booking reference number</h4>
 
     <br><p>${roomsSetupNum}</p>
+    <br><br>
+    <button type="button" class="btn btn-secondary mb-3" id="next-page-details" ;text-align:center; onclick="nextPageDetails(this);">Finalise booking</button>
     `;
         secondExtra = false;
     };
+}
+
+// This function takes the user to the hotel.html page where they will be able to provide further information that is required to make a booking.
+
+function nextPageDetails (event) {
+    window.location.href = "./hotel.html";
+}
+
+// To update these functions
+
+function hotelBookingNotesOnLoad (event) {
+
+}
+
+function hotelBookingRoomCatOnLoad (event) {
+    const roomCatTransfer = 
+    
+    // if (roomsSetupNum.includes("co")) {
+
+    // } else if (roomsSetupNum.includes("ex")) {
+
+    // } else if (roomsSetupNum.includes("fa")) {
+        
+    // } else if (roomsSetupNum.includes("su")) {
+        
+    // }
 }
 
 // The room categories setup starts here. These objects contain the room numbers, amenities, description of the rooms and the service it comes with,
@@ -358,21 +401,25 @@ Our Superior Suites blend luxury, comfort, and style, making them the perfect ch
 
 // Next, an array is getting declared, which will be used to store all the information about the experience the user is choosing while going through this page
 
-// This is the part that is calling for the "onLoad" function that makes loading up the page a bit more interesting.
+let roomsSetupNum = '';
 
-//window.onload(onLoad());
-
-// This is an Event Listener for hovering over, cursor leaving or user clicking on one of the room category pictures
+// These variables will be used to acces specific elements or set of elements on the first "page".
 
 let roomsSetup = document.getElementById('rooms-setup');
-let categories = document.getElementsByClassName('rooms-categories');
+let categories = document.getElementsByClassName('room-categories');
 let roomsPictures = document.getElementById('rooms-picture');
 let roomsDescription = document.getElementById('rooms-description');
+
+// This variable is used to tranfer code to the roomsSetup innerHTML to take the user to the next "page".
+
 let roomsExtras = ``;
+
+// These variables are used to determine whether an extra is selected or not.
+
 let firstExtra = false;
 let secondExtra = false;
 
-let roomsSetupNum = '';
+// This for loop iterates through the divs that are in the container with the class of "room-categories"
 
 for (let i = 0; i < categories.length; i++) {
     categories[i].whichOne = i;
