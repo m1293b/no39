@@ -49,47 +49,73 @@ function catClick(event) {
         <li><i>${rooms[this.whichOne].upsells[1].description}</i></li>
     </ul>
     <br><hr style="width:50%;text-align:center;">
-    <br><br>
+    <br>
+    <p><i>* select extras on the next page</i></p><br>
     <button type="button" class="btn btn-success mb-3" id="select-room" style="width:50%;text-align:center;" onclick="nextPage()";>Select Room</button>
     
     `
     roomsDescription.innerHTML = descriptionHTML;
+    const rndOrdNum = rooms[this.whichOne].numbers[Math.floor((Math.random() * 4) + 1)] + ':' + Math.floor((Math.random() * 10000) * 11);
+    roomsSetupNum = rooms[this.whichOne].code + rndOrdNum;
+    
+    roomsExtras = `
+    <div class="row mt-2">
+        <div class="col p-4 bg-light rounded">
+            <ul class = "extras-center">
+                <li><u><b>${rooms[this.whichOne].upsells[0].item}</b></u></li>
+                <li><i><b>${rooms[this.whichOne].upsells[0].price}</b></i></li>
+                <li><i>${rooms[this.whichOne].upsells[0].description}</i></li>
+            </ul>
+            <button type="button" class="btn btn-success mb-3" id="1st-extra-add";text-align:center;" onclick="addExtra1()";>Add</button>
+        <br><hr style="width:50%;text-align:center;">
+            <ul class = "extras-center">
+                <li><u><b>${rooms[this.whichOne].upsells[1].item}</b></u></li>
+                <li><i><b>${rooms[this.whichOne].upsells[1].price}</b></i></li>
+                <li><i>${rooms[this.whichOne].upsells[1].description}</i></li>
+            </ul>
+            <button type="button" class="btn btn-success mb-3" id="2nd-extra-add" ;text-align:center;" onclick="addExtra2()";>Add</button>
+        </div>
+    </div>
+    <div class="row mt-2">
+        <div class="col p-4 bg-light rounded" id="setup-confirmation"><i>This is where the user sees the booking confirmation.</i></div>
+    </div>
+    `
     document.getElementById('select-room').addEventListener('click', nextPage);
-    const rndOrdNum = function rnd() {Math.floor((Matn.random() * 10) * 3)};
-    roomsOrder = rooms[this.whichOne].code + rndOrdNum;
 };
 
 function nextPage(event) {
-    this.style.backgroundColor = "gray";
-    this.textContent = "Loading...";
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-    roomsSetup.innerHTML = `
-    <div class="row mt-2">
-        <div class="col p-4 bg-light rounded" id="select-extras"><i>This is where user can select extras</i></div>
-    </div>
-    <div class="row mt-2">
-        <div class="col p-4 bg-light rounded" id="booking-confirmation"><i>This is where the user sees the booking confirmation.</i></div>
-    </div>
-    `
 
-    let selectExtras = document.getElementById('select-extras');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    roomsSetup.innerHTML = roomsExtras;
+ 
+    let selectExtras = document.getElementById('1st-extra-add');
     selectExtras.addEventListener('click', addExtra1);
 
-    let bookingConf = document.getElementById('booking-confirmation');
+    let bookingConf = document.getElementById('2nd-extra-add');
     bookingConf.addEventListener('click', addExtra2);
 }
 
-function addExtra1() {
-    roomsOrder += '1e'    
-}
-function addExtra2() {
-    roomsOrder = '2e';
-    bookingConf.innerHTML = `
+
+// UPDATE this to make the last section work
+function addExtra1(event) {
+    this.disabled = true;
+    document.getElementById('setup-confirmation').innerHTML = `
     <h2>Thank you for booking your stay with us!</h2>
+    <hr style="width:50%;text-align:center;">
+    <br><h4>Your booking reference number</h4>
 
-    <h4>Your booking reference number</h4>
+    <br><p>${roomsSetupNum}:1e</p>
+    `
+}
+function addExtra2(event) {
+    this.disabled = true;
+    document.getElementById('setup-confirmation').innerHTML = `
+    <h2>Thank you for booking your stay with us!</h2>
+    <hr style="width:50%;text-align:center;">
+    <br><h4>Your booking reference number</h4>
 
-    <br><p>${roomsOrder}</p>
+    <br><p>${roomsSetupNum}:2e</p>
     `
 }
 
@@ -112,7 +138,7 @@ let rooms = [
             "./assets/images/cosy_rooms/pexels-pixabay-164595.jpg",
             "./assets/images/cosy_rooms/pexels-pixabay-271618.jpg",
             "./assets/images/cosy_rooms/pexels-pixabay-271624.jpg",],
-        numbers: ["1", " 2", " 3", " 4"],
+        numbers: ["1", "2", "3", "4"],
         features: [
             'King bed',
             ' Walk-in shower',
@@ -163,7 +189,7 @@ let rooms = [
             "./assets/images/excellent_rooms/pexels-heyho-6316054.jpg",
             "./assets/images/excellent_rooms/pexels-heyho-6933760.jpg",
             "./assets/images/excellent_rooms/pexels-vika-glitter-392079-3315291.jpg",],
-        numbers: [5, 6, 7, 8],
+        numbers: ["5","6","7","8"],
         features: ['Super King bed',
             'Walk-in shower',
             'Minibar',
@@ -216,7 +242,7 @@ let rooms = [
             "./assets/images/family_rooms/pexels-naimbic-2029722.jpg",
             "./assets/images/family_rooms/pexels-pixabay-271631.jpg",
             "./assets/images/family_rooms/pexels-suhel-vba-1749662-3659683.jpg"],
-        numbers: [9, 10, 11, 12],
+        numbers: ["9","10","11","12"],
         features: ['Super King bed',
             '2x single beds',
             'Walk-in shower',
@@ -256,7 +282,7 @@ let rooms = [
             "./assets/images/superior_suites/pexels-heyho-6585757.jpg",
             "./assets/images/superior_suites/pexels-heyho-6587902.jpg",
             "./assets/images/superior_suites/pexels-jvdm-1457847.jpg",],
-        numbers: [12, 14, 15, 16],
+        numbers: ["12","14","15","16"],
         features: ['Emperor bed',
             'Roll-top bath',
             'Double Walk-in shower',
@@ -302,8 +328,9 @@ let roomsSetup = document.getElementById('rooms-setup');
 let categories = document.getElementsByClassName('rooms-categories');
 let roomsPictures = document.getElementById('rooms-picture');
 let roomsDescription = document.getElementById('rooms-description');
+let roomsExtras = ``;
 
-let roomsOrder = '';
+let roomsSetupNum = '';
 
 for (let i = 0; i < categories.length; i++) {
     categories[i].whichOne = i;
