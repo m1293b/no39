@@ -99,24 +99,37 @@ function nextPage(event) {
 
 // UPDATE this to make the last section work
 function addExtra1(event) {
-    this.disabled = true;
+    if (firstExtra === false) {
+        roomsSetupNum += ':1e';
     document.getElementById('setup-confirmation').innerHTML = `
     <h2>Thank you for booking your stay with us!</h2>
     <hr style="width:50%;text-align:center;">
     <br><h4>Your booking reference number</h4>
 
     <br><p>${roomsSetupNum}:1e</p>
-    `
+    `;
+    secondExtra = true;
+    } else {
+        if(roomsSetup.includes == ":1e") {
+            roomsSetup.pop(":1e");
+        }
+        firstExtra = false
+    }
 }
 function addExtra2(event) {
-    this.disabled = true;
+    if (secondExtra === false) {
+        roomsSetupNum += ':2e';
     document.getElementById('setup-confirmation').innerHTML = `
     <h2>Thank you for booking your stay with us!</h2>
     <hr style="width:50%;text-align:center;">
     <br><h4>Your booking reference number</h4>
 
-    <br><p>${roomsSetupNum}:2e</p>
-    `
+    <br><p>${roomsSetupNum}</p>
+    `;
+    secondExtra = true;
+    } else {
+        secondExtra = false;
+    }
 }
 
 
@@ -329,6 +342,8 @@ let categories = document.getElementsByClassName('rooms-categories');
 let roomsPictures = document.getElementById('rooms-picture');
 let roomsDescription = document.getElementById('rooms-description');
 let roomsExtras = ``;
+let firstExtra = false;
+let secondExtra = false;
 
 let roomsSetupNum = '';
 
