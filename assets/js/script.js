@@ -55,9 +55,9 @@ function catClick(event) {
     
     `
     roomsDescription.innerHTML = descriptionHTML;
-    const rndOrdNum = rooms[this.whichOne].numbers[Math.floor((Math.random() * 4) + 1)] + ':' + Math.floor((Math.random() * 10000) * 11);
+    const rndOrdNum = rooms[this.whichOne].numbers[Math.floor(Math.random() * 4)] + ':' + Math.floor((Math.random() * 10000) * 11);
     roomsSetupNum = rooms[this.whichOne].code + rndOrdNum;
-    
+
     roomsExtras = `
     <div class="row mt-2">
         <div class="col p-4 bg-light rounded">
@@ -66,14 +66,14 @@ function catClick(event) {
                 <li><i><b>${rooms[this.whichOne].upsells[0].price}</b></i></li>
                 <li><i>${rooms[this.whichOne].upsells[0].description}</i></li>
             </ul>
-            <button type="button" class="btn btn-success mb-3" id="1st-extra-add";text-align:center;" onclick="addExtra1()";>Add</button>
+            <button type="button" class="btn btn-success mb-3" id="1st-extra-add";text-align:center;>Add</button>
         <br><hr style="width:50%;text-align:center;">
             <ul class = "extras-center">
                 <li><u><b>${rooms[this.whichOne].upsells[1].item}</b></u></li>
                 <li><i><b>${rooms[this.whichOne].upsells[1].price}</b></i></li>
                 <li><i>${rooms[this.whichOne].upsells[1].description}</i></li>
             </ul>
-            <button type="button" class="btn btn-success mb-3" id="2nd-extra-add" ;text-align:center;" onclick="addExtra2()";>Add</button>
+            <button type="button" class="btn btn-success mb-3" id="2nd-extra-add" ;text-align:center;>Add</button>
         </div>
     </div>
     <div class="row mt-2">
@@ -88,12 +88,20 @@ function nextPage(event) {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 
     roomsSetup.innerHTML = roomsExtras;
- 
+
     let selectExtras = document.getElementById('1st-extra-add');
-    selectExtras.addEventListener('click', addExtra1);
+    selectExtras.addEventListener('mouseup', addExtra1);
 
     let bookingConf = document.getElementById('2nd-extra-add');
-    bookingConf.addEventListener('click', addExtra2);
+    bookingConf.addEventListener('mouseup', addExtra2);
+
+    document.getElementById('setup-confirmation').innerHTML = `
+    <h2>Thank you for booking your stay with us!</h2>
+    <hr style="width:50%;text-align:center;">
+    <br><h4>Your booking reference number</h4>
+
+    <br><p>${roomsSetupNum}</p>
+    `
 }
 
 
@@ -101,44 +109,60 @@ function nextPage(event) {
 function addExtra1(event) {
     if (firstExtra === false) {
         roomsSetupNum += ':1e';
-    document.getElementById('setup-confirmation').innerHTML = `
-    <h2>Thank you for booking your stay with us!</h2>
-    <hr style="width:50%;text-align:center;">
-    <br><h4>Your booking reference number</h4>
-
-    <br><p>${roomsSetupNum}:1e</p>
-    `;
-    firstExtra = true;
-    } else {
-        if(roomsSetup.includes == ":1e") {
-            roomsSetup.replace(":1e", "");
-        }
-        firstExtra = false
-    }
-}
-function addExtra2(event) {
-    if (secondExtra === false) {
-        roomsSetupNum += ':2e';
-    document.getElementById('setup-confirmation').innerHTML = `
+        document.getElementById('setup-confirmation').innerHTML = `
     <h2>Thank you for booking your stay with us!</h2>
     <hr style="width:50%;text-align:center;">
     <br><h4>Your booking reference number</h4>
 
     <br><p>${roomsSetupNum}</p>
     `;
-    secondExtra = true;
+        this.style.backgroundColor = "red";
+        this.textContent = "Remove";
+        firstExtra = true;
     } else {
-        if(roomsSetup.includes == ":2e") {
-            roomsSetup.replace(":2e", "");
-        }
-        secondExtra = false;
-    }
+
+        roomsSetupNum = roomsSetupNum.replace(/:1e/g, "");
+        console.log(roomsSetupNum);
+        this.style.backgroundColor = "green";
+        this.textContent = "Add";
+        document.getElementById('setup-confirmation').innerHTML = `
+    <h2>Thank you for booking your stay with us!</h2>
+    <hr style="width:50%;text-align:center;">
+    <br><h4>Your booking reference number</h4>
+
+    <br><p>${roomsSetupNum}</p>
+    `;
+        firstExtra = false;
+    };
 }
+function addExtra2(event) {
+    if (secondExtra === false) {
+        roomsSetupNum += ':2e';
+        console.log(roomsSetupNum);
+        document.getElementById('setup-confirmation').innerHTML = `
+    <h2>Thank you for booking your stay with us!</h2>
+    <hr style="width:50%;text-align:center;">
+    <br><h4>Your booking reference number</h4>
 
+    <br><p>${roomsSetupNum}</p>
+    `;
+        this.style.backgroundColor = "red";
+        this.textContent = "Remove";
+        secondExtra = true;
+    } else {
 
+        roomsSetupNum = roomsSetupNum.replace(/:2e/g, "");
+        this.style.backgroundColor = "green";
+        this.textContent = "Add";
+        document.getElementById('setup-confirmation').innerHTML = `
+    <h2>Thank you for booking your stay with us!</h2>
+    <hr style="width:50%;text-align:center;">
+    <br><h4>Your booking reference number</h4>
 
-function orderConfirm() {
-
+    <br><p>${roomsSetupNum}</p>
+    `;
+        secondExtra = false;
+    };
 }
 
 // The room categories setup starts here. These objects contain the room numbers, amenities, description of the rooms and the service it comes with,
@@ -205,7 +229,7 @@ let rooms = [
             "./assets/images/excellent_rooms/pexels-heyho-6316054.jpg",
             "./assets/images/excellent_rooms/pexels-heyho-6933760.jpg",
             "./assets/images/excellent_rooms/pexels-vika-glitter-392079-3315291.jpg",],
-        numbers: ["5","6","7","8"],
+        numbers: ["5", "6", "7", "8"],
         features: ['Super King bed',
             'Walk-in shower',
             'Minibar',
@@ -258,7 +282,7 @@ let rooms = [
             "./assets/images/family_rooms/pexels-naimbic-2029722.jpg",
             "./assets/images/family_rooms/pexels-pixabay-271631.jpg",
             "./assets/images/family_rooms/pexels-suhel-vba-1749662-3659683.jpg"],
-        numbers: ["9","10","11","12"],
+        numbers: ["9", "10", "11", "12"],
         features: ['Super King bed',
             '2x single beds',
             'Walk-in shower',
@@ -298,7 +322,7 @@ let rooms = [
             "./assets/images/superior_suites/pexels-heyho-6585757.jpg",
             "./assets/images/superior_suites/pexels-heyho-6587902.jpg",
             "./assets/images/superior_suites/pexels-jvdm-1457847.jpg",],
-        numbers: ["12","14","15","16"],
+        numbers: ["12", "14", "15", "16"],
         features: ['Emperor bed',
             'Roll-top bath',
             'Double Walk-in shower',
