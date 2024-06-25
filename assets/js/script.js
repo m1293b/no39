@@ -1,5 +1,3 @@
-let roomsOrder = [];
-
 // This function will be executed when the user hovers over one of the divs that contains a picture of a room in that specific category
 
 function catMIn(event) {
@@ -16,11 +14,26 @@ function catMOut(event) {
 
 
 function catClick(event) {
-    
+
+    let insPictures = rooms[this.whichOne].pictures.slice();
     let insNumbers = rooms[this.whichOne].numbers.slice();
     let insFeatures = rooms[this.whichOne].features.slice();
     let insDescription = rooms[this.whichOne].description;
     let insPriceFrom = rooms[this.whichOne].priceFrom;
+
+    let picturesHTML = `<div id="pics">`;
+
+    for (let i = 0; i < insPictures.length; i++) {
+        picturesHTML += `
+    <div class="pics-in-div">
+        <img src="${insPictures[i]}">
+    </div>
+    `;
+    }
+
+    picturesHTML += `</div>`;
+
+    roomsPictures.innerHTML = picturesHTML;
 
     let descriptionHTML = `${insDescription}<br><hr><br>
     <h4><u>Available extras</u></h4><br><hr style="width:50%;text-align:center;">
@@ -28,30 +41,62 @@ function catClick(event) {
         <li><u><b>${rooms[this.whichOne].upsells[0].item}</b></u></li>
         <li><i><b>${rooms[this.whichOne].upsells[0].price}</b></i></li>
         <li><i>${rooms[this.whichOne].upsells[0].description}</i></li>
-        <li><button type="button" class="btn btn-success" id="first-addon">Add</button></li>
     </ul>
     <br><hr style="width:50%;text-align:center;">
     <ul class = "extras-center">
         <li><u><b>${rooms[this.whichOne].upsells[1].item}</b></u></li>
         <li><i><b>${rooms[this.whichOne].upsells[1].price}</b></i></li>
         <li><i>${rooms[this.whichOne].upsells[1].description}</i></li>
-        <li><button type="button" class="btn btn-success" id="second-addon">Add</button></li>
     </ul>
+    <br><hr style="width:50%;text-align:center;">
+    <br><br>
+    <button type="button" class="btn btn-success mb-3" id="select-room" style="width:50%;text-align:center;" onclick="nextPage()";>Select Room</button>
     
     `
     roomsDescription.innerHTML = descriptionHTML;
-    addEventListener();
+    document.getElementById('select-room').addEventListener('click', nextPage);
+    const rndOrdNum = function rnd() {Math.floor((Matn.random() * 10) * 3)};
+    roomsOrder = rooms[this.whichOne].code + rndOrdNum;
 };
 
-function addEventListener(){
-    let firstAddon = document.getElementById('first-addon');
-    let secondAddon = document.getElementById('second-addon');
-    firstAddon.addEventListener('click', addExtra);
-    secondAddon.addEventListener('click', addExtra);
+function nextPage(event) {
+    this.style.backgroundColor = "gray";
+    this.textContent = "Loading...";
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    roomsSetup.innerHTML = `
+    <div class="row mt-2">
+        <div class="col p-4 bg-light rounded" id="select-extras"><i>This is where user can select extras</i></div>
+    </div>
+    <div class="row mt-2">
+        <div class="col p-4 bg-light rounded" id="booking-confirmation"><i>This is where the user sees the booking confirmation.</i></div>
+    </div>
+    `
+
+    let selectExtras = document.getElementById('select-extras');
+    selectExtras.addEventListener('click', addExtra1);
+
+    let bookingConf = document.getElementById('booking-confirmation');
+    bookingConf.addEventListener('click', addExtra2);
 }
 
-function addExtra(event) { 
-    roomsOrder.push();
+function addExtra1() {
+    roomsOrder += '1e'    
+}
+function addExtra2() {
+    roomsOrder = '2e';
+    bookingConf.innerHTML = `
+    <h2>Thank you for booking your stay with us!</h2>
+
+    <h4>Your booking reference number</h4>
+
+    <br><p>${roomsOrder}</p>
+    `
+}
+
+
+
+function orderConfirm() {
+
 }
 
 // The room categories setup starts here. These objects contain the room numbers, amenities, description of the rooms and the service it comes with,
@@ -60,6 +105,13 @@ function addExtra(event) {
 
 let rooms = [
     cosy = {
+        code: 'co',
+        pictures: [
+            "./assets/images/cosy_rooms/pexels-heyho-6527066.jpg",
+            "./assets/images/cosy_rooms/pexels-jonathanborba-3144580.jpg",
+            "./assets/images/cosy_rooms/pexels-pixabay-164595.jpg",
+            "./assets/images/cosy_rooms/pexels-pixabay-271618.jpg",
+            "./assets/images/cosy_rooms/pexels-pixabay-271624.jpg",],
         numbers: ["1", " 2", " 3", " 4"],
         features: [
             'King bed',
@@ -71,7 +123,9 @@ let rooms = [
         description: `<h2><u>Cosy Room</u></h2><br>
         <p><i>Our Cosy Rooms are designed to cater to the needs of business people, offering comfort and convenience at an affordable price. Perfect for the modern professional, this room provides everything you need for a productive and restful stay.</i></p>
         
-        <br><h4>Features</h4><br>
+        <hr style="width:50%;text-align:center;">
+
+        <br><h3>Features</h3><br>
         <h5>Sleeping Arrangements</h5>
         <p>Relax and unwind in the comfortable King bed, ensuring you get a good night's sleep to prepare for your busy day ahead.</p>
 
@@ -102,6 +156,13 @@ let rooms = [
         ],
     },
     excellent = {
+        code: 'ex',
+        pictures: [
+            "./assets/images/excellent_rooms/pexels-heyho-6032203.jpg",
+            "./assets/images/excellent_rooms/pexels-heyho-6284232.jpg",
+            "./assets/images/excellent_rooms/pexels-heyho-6316054.jpg",
+            "./assets/images/excellent_rooms/pexels-heyho-6933760.jpg",
+            "./assets/images/excellent_rooms/pexels-vika-glitter-392079-3315291.jpg",],
         numbers: [5, 6, 7, 8],
         features: ['Super King bed',
             'Walk-in shower',
@@ -113,7 +174,9 @@ let rooms = [
         description: `<h2><u>Excellent Room</u></h2><br>
         <p><i>Our Excellent Rooms offer the ultimate in comfort and convenience, perfect for business professionals in high positions seeking a superior stay experience.</i></p>
         
-        <br><h4>Features</h4><br>
+        <hr style="width:50%;text-align:center;">
+
+        <br><h3>Features</h3><br>
         <h5>Sleeping Arrangements</h5>
         <p>Rest easy in the spacious and luxurious Super King bed, designed to provide you with a peaceful night's sleep.</p>
 
@@ -145,6 +208,14 @@ let rooms = [
         ],
     },
     family = {
+        code: 'fa',
+        pictures: [
+            "./assets/images/family_rooms/pexels-athenea-codjambassis-rossitto-472760075-26571204.jpg",
+            "./assets/images/family_rooms/pexels-enginakyurt-3688261.jpg",
+            "./assets/images/family_rooms/pexels-fotoaibe-1743229.jpg",
+            "./assets/images/family_rooms/pexels-naimbic-2029722.jpg",
+            "./assets/images/family_rooms/pexels-pixabay-271631.jpg",
+            "./assets/images/family_rooms/pexels-suhel-vba-1749662-3659683.jpg"],
         numbers: [9, 10, 11, 12],
         features: ['Super King bed',
             '2x single beds',
@@ -178,6 +249,13 @@ let rooms = [
         ],
     },
     superior = {
+        code: 'su',
+        pictures: [
+            "./assets/images/superior_suites/pexels-heyho-6032424.jpg",
+            "./assets/images/superior_suites/pexels-heyho-6032425.jpg",
+            "./assets/images/superior_suites/pexels-heyho-6585757.jpg",
+            "./assets/images/superior_suites/pexels-heyho-6587902.jpg",
+            "./assets/images/superior_suites/pexels-jvdm-1457847.jpg",],
         numbers: [12, 14, 15, 16],
         features: ['Emperor bed',
             'Roll-top bath',
@@ -214,19 +292,19 @@ Our Superior Suites blend luxury, comfort, and style, making them the perfect ch
 
 // Next, an array is getting declared, which will be used to store all the information about the experience the user is choosing while going through this page
 
-let booking = [];
-
 // This is the part that is calling for the "onLoad" function that makes loading up the page a bit more interesting.
 
 //window.onload(onLoad());
 
 // This is an Event Listener for hovering over, cursor leaving or user clicking on one of the room category pictures
 
+let roomsSetup = document.getElementById('rooms-setup');
 let categories = document.getElementsByClassName('rooms-categories');
 let roomsPictures = document.getElementById('rooms-picture');
 let roomsDescription = document.getElementById('rooms-description');
 
-categories.whichOne = 1;
+let roomsOrder = '';
+
 for (let i = 0; i < categories.length; i++) {
     categories[i].whichOne = i;
     categories[i].addEventListener('mouseover', catMIn);

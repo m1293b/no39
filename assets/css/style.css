@@ -369,15 +369,12 @@ div[class="main-offers"] li {
     max-width: 80%;
 }
 
-.rooms-categories img {
-    border-radius: 8%;
-}
-
 .rooms-categories {
     min-height: fit-content;
 }
 
 .rooms-categories img {
+    border-radius: 8%;
     max-width: 90%;
     height: auto;
 }
@@ -390,4 +387,26 @@ div[class="main-offers"] li {
 .extras-center li {
     list-style: none;
     line-height: 40px;
+}
+
+#pics {
+    clear: both;
+    line-height: 0%;
+    column-count: 2;
+    column-gap: 0;
+}
+
+.pics-in-div img {
+    max-width: 90%;
+    border: #222831 4px solid;
+    border-radius: 10px;
+}
+
+.pics-in-div {
+    margin: 2px;
+    /* border: #222831 4px solid; */
+    border-radius: 9px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    max-width: fit-content;
 }
