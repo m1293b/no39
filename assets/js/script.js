@@ -399,7 +399,7 @@ Our Superior Suites blend luxury, comfort, and style, making them the perfect ch
     }
 ]
 
-// Next, an array is getting declared, which will be used to store all the information about the experience the user is choosing while going through this page
+// Next, a variable is getting declared, which will be used to store all the information about the experience the user is choosing while going through this page
 
 let roomsSetupNum = '';
 
