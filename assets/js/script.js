@@ -39,14 +39,15 @@ function catClick(event) {
     </ul>
     
     `
-    addEventListener();
     roomsDescription.innerHTML = descriptionHTML;
+    addEventListener();
 };
 
 function addEventListener(){
-    first
-    .addEventListener('click', addExtra);
-    document.getElementById('second-addon').addEventListener('click', addExtra);
+    let firstAddon = document.getElementById('first-addon');
+    let secondAddon = document.getElementById('second-addon');
+    firstAddon.addEventListener('click', addExtra);
+    secondAddon.addEventListener('click', addExtra);
 }
 
 function addExtra(event) { 
