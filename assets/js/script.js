@@ -108,10 +108,10 @@ function addExtra1(event) {
 
     <br><p>${roomsSetupNum}:1e</p>
     `;
-    secondExtra = true;
+    firstExtra = true;
     } else {
         if(roomsSetup.includes == ":1e") {
-            roomsSetup.pop(":1e");
+            roomsSetup.replace(":1e", "");
         }
         firstExtra = false
     }
@@ -128,6 +128,9 @@ function addExtra2(event) {
     `;
     secondExtra = true;
     } else {
+        if(roomsSetup.includes == ":2e") {
+            roomsSetup.replace(":2e", "");
+        }
         secondExtra = false;
     }
 }
