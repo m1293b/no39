@@ -365,6 +365,19 @@ div[class="main-offers"] li {
 
 /*  */
 
+.over-image {
+    font-size: x-large;
+    background-color: #e4e9ea;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
+}
+
 #rooms-setup {
     max-width: 80%;
 }
@@ -377,6 +390,7 @@ div[class="main-offers"] li {
     border-radius: 8%;
     max-width: 90%;
     height: auto;
+    z-index: 3;
 }
 
 .extras-center {

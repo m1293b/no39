@@ -4,6 +4,7 @@ function catMIn(event) {
     this.children[0].style.borderRadius = "30%";
     this.children[0].style.border = "thin solid #222831";
     this.children[0].style.cursor = "pointer";
+    this.children[1].style.visibility = "visible";
 };
 
 // This function will be executed when the cursor leaves one of the divs that contains a picture of a room in that specific category.
@@ -12,6 +13,7 @@ function catMOut(event) {
     this.children[0].style.borderRadius = "8%";
     this.children[0].style.border = "thin solid white";
     this.children[0].style.cursor = "default";
+    this.children[1].style.visibility = "hidden";
 };
 
 // This functions changes the innerHTML of the two column divs inside the container to showcase pictures of the selected room category,
@@ -447,6 +449,7 @@ let roomsSetup = document.getElementById('rooms-setup');
 let categories = document.getElementsByClassName('room-categories');
 let roomsPictures = document.getElementById('rooms-picture');
 let roomsDescription = document.getElementById('rooms-description');
+let roomCategoryLabels = document.getElementsByClassName('over-image');
 
 // This variable is used to tranfer code to the roomsSetup innerHTML to take the user to the next "page".
 
