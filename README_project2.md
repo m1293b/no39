@@ -19,8 +19,8 @@
   ## Testing
   - Testing with validators
   - Manual testing
-  - Restaurant booking form testing
-  - Hotel booking form testing
+  - Room category selection
+  - Add extras
 
   ## Credits
   - Content
@@ -65,16 +65,18 @@
 
   - ## Design choices
 
-    I continued to use curved borders everywhere I found it. Made the experience "lighter", more enjoyable to look at than sharp corners. I tried to implement this feature as much as I could to make the user feel more relax in a way that, if needed, they could spend more time reading through the lines or looking at pictures. I believe it is important to showcase the feeling of the product, in this case a hotel and a restaurant, that we want to advertise.
+    I continued to use curved borders wherever I could. I found Bootstrap's container to be quite usefull again, as it helped me neatly organise the layout, especially when displaying pictures of the rooms.
 
   - ## Business goals
     
-    As a company that offers multiple venues at its property, I would like to give the opportunity for the potential guest to combine the two experiences.
+    This page helps the potential guest to learn more about what the hotel could offer in terms of rooms and services.
 
   - ## Developer goals
 
     I wanted the business to achive its goal by simplifying the way how the user finds the options. I added the links to features that invites the user to buy vouchers, so e.g. family members could surprise their beloved with a present during the festive period. I have also added the option to buy packages, that include an overall discount on the total price, and makes it simpler for the potential guests to organise their stay.
 
+
+<!-- Needs updating -->
   - ## Wireframes
 
     ![A picture of the index.html desktop version.](./assets/wireframes/Main-page-desktop.png "Desktop version of index.html")
@@ -86,23 +88,21 @@
     ![A picture of the rest.html desktop version.](./assets/wireframes/Restaurant-page-desktop.png "Desktop version of rest.html")
     ![A picture of the rest.html tablet version.](./assets/wireframes/Restaurant-page-tablet.png "Tablet version of rest.html")
     ![A picture of the rest.html Mobile version.](./assets/wireframes/Main-page-mobile.png "Mobile version of index.html")
-
+<!-- until here -->
 
 # Features
    
 
   - ## Existing features
     
-  * Being able to see opening times.
-  * Get a better feel of the venues the property offeres.
-  * Booking form for both venues - which will need to be improved as more knowledge becomes available throughout the course.
-  * Location section, to help potential guests to find the venues.
-  * Contact details, to give the opportunity to potential guests to enquire.
+  * Being able to view more pictures of the rooms.
+  * Get a better understanding that services the hotel can offer.
+  * Option to add extras and reference the package the user has put together.
 
   - ## Features left to be implemented
     
+  * To transfer data from the room/extras selection pages to the actual booking form, to pre-populate certain input elements.
   * A database, to process and store data that the user sent via the booking form.
-  * Dynamic menu system - which will be adding more quality to UX.
   
 
 # Technologies used
@@ -112,57 +112,41 @@
 
   - HTML
   - CSS
+  - JavaScript
 
   2. Frameworks, Libraries & Programs Used:
 
   - Bootstrap - Used to create boxes for the main and footer sections.
   - GitHub - Used for making my files available on the web.
-  - FontAwesome - Used for decorating the navigation buttons
 
-  3. Websites used
+  1. Websites used
 
+  - [I used stackoverflow to check for solution when I got tired/stuck.](https://stackoverflow.com/)
+  - [I used w3schools to check for correct syntax whenever I had my code stop working.](https://www.w3schools.com/)
   - [The website I used to check if my website is responsive. I also included a screenshot in the testing section.](https://ui.dev/)
   - [I used Bootstrap's website a lot, especially to get a better idea how to align items.](https://getbootstrap.com/)
-  - [I used this website to find the colour I felt comfortable using with eachother.](https://colorhunt.co)
   - [I used Pexels to find appropriate photos and videos to fit in the subject of my website.](https://www.pexels.com)
-  - [I used FontAwesome to find lttle icons to decorate the buttons in the nav bar.](https://fontawesome.com)
-  - [I used Flaticon to find lttle icons to replace the bigger pictures in the header once they would be too big on a smaller screen.](https://www.flaticon.com)
 
 # Bugs
 
 
-  I had to download the css files, as while testing the live website, the css file would not load properly.
-
-  It felt quite difficult to understand how the positioning works. The Chrome developer tool proved to be quite useful, as taught, and helped me solved the issues I had in the nav element quite quickly.
-  I also tried to make this links and the div they are in responsive. Some of the solutions were creater without the need of a media quiery, then I found it to be useful for other parts.
-
-  I spent quite some time solving the issue with the positioning of the links in the nav element. I found wraping each anchor tag in a div makes it easier to position them. The final issue with the positioning of the anchor tags was aligning them. This is when Chrome's developer tool came in handy, as with the display attribute, it gave me the option to try out different values via a little button next to it.
-  This got me the solution with the justify-content and align-items being set with the correct values.
-
-  As I did not want to paste in all of the section from the css file, this is an example how I managed to display the anchor tags in a way that fit the design:
-
-    
-  #nav-box-contacts { 
-      display: inline-flex;
-      width: 33%;
-      float: left;
-      justify-content: space-evenly;
-      align-items: center;
-      }
+  I had a bug, when I created a function for the EventListener of the "Add" buttons on the last page. I couldn't get it to work so it would add a specific code to
+  the reference number whenever the user clicked on the button, and would remove when the user clicked on the same button. It kept adding the code twice, and after a while I dug deep into my memory and realised, the "click" event counts twice. I changed it to "mouseup", and it works just fine.
     
 
+<!-- Needs updating -->
 # Testing
 
 ## Testing with validators
 
   ## Lighthouse
       
-  ![A screenshot of the Lighthouse results for the mobile version](./assets/testing/Lighthouse/lighthouse_mobile.png "Lighthouse test for the mobile version of the site.")
-  ![A screenshot of the Lighthouse results for the desktop version](./assets/testing/Lighthouse/lighthouse_desktop.png "Lighthouse test for the desktop version of the website.")
+  ![A screenshot of the Lighthouse results for the mobile version](./assets/testing/Lighthouse/lighthouse_mobile_project_2.png "Lighthouse test for the mobile version of the site.")
+  ![A screenshot of the Lighthouse results for the desktop version](./assets/testing/Lighthouse/lighthouse_desktop_project_2.png "Lighthouse test for the desktop version of the website.")
   
   ## W3C HTML
   
-  ![A screenshot of the initial W3C testing result. 6 x errors shown, 4 x to be corrected.](./assets/testing/W3C/first_W3C_testing_result.png "Initial testing HTML of my website with W3C.")
+  ![A screenshot of the initial W3C testing result. 6 x errors shown, 4 x to be corrected.](./assets/testing/W3C/first_W3C_testing_result_project_2.png "Initial testing HTML of my website with W3C.")
 
   After the initial testing, I went through the HTML files and corrected errors shown by the W3C test result.
 
@@ -170,7 +154,7 @@
 
   ## W3C CSS(Jigsaw)
   
-  ![A screenshot of the initial Jigsaw(W3C) testing result. 1 x error that needed to be addressed.](./assets/testing/Jigsaw/first_jigsaw_testing_result.png "Initial testing CSS of my website with W3C.")
+  ![A screenshot of the initial Jigsaw(W3C) testing result. 1 x error that needed to be addressed.](./assets/testing/Jigsaw/first_jigsaw_testing_result_project_2.png "Initial testing CSS of my website with W3C.")
 
   After the initial testing, I went through the CSS file and corrected errors shown by the Jigsaw test result.
 
@@ -226,32 +210,19 @@
   - As a frequent visitor, I would like to be able to easily book a room or a table for my party.
 
     - On the main page, there are a couple of options to get to the booking forms. The user could click on the button in the navigation bar, click on the picture that represents the desired venue or click on the button in the short introduction section.
+<!-- until here -->
 
-## Restaurant booking form testing
+## Room category selection testing
 
-  Checking mandatory fields. Goal: To have a message box popping up to tell the user they have missed to fill out a required field.
+  - The user is able to see which category they are about to select and view more information about once they have hovered over one of the pictures.
+  - The user is able to switch between categories without an issue. The pictures could load faster, so I will look into a fix for that. 
 
-  ![Result of trying to book a table without providing a valid email address.](./assets/testing/Manual/restaurant_form_correct_format_email.png "Result of trying to book a table without providing a valid email address.")
+## Add extras
 
-  ![Result of trying to book a table without filling out the first name box.](./assets/testing/Manual/restaurant_form_mandatory_first_name.png "Result of trying to book a table without filling out the first name box.")
+  - The user can add either of the extras without an issue. Everytime the user adds an extra, the reference number gets updated.
+  - The user can remove the extra service they added earlier. Everytime the user removes an extra, the reference number gets updated.
 
-  ![Result of trying to book a table without choosing a date for the booking.](./assets/testing/Manual/restaurant_form_mandatory_date.png "Result of trying to book a table without choosing a date for the booking.")
-
-  ![Result of booking a table with all the required information.](./assets/testing/Manual/restaurant_form_completion.png "Final result of submitting a booking request.")
-
-## Hotel booking form testing
-
-  Checking mandatory fields. Goal: To have a message box popping up to tell the user they have missed to fill out a required field.
-
-  ![Result of trying to book a room without providing a valid email address.](./assets/testing/Manual/hotel_form_correct_format_email.png "Result of trying to book a room without providing a valid email address.")
-
-  ![Result of trying to book a room without filling out the first name box.](./assets/testing/Manual/hotel_form_mandatory_first_name.png "Result of trying to book a room without filling out the first name box.")
-
-  ![Result of trying to book a room without choosing a date for the booking.](./assets/testing/Manual/hotel_form_mandatory_date.png "Result of trying to book a room without choosing a date for the booking.")
-
-  ![Result of booking a room with all the required information.](./assets/testing/Manual/hotel_form_completion.png "Result of booking a room with all the required information.")   
-
-
+<!-- Needs updating -->
 # Credits
    
   1. ## Content
@@ -271,8 +242,8 @@
   - [Font-awesome icon was used within the anchor tag for the main page's link](https://fontawesome.com/icons/house?f=classic&s=solid)
   - [Font-awesome icon was used within the anchor tag for the location's link](https://fontawesome.com/icons/location-dot?f=classic&s=solid)
   - [Font-awesome icon was used within the anchor tag for the restaurants's link](https://fontawesome.com/icons/utensils?f=classic&s=solid)
-  
+  <!-- until here -->
   3. ## Code
    
-  - I've got the idea of margin: 0 auto; from the "I love running" project. It is an easy way to devide the width of the screen by 3 equaly sized sections.
-  - I've used form-group from Bootstrap's website as a template for my booking forms.
+  - Official site like W3School and Bootstrap help to create a great lyaout that functions well.
+  - StackOverflow helped me to see how others solved the issues their code had and I manage to use some of the solutions after customising them to fit my code.
