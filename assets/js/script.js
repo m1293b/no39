@@ -25,11 +25,11 @@ function catClick(event) {
     let insDescription = rooms[this.whichOne].description;
     let insPriceFrom = rooms[this.whichOne].priceFrom;
 
-    let picturesHTML = `<div id="pics">`;
+    let picturesHTML = `<div class="row justify-content-center" id="pics">`;
 
     for (let i = 0; i < insPictures.length; i++) {
         picturesHTML += `
-    <div class="pics-in-div">
+    <div class="pics-in-div col-12 col-md-5">
         <img src="${insPictures[i]}">
     </div>
     `;
@@ -61,6 +61,8 @@ function catClick(event) {
     roomsDescription.innerHTML = descriptionHTML;
     const rndOrdNum = rooms[this.whichOne].numbers[Math.floor(Math.random() * 4)] + ':' + Math.floor((Math.random() * 10000) * 11);
     roomsSetupNum = rooms[this.whichOne].code + ":" + rndOrdNum;
+
+    whichRoom = rooms[this.whichOne].code;
 
     roomsExtras = `
     <div class="row mt-2">
@@ -102,15 +104,22 @@ function nextPageExtras(event) {
     bookingConf.addEventListener('mouseup', addExtra2);
 
     document.getElementById('setup-confirmation').innerHTML = `
-    <h2>Thank you for booking your stay with us!</h2>
-    <hr style="width:50%;text-align:center;">
-    <br><h4>Your booking reference number</h4>
+        <br><h4>Your package reference number</h4>
 
     <br><p>${roomsSetupNum}</p>
-    <br><br>
+    <hr style="width:50%;text-align:center;">
+    <br>
+    <p class = "text-center"><i>Thank you for choosing our ${whichRoom} room for your ideal stay, and for selecting any additional extras to enhance your stay. 
+    <br><br>To ensure we accommodate all your needs, please quote the reference number you just received in the "Additional notes" on the following page.
+    <br><br>This will help our team prepare for your arrival and meet your specific requirements.
+    <br><br>Additionally, please select the appropriate room category on the following page if you wish to utilize the extras you have chosen.
+    <br><br>If you would like to reserve a table at our restaurant for the duration of your stay, you can do so on the Restaurant's page or by requesting it in the additional notes section as well.
+    <br><br><br>We look forward to making your stay unforgettable.</i></p>
+    <br>
+    <hr style="width:50%;text-align:center;">
     <button type="button" class="btn btn-secondary mb-3" id="next-page-details" ;text-align:center; onclick="nextPageDetails(this);">Finalise booking</button>
     `
-}
+};
 
 
 // The functions below control what happens when the user clicks on one of the buttons to add an extra service to their booking.
@@ -119,12 +128,19 @@ function addExtra1(event) {
     if (firstExtra === false) {
         roomsSetupNum += ':1e';
         document.getElementById('setup-confirmation').innerHTML = `
-    <h2>Thank you for booking your stay with us!</h2>
-    <hr style="width:50%;text-align:center;">
-    <br><h4>Your booking reference number</h4>
+        <br><h4>Your package reference number</h4>
 
     <br><p>${roomsSetupNum}</p>
-    <br><br>
+    <hr style="width:50%;text-align:center;">
+    <br>
+    <p class = "text-center"><i>Thank you for choosing our ${whichRoom} room for your ideal stay, and for selecting any additional extras to enhance your stay. 
+    <br><br>To ensure we accommodate all your needs, please quote the reference number you just received in the "Additional notes" on the following page.
+    <br><br>This will help our team prepare for your arrival and meet your specific requirements.
+    <br><br>Additionally, please select the appropriate room category on the following page if you wish to utilize the extras you have chosen.
+    <br><br>If you would like to reserve a table at our restaurant for the duration of your stay, you can do so on the Restaurant's page or by requesting it in the additional notes section as well.
+    <br><br><br>We look forward to making your stay unforgettable.</i></p>
+    <br>
+    <hr style="width:50%;text-align:center;">
     <button type="button" class="btn btn-secondary mb-3" id="next-page-details" ;text-align:center; onclick="nextPageDetails(this);">Finalise booking</button>
     `;
         this.style.backgroundColor = "red";
@@ -137,28 +153,43 @@ function addExtra1(event) {
         this.style.backgroundColor = "green";
         this.textContent = "Add";
         document.getElementById('setup-confirmation').innerHTML = `
-    <h2>Thank you for booking your stay with us!</h2>
-    <hr style="width:50%;text-align:center;">
-    <br><h4>Your booking reference number</h4>
+        <br><h4>Your package reference number</h4>
 
     <br><p>${roomsSetupNum}</p>
-    <br><br>
+    <hr style="width:50%;text-align:center;">
+    <br>
+    <p class = "text-center"><i>Thank you for choosing our ${whichRoom} room for your ideal stay, and for selecting any additional extras to enhance your stay. 
+    <br><br>To ensure we accommodate all your needs, please quote the reference number you just received in the "Additional notes" on the following page.
+    <br><br>This will help our team prepare for your arrival and meet your specific requirements.
+    <br><br>Additionally, please select the appropriate room category on the following page if you wish to utilize the extras you have chosen.
+    <br><br>If you would like to reserve a table at our restaurant for the duration of your stay, you can do so on the Restaurant's page or by requesting it in the additional notes section as well.
+    <br><br><br>We look forward to making your stay unforgettable.</i></p>
+    <br>
+    <hr style="width:50%;text-align:center;">
     <button type="button" class="btn btn-secondary mb-3" id="next-page-details" ;text-align:center; onclick="nextPageDetails(this);">Finalise booking</button>
     `;
         firstExtra = false;
     };
-}
+};
+
 function addExtra2(event) {
     if (secondExtra === false) {
         roomsSetupNum += ':2e';
         console.log(roomsSetupNum);
         document.getElementById('setup-confirmation').innerHTML = `
-    <h2>Thank you for booking your stay with us!</h2>
-    <hr style="width:50%;text-align:center;">
-    <br><h4>Your booking reference number</h4>
+        <br><h4>Your package reference number</h4>
 
     <br><p>${roomsSetupNum}</p>
-    <br><br>
+    <hr style="width:50%;text-align:center;">
+    <br>
+    <p class = "text-center"><i>Thank you for choosing our ${whichRoom} room for your ideal stay, and for selecting any additional extras to enhance your stay. 
+    <br><br>To ensure we accommodate all your needs, please quote the reference number you just received in the "Additional notes" on the following page.
+    <br><br>This will help our team prepare for your arrival and meet your specific requirements.
+    <br><br>Additionally, please select the appropriate room category on the following page if you wish to utilize the extras you have chosen.
+    <br><br>If you would like to reserve a table at our restaurant for the duration of your stay, you can do so on the Restaurant's page or by requesting it in the additional notes section as well.
+    <br><br><br>We look forward to making your stay unforgettable.</i></p>
+    <br>
+    <hr style="width:50%;text-align:center;">
     <button type="button" class="btn btn-secondary mb-3" id="next-page-details" ;text-align:center; onclick="nextPageDetails(this);">Finalise booking</button>
     `;
         this.style.backgroundColor = "red";
@@ -170,43 +201,30 @@ function addExtra2(event) {
         this.style.backgroundColor = "green";
         this.textContent = "Add";
         document.getElementById('setup-confirmation').innerHTML = `
-    <h2>Thank you for booking your stay with us!</h2>
-    <hr style="width:50%;text-align:center;">
-    <br><h4>Your booking reference number</h4>
+        <br><h4>Your package reference number</h4>
 
     <br><p>${roomsSetupNum}</p>
-    <br><br>
+    <hr style="width:50%;text-align:center;">
+    <br>
+    <p class = "text-center"><i>Thank you for choosing our ${whichRoom} room for your ideal stay, and for selecting any additional extras to enhance your stay. 
+    <br><br>To ensure we accommodate all your needs, please quote the reference number you just received in the "Additional notes" on the following page.
+    <br><br>This will help our team prepare for your arrival and meet your specific requirements.
+    <br><br>Additionally, please select the appropriate room category on the following page if you wish to utilize the extras you have chosen.
+    <br><br>If you would like to reserve a table at our restaurant for the duration of your stay, you can do so on the Restaurant's page or by requesting it in the additional notes section as well.
+    <br><br><br>We look forward to making your stay unforgettable.</i></p>
+    <br>
+    <hr style="width:50%;text-align:center;">
     <button type="button" class="btn btn-secondary mb-3" id="next-page-details" ;text-align:center; onclick="nextPageDetails(this);">Finalise booking</button>
     `;
         secondExtra = false;
     };
-}
+};
 
 // This function takes the user to the hotel.html page where they will be able to provide further information that is required to make a booking.
 
-function nextPageDetails (event) {
+function nextPageDetails(event) {
     window.location.href = "./hotel.html";
-}
-
-// To update these functions
-
-function hotelBookingNotesOnLoad (event) {
-
-}
-
-function hotelBookingRoomCatOnLoad (event) {
-    const roomCatTransfer = 
-    
-    // if (roomsSetupNum.includes("co")) {
-
-    // } else if (roomsSetupNum.includes("ex")) {
-
-    // } else if (roomsSetupNum.includes("fa")) {
-        
-    // } else if (roomsSetupNum.includes("su")) {
-        
-    // }
-}
+};
 
 // The room categories setup starts here. These objects contain the room numbers, amenities, description of the rooms and the service it comes with,
 // and the starting price.
@@ -214,7 +232,7 @@ function hotelBookingRoomCatOnLoad (event) {
 
 let rooms = [
     cosy = {
-        code: 'co',
+        code: 'Cosy',
         pictures: [
             "./assets/images/cosy_rooms/pexels-heyho-6527066.jpg",
             "./assets/images/cosy_rooms/pexels-jonathanborba-3144580.jpg",
@@ -248,8 +266,8 @@ let rooms = [
         <br><br><h5>Pricing</h5>
         <p>Prices start from: £120</p>
         
-        <br><h5>Room Numbers</h5>
-        <p>Available rooms: 1, 2, 3, 4</p><br><br>`,
+        <br><h5>Available rooms</h5>
+        <p>1, 2, 3, 4</p>`,
         priceFrom: '£120',
         upsells: [
             {
@@ -265,12 +283,12 @@ let rooms = [
         ],
     },
     excellent = {
-        code: 'ex',
+        code: 'Excellent',
         pictures: [
             "./assets/images/excellent_rooms/pexels-heyho-6032203.jpg",
+            "./assets/images/excellent_rooms/pexels-heyho-6933760.jpg",
             "./assets/images/excellent_rooms/pexels-heyho-6284232.jpg",
             "./assets/images/excellent_rooms/pexels-heyho-6316054.jpg",
-            "./assets/images/excellent_rooms/pexels-heyho-6933760.jpg",
             "./assets/images/excellent_rooms/pexels-vika-glitter-392079-3315291.jpg",],
         numbers: ["5", "6", "7", "8"],
         features: ['Super King bed',
@@ -297,11 +315,11 @@ let rooms = [
         <p>Stay connected with both wired and wireless internet connections, ensuring reliable and high-speed access.</p>
         <p>Complimentary coffee and tea are available in-room, providing you with a quick and convenient refreshment.</p>
 
-        <br><h5>Pricing</h5>
+        <br><br><h5>Pricing</h5>
         <p>The price starts from £180.</p>
         
-        <br><h5>Room Numbers</h5>
-        <p>Available rooms: 5, 6, 7, 8</p>`,
+        <br><h5>Available rooms</h5>
+        <p>5, 6, 7, 8</p>`,
         priceFrom: '£180',
         upsells: [
             {
@@ -317,7 +335,7 @@ let rooms = [
         ],
     },
     family = {
-        code: 'fa',
+        code: 'Family',
         pictures: [
             "./assets/images/family_rooms/pexels-athenea-codjambassis-rossitto-472760075-26571204.jpg",
             "./assets/images/family_rooms/pexels-enginakyurt-3688261.jpg",
@@ -330,19 +348,28 @@ let rooms = [
             '2x single beds',
             'Walk-in shower',
             'Seating area with board games'],
-        description: `<h2>Family Room</h2><br>
+        description: `<h2><u>Family Room</u></h2><br>
         <i><p>Welcome to our spacious Family Room, the ideal haven for families seeking comfort, privacy, and fun. This thoughtfully designed suite offers everything you need for a memorable family stay.</p></i><br>
 
+        <hr style="width:50%;text-align:center;">
+
+        <br><h3>Features</h3><br>
         <h5>Sleeping Arrangements</h5>
         <p>Enjoy a restful night's sleep in the luxurious Super King bed, located in the main room, ensuring parents have a tranquil retreat. Adjacent to this is a separate, connected room featuring two comfortable single beds, perfect for children. A door between the rooms allows for privacy when needed, giving everyone their own space to unwind.</p><br>
 
-        <h5>Modern Amenities</h5>
+        <br><h5>Modern Amenities</h5>
         <p>Begin your day with a refreshing experience in our modern walk-in shower. The bathroom is equipped with complimentary toiletries and soft, fluffy towels, ensuring your stay is as convenient and comfortable as possible.</p><br>
 
-        <h5>Family-Friendly</h5>
+        <br><h5>Family-Friendly</h5>
         <p>Spend quality time together in the inviting seating area, designed with families in mind. Engage in friendly competition or collaborative fun with our selection of board games, perfect for creating cherished memories during your stay.</p><br>
 
-        <p>Our Family Room offers a blend of comfort, privacy, and entertainment, making it the ideal choice for families looking to enjoy a home away from home. Book your stay today and create lasting memories with your loved ones!</p>`,
+        <p>Our Family Room offers a blend of comfort, privacy, and entertainment, making it the ideal choice for families looking to enjoy a home away from home. Book your stay today and create lasting memories with your loved ones!</p>
+
+        <br><br><h5>Pricing</h5>
+        <p>The price starts from £2400.</p>
+        
+        <br><h5>Available rooms</h5>
+        <p>9, 10, 11, 12</p>`,
         priceFrom: '£240',
         upsells: [
             {
@@ -358,31 +385,42 @@ let rooms = [
         ],
     },
     superior = {
-        code: 'su',
+        code: 'Superior',
         pictures: [
-            "./assets/images/superior_suites/pexels-heyho-6032424.jpg",
             "./assets/images/superior_suites/pexels-heyho-6032425.jpg",
             "./assets/images/superior_suites/pexels-heyho-6585757.jpg",
-            "./assets/images/superior_suites/pexels-heyho-6587902.jpg",
-            "./assets/images/superior_suites/pexels-jvdm-1457847.jpg",],
+            "./assets/images/superior_suites/pexels-heyho-6032424.jpg",
+            "./assets/images/superior_suites/pexels-jvdm-1457847.jpg",
+            "./assets/images/superior_suites/pexels-heyho-6587902.jpg",],
         numbers: ["12", "14", "15", "16"],
         features: ['Emperor bed',
             'Roll-top bath',
             'Double Walk-in shower',
             'Balcony',
             'Minibar'],
-        description: `Experience unparalleled luxury and comfort in our Superior Suites, the perfect retreat for couples seeking an unforgettable getaway.
+        description: `<h2><u>Superior Suite</u></h2><br><br>
+        <p><i>Experience the epitome of luxury and comfort in our Superior Suite, the perfect retreat for couples seeking an unforgettable getaway.</i></p>
 
-Sumptuous Sleeping Arrangements
-Relax and rejuvenate in the lavish Emperor bed, draped in the finest linens and designed to provide the ultimate sleeping experience. Wake up refreshed and ready to embrace the day in this spacious and beautifully appointed suite.
+        <hr style="width:50%;text-align:center;">
 
-Luxurious Bathing Experience
-Indulge in the elegance of the roll-top bath, ideal for unwinding with a long, soothing soak. The suite also features a double walk-in shower, offering a spacious and invigorating start to your day, complete with premium toiletries and plush towels.
+        <br><h3>Features</h3><br>
+        <h5>Sleeping Arrangements</h5>
+        <p>Relax and rejuvenate in the lavish Emperor bed, draped in the finest linens and designed to provide the ultimate sleeping experience.</p>
 
-Modern Amenities
-Step out onto your private balcony to enjoy serene views, whether you're sipping your morning coffee or toasting the evening with a glass of wine. Enhance your stay with our well-stocked minibar, offering a selection of premium beverages and snacks for your convenience.
+        <br><h5>Luxurious Bathing Experience</h5>
+        <p>Indulge in the elegance of the roll-top bath, ideal for unwinding with a long, soothing soak. The suite also features a double walk-in shower, offering a spacious and invigorating start to your day, complete with premium toiletries and plush towels.</p>
 
-Our Superior Suites blend luxury, comfort, and style, making them the perfect choice for couples seeking a sophisticated and romantic escape. Book your stay today and indulge in the ultimate luxury experience.`,
+        <br><h5>Private Balcony</h5>
+        <p>Step out onto your private balcony to enjoy serene views, whether you're sipping your morning coffee or toasting the evening with a glass of wine.</p>
+
+        <br><h5>Modern Amenities</h5>
+        <p>Enhance your stay with our well-stocked minibar, offering a selection of premium beverages and snacks for your convenience.</p>
+
+        <br><br><h5>Pricing</h5>
+        <p>Prices start from: £260</p>
+        
+        <br><h5>Available rooms</h5>
+        <p>12, 14, 15, 16</p>`,
         priceFrom: '£260',
         upsells: [
             {
@@ -418,6 +456,10 @@ let roomsExtras = ``;
 
 let firstExtra = false;
 let secondExtra = false;
+
+// This variable is used on the final page of the room selection, to thank the user for selecting the specific room.
+
+let whichRoom = '';
 
 // This for loop iterates through the divs that are in the container with the class of "room-categories"
 

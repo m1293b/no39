@@ -369,11 +369,11 @@ div[class="main-offers"] li {
     max-width: 80%;
 }
 
-.rooms-categories {
+.room-categories {
     min-height: fit-content;
 }
 
-.rooms-categories img {
+.room-categories img {
     border-radius: 8%;
     max-width: 90%;
     height: auto;
@@ -387,13 +387,6 @@ div[class="main-offers"] li {
 .extras-center li {
     list-style: none;
     line-height: 40px;
-}
-
-#pics {
-    clear: both;
-    line-height: 0%;
-    column-count: 2;
-    column-gap: 0;
 }
 
 .pics-in-div img {
