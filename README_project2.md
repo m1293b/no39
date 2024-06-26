@@ -162,7 +162,7 @@
 
   ## Final website
 
-  ![A screenshot of my website on different screen sizes.](./assets/testing/final_screens.png "A screenshot of my website on different screen sizes.")
+  ![A screenshot of my website on different screen sizes.](./assets/testing/final_screens_second_project.png "A screenshot of my website on different screen sizes.")
   
 ## Manual testing
 
