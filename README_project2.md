@@ -79,8 +79,8 @@
 <!-- Needs updating -->
   - ## Wireframes
 
-    ![A picture of the index.html desktop version.](./assets/wireframes/Main-page-desktop.png "Desktop version of index.html")
-    ![A picture of the index.html tablet version.](./assets/wireframes/Main-page-tablet.png "Tablet version of index.html")
+    ![A picture of the rooms.html desktop version.](./assets/wireframes/Main-page-desktop.png "Desktop version of index.html")
+    ![A picture of the index.html tablet version.](./assets/wireframes/rooms-first-page-tablet.png "Tablet version of index.html")
     ![A picture of the index.html mobile version.](./assets/wireframes/Main-page-mobile.png "Mobile version of index.html")
     ![A picture of the hotel.html desktop version.](./assets/wireframes/Hotel-page-desktop.png "Desktop version of hotel.html")
     ![A picture of the hotel.html tablet version.](./assets/wireframes/Hotel-page-tablet.png "Tablet version of hotel.html")
@@ -156,54 +156,34 @@
 
   ![A screenshot of the finished website on different screen sizes.](./assets/testing/final_screens_second_project.png "A screenshot of the finished website on different screen sizes.")
 
-<!-- Needs updating -->
+
 ## Manual testing
 
-  - User stories
+  ### User Stories
 
-  1.  First time visitor goals:
-  
-  - As a first time visitor, I would like to be able to understand what is the purpose of the website.
+  #### As a Solo Traveler
+  - **Story**: I want a comfortable and affordable room with essential amenities so that I can have a pleasant and convenient stay without overspending.
+  - **Test Result**: The Cosy Room category fulfills this requirement with its king bed, walk-in shower, minibar, and complimentary coffee and tea. Prices start from £120.
 
-    - As I arrive to the website's main page, it is apparent that it offers accommodation and has a restaurant on-site as well.
-  
-  - As a first time visitor, I would like to be able to easily navigate through the pages.
+  #### As a Business Professional
+  - **Story**: I want a room equipped with a work desk, high-speed internet, and a laptop safe so that I can work efficiently and securely during my stay.
+  - **Test Result**: The Excellent Room category meets this need, offering a super king bed, work desk, wired and wireless internet connection, and a laptop safe.
 
-    - The navigation bar is clear and visible regardless how much the user scrolled down.
+  #### As a Family
+  - **Story**: I want a spacious room with separate sleeping areas for parents and children so that our family can enjoy a comfortable and private stay.
+  - **Test Result**: The Family Room category addresses this need with a super king bed for parents, two single beds in a separate connected room, and a seating area with board games.
 
-  - As a first time visitor, I would like to be able to find the location information.
+  #### As a Couple
+  - **Story**: I want a luxurious suite with premium amenities like a roll-top bath and balcony so that we can have a romantic and relaxing getaway.
+  - **Test Result**: The Superior Suite provides an emperor bed, roll-top bath, double walk-in shower, balcony, and minibar.
 
-    - If someone just searches for "restaurants nearby" and opens my website, they would not know how nearby the venue us. For this very reason, I have included a "Location" button to take the user to the iframe that accommodates Google Maps with the venue's location set as default.
+  #### As an Event Organizer
+  - **Story**: I want access to meeting room rentals and airport transfers so that I can coordinate business events and travel logistics smoothly.
+  - **Test Result**: The website offers meeting room rentals at customized discounted rates and airport transfers for £80, available as extras with the Excellent Room category.
 
-  2.  Returning visitor goals:
-
-  - As a returning visitor, I would like to be able to comfortably find the previously visited sites.
-
-    - The navigation bar is fixed to the top of the page, so it is available all the time.
-
-  - As a returning visitor, I would like to be able to be able to find the contact details, regardless which page I am viewing.
-
-    - For this reason, there is a button in the navigation section that takes the user to the contact details, regardless which page they are viewing.
-
-  - As a returning visitor, I would like to be able to find other experiences the venue offers.
-
-    - Both the hotel's and the restaurant's short introduction is located on the main page, which makes it easier for the user to, as an example, book a table for the day of their arrival to the hotel.
-
-  
-  3.  Frequent visitor goals:
-
-  - As a frequent visitor, I would like to be able to easily find out if there are any updates on the packages.
-
-    - All the offer's names show up on the main page, following the appropriate venues short introduction.
-
-  - As a frequent visitor, I would like to be able to see the restaurant opening times.
-
-    - The opening times sections follows the booking form, which makes it convenient for the user to have a look while booking their next visit.
-
-  - As a frequent visitor, I would like to be able to easily book a room or a table for my party.
-
-    - On the main page, there are a couple of options to get to the booking forms. The user could click on the button in the navigation bar, click on the picture that represents the desired venue or click on the button in the short introduction section.
-<!-- until here -->
+  #### As a Food Enthusiast
+  - **Story**: I want the option to reserve a table at the hotel's restaurant so that I can enjoy fine dining without leaving the hotel premises.
+  - **Test Result**: Users can reserve a table at the restaurant via the Restaurant's page or request it in the additional notes section during booking.
 
 ## Room category selection testing
 
