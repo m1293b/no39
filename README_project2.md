@@ -134,7 +134,7 @@
   the reference number whenever the user clicked on the button, and would remove when the user clicked on the same button. It kept adding the code twice, and after a while I dug deep into my memory and realised, the "click" event counts twice. I changed it to "mouseup", and it works just fine.
     
 
-<!-- Needs updating -->
+
 # Testing
 
 ## Testing with validators
@@ -146,24 +146,17 @@
   
   ## W3C HTML
   
-  ![A screenshot of the initial W3C testing result. 6 x errors shown, 4 x to be corrected.](./assets/testing/W3C/first_W3C_testing_result_project_2.png "Initial testing HTML of my website with W3C.")
-
-  After the initial testing, I went through the HTML files and corrected errors shown by the W3C test result.
-
-  ![A screenshot of the testing result after correcting 4 x errors that needed to be addressed. The other 2 errors are not causeing any issues. The percentage simbol is essential in that case, and in fact there is a paragraph that is being closed by that end tag.](./assets/testing/W3C/W3C_after_correction.png "Testing HTML of my website with W3C after corrections were applied.")
+  ![A screenshot of the W3C testing result. 2 x errors shown, 1 x where it had an issue with a paragraph that I could not find, or it is a validator mistake? The other error is related to the iframe I used for the google maps, and it does not affect anything negatively](./assets/testing/W3C/second_project_W3C_validator.png "Testing HTML of my website with W3C.")
 
   ## W3C CSS(Jigsaw)
   
-  ![A screenshot of the initial Jigsaw(W3C) testing result. 1 x error that needed to be addressed.](./assets/testing/Jigsaw/first_jigsaw_testing_result_project_2.png "Initial testing CSS of my website with W3C.")
-
-  After the initial testing, I went through the CSS file and corrected errors shown by the Jigsaw test result.
-
-  ![A screenshot of the testing result after correction was applied. I have deleted the unused CSS files to save space.](./assets/testing/Jigsaw/jigsaw_after_correction.png "Testing CSS of my website with W3C after corrections were applied.")
+  ![A screenshot of Jigsaw(W3C) testing result. No error found.](./assets/testing/Jigsaw/second_project_jigsaw_testing_result.png "ITesting CSS of my website with W3C.")
 
   ## Final website
 
-  ![A screenshot of my website on different screen sizes.](./assets/testing/final_screens_second_project.png "A screenshot of my website on different screen sizes.")
-  
+  ![A screenshot of the finished website on different screen sizes.](./assets/testing/final_screens_second_project.png "A screenshot of the finished website on different screen sizes.")
+
+<!-- Needs updating -->
 ## Manual testing
 
   - User stories
