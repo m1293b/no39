@@ -234,7 +234,7 @@ function nextPageDetails(event) {
 
 let rooms = [
     cosy = {
-        code: 'Cosy',
+        code: 'co',
         pictures: [
             "./assets/images/cosy_rooms/pexels-heyho-6527066.jpg",
             "./assets/images/cosy_rooms/pexels-jonathanborba-3144580.jpg",
@@ -285,7 +285,7 @@ let rooms = [
         ],
     },
     excellent = {
-        code: 'Excellent',
+        code: 'ex',
         pictures: [
             "./assets/images/excellent_rooms/pexels-heyho-6032203.jpg",
             "./assets/images/excellent_rooms/pexels-heyho-6933760.jpg",
@@ -337,7 +337,7 @@ let rooms = [
         ],
     },
     family = {
-        code: 'Family',
+        code: 'fa',
         pictures: [
             "./assets/images/family_rooms/pexels-athenea-codjambassis-rossitto-472760075-26571204.jpg",
             "./assets/images/family_rooms/pexels-enginakyurt-3688261.jpg",
@@ -387,7 +387,7 @@ let rooms = [
         ],
     },
     superior = {
-        code: 'Superior',
+        code: 'su',
         pictures: [
             "./assets/images/superior_suites/pexels-heyho-6032425.jpg",
             "./assets/images/superior_suites/pexels-heyho-6585757.jpg",
