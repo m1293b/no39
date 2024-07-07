@@ -1,36 +1,75 @@
-const { JSDOM } = require("jsdom");
-const catMIn = require("../js/script.js");
+/**
+ * @jest-environment jsdom
+ */
 
-describe("Script.js tests", () =>{
-    describe("catMIn test", () =>{
-        test('catMIn function modifies styles correctly on mouseover event', () => {
-            // Create a mock DOM structure
-            const dom = new JSDOM(`
-                <div id="parent">
-                    <div id="child1"></div>
-                    <div id="child2"></div>
-                </div>
-            `);
-        
+const fs = require("fs");
+const catClick = require("../../js/script.js");
+
+// Mock the global variables used in the function
+global.rooms = [
+    {
+        pictures: ["pic1.jpg", "pic2.jpg"],
+        numbers: ["001", "002", "003", "004"],
+        features: ["feature1", "feature2"],
+        description: "Room description",
+        priceFrom: 100,
+        code: "ROOM1",
+        upsells: [
+            { item: "Upsell1", price: "$10", description: "Upsell description 1" },
+            { item: "Upsell2", price: "$20", description: "Upsell description 2" }
+        ]
+    }
+];
+global.roomsPictures = document.createElement("div");
+global.roomsDescription = document.createElement("div");
+global.roomsExtras = "";
+global.roomsSetupNum = "";
+global.whichRoom = "";
+
+beforeEach(() => {
+    // Set up the DOM structure
+    document.body.innerHTML = `
+        <div class="room-categories">
+            <div class="child1"></div>
+            <div class="child2"></div>
+        </div>
+        <div id="rooms-pictures"></div>
+        <div id="rooms-description"></div>
+    `;
+    // Add global variables to the DOM
+    global.roomsPictures = document.getElementById("rooms-pictures");
+    global.roomsDescription = document.getElementById("rooms-description");
+});
+
+describe("Script.js tests", () => {
+    describe("catClick test", () => {
+        test('catClick function modifies DOM correctly on click event', () => {
             // Get the parent element
-            const parent = dom.window.document.getElementById("parent");
+            const parent = document.getElementsByClassName("room-categories")[0];
             
+            // Mock the context of 'this' in the function
+            parent.whichOne = 0;
+
             // Attach the event listener to the parent element
-            parent.addEventListener('mouseover', catMIn);
+            parent.addEventListener('click', catClick);
             
-            // Create a new mouseover event
-            const event = new dom.window.Event('mouseover');
+            // Create a new click event
+            const event = new MouseEvent('click');
             
             // Dispatch the event
             parent.dispatchEvent(event);
-            
-            // Assertions for the first child
-            expect(parent.children[0].style.borderRadius).toBe("30%");
-            expect(parent.children[0].style.border).toBe("thin solid #222831");
-            expect(parent.children[0].style.cursor).toBe("pointer");
-        
-            // Assertions for the second child
-            expect(parent.children[1].style.visibility).toBe("visible");
+
+            // Assertions for descriptionHTML
+            expect(global.roomsDescription.innerHTML).toContain("Room description");
+            expect(global.roomsDescription.innerHTML).toContain("Upsell1");
+            expect(global.roomsDescription.innerHTML).toContain("$10");
+            expect(global.roomsDescription.innerHTML).toContain("Upsell description 1");
+            expect(global.roomsDescription.innerHTML).toContain("Upsell2");
+            expect(global.roomsDescription.innerHTML).toContain("$20");
+            expect(global.roomsDescription.innerHTML).toContain("Upsell description 2");
+
+            // Check that the button exists
+            expect(document.getElementById('select-room')).not.toBeNull();
         });
-    })
-})
+    });
+});

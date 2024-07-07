@@ -7,6 +7,11 @@
     "test": "jest --env=jsdom",
     "testEnvironment": "jsdom"
   },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "jest-transform-stub"
+    }
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jestjs/jest.git"
@@ -19,7 +24,8 @@
   "homepage": "https://github.com/jestjs/jest#readme",
   "devDependencies": {
     "jest": "^29.7.0",
-    "jest-environment-jsdom": "^29.7.0"
+    "jest-environment-jsdom": "^29.7.0",
+    "jest-transform-stub": "^2.0.0"
   },
   "dependencies": {
     "jsdom": "^24.1.0"
