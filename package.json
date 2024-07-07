@@ -1,0 +1,27 @@
+{
+  "name": "no39",
+  "version": "1.0.0",
+  "description": "## UX   - User stories   - Project goals   - Design choices   - Business goals   - Developer goals   - Wire frames",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --env=jsdom",
+    "testEnvironment": "jsdom"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jestjs/jest.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jestjs/jest/issues"
+  },
+  "homepage": "https://github.com/jestjs/jest#readme",
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0"
+  },
+  "dependencies": {
+    "jsdom": "^24.1.0"
+  }
+}
