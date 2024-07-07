@@ -29,13 +29,20 @@ function catClick(event) {
 
     let picturesHTML = `<div class="row justify-content-center" id="pics">`;
 
-    for (let i = 0; i < insPictures.length; i++) {
+    insPictures.map(pictures => {
         picturesHTML += `
     <div class="pics-in-div col-12 col-md-5">
-        <img src="${insPictures[i]}">
+        <img src="${pictures}">
     </div>
     `;
-    }
+    });
+    // for (let i = 0; i < insPictures.length; i++) {
+    //     picturesHTML += `
+    // <div class="pics-in-div col-12 col-md-5">
+    //     <img src="${insPictures[i]}">
+    // </div>
+    // `;
+    // }
 
     picturesHTML += `</div>`;
 
