@@ -144,7 +144,11 @@
 
   ## W3C CSS(Jigsaw)
   
-  ![A screenshot of Jigsaw(W3C) testing result. No error found.](./assets/testing/Jigsaw/second_project_jigsaw_testing_result.png "ITesting CSS of my website with W3C.")
+  ![A screenshot of Jigsaw(W3C) testing result. No error found.](./assets/testing/Jigsaw/second_project_jigsaw_testing_result.png "Testing CSS of my website with W3C.")
+
+  ## W3C CSS(Jigsaw)
+  
+  ![A screenshot of Jigsaw(W3C) testing result. No error found.](./assets/testing/Jigsaw/second_project_jigsaw_testing_result.png "Testing CSS of my website with W3C.")
 
   ## Final website
 
@@ -179,6 +183,10 @@
   - **Story**: I want the option to reserve a table at the hotel's restaurant so that I can enjoy fine dining without leaving the hotel premises.
   - **Test Result**: Users can reserve a table at the restaurant via the Restaurant's page or request it in the additional notes section during booking.
 
+<!-- To be updated -->
+## Automated testing
+
+<!-- until here -->
 ## Room category selection testing
 
   - The user is able to see which category they are about to select and view more information about once they have hovered over one of the pictures.
