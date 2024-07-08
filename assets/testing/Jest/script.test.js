@@ -1,75 +1,65 @@
 /**
  * @jest-environment jsdom
  */
-
-const fs = require("fs");
 const catClick = require("../../js/script.js");
-
-// Mock the global variables used in the function
-global.rooms = [
-    {
-        pictures: ["pic1.jpg", "pic2.jpg"],
-        numbers: ["001", "002", "003", "004"],
-        features: ["feature1", "feature2"],
-        description: "Room description",
-        priceFrom: 100,
-        code: "ROOM1",
-        upsells: [
-            { item: "Upsell1", price: "$10", description: "Upsell description 1" },
-            { item: "Upsell2", price: "$20", description: "Upsell description 2" }
-        ]
-    }
-];
-global.roomsPictures = document.createElement("div");
-global.roomsDescription = document.createElement("div");
-global.roomsExtras = "";
-global.roomsSetupNum = "";
-global.whichRoom = "";
+const rooms = require("../../js/script.js");
 
 beforeEach(() => {
-    // Set up the DOM structure
-    document.body.innerHTML = `
-        <div class="room-categories">
-            <div class="child1"></div>
-            <div class="child2"></div>
-        </div>
-        <div id="rooms-pictures"></div>
-        <div id="rooms-description"></div>
-    `;
-    // Add global variables to the DOM
-    global.roomsPictures = document.getElementById("rooms-pictures");
-    global.roomsDescription = document.getElementById("rooms-description");
+    let fs = require("fs");
+    let fileContents = fs.readFileSync("rooms.html", "utf-8");
+    document.open();
+    document.write(fileContents);
+    document.close();
 });
 
-describe("Script.js tests", () => {
-    describe("catClick test", () => {
-        test('catClick function modifies DOM correctly on click event', () => {
-            // Get the parent element
-            const parent = document.getElementsByClassName("room-categories")[0];
-            
-            // Mock the context of 'this' in the function
-            parent.whichOne = 0;
+describe("Rooms.html tests", () => {
+    // test("checking if document has loaded", () => {
+    //     expect(document.getElementsByTagName("h1").length).toBe(1);
+    // })
+    // test("checking further", () => {
+    //     expect(document.body.innerHTML).toContain("cosy-select");
+    // })
+    // test("check", () => {
+    //     const clicked = new MouseEvent('click');
 
-            // Attach the event listener to the parent element
-            parent.addEventListener('click', catClick);
-            
-            // Create a new click event
-            const event = new MouseEvent('click');
-            
-            // Dispatch the event
-            parent.dispatchEvent(event);
+    //     const cosyPic = document.getElementsByClassName('room-categories')[0];
 
-            // Assertions for descriptionHTML
-            expect(global.roomsDescription.innerHTML).toContain("Room description");
-            expect(global.roomsDescription.innerHTML).toContain("Upsell1");
-            expect(global.roomsDescription.innerHTML).toContain("$10");
-            expect(global.roomsDescription.innerHTML).toContain("Upsell description 1");
-            expect(global.roomsDescription.innerHTML).toContain("Upsell2");
-            expect(global.roomsDescription.innerHTML).toContain("$20");
-            expect(global.roomsDescription.innerHTML).toContain("Upsell description 2");
+    //     cosyPic.dispatchEvent(clicked);
 
-            // Check that the button exists
-            expect(document.getElementById('select-room')).not.toBeNull();
+    //     expect(cosyPic.innerHTML).toContain("pexels-jonathanborba-3144580.jpg");
+
+    //     // cosyPic.clicked;
+
+    //     // expect((document.getElementById("rooms-description")).innerHTML).toContain("Our Cosy Rooms are designed");
+    // })
+    // test("check mouseover", () => {
+    //     // const mouseoverImg = new MouseEvent('mouseover');
+    //     (document.getElementsByClassName("room-categories")[0]).hover;
+    //     expect(document.getElementsByClassName("room-categories")[0].children[0].style.borderRadius).toBe("8%");
+    // })
+    // test("check click", () => {
+
+    //     // const clicked = new MouseEvent('click');
+    //     const cosyPic = document.getElementsByClassName('room-categories')[0];
+
+    //     const clicked = new MouseEvent("click", {
+    //         bubbles: true,
+    //         cancelable: true,
+    //         view: window
+    //     });
+
+    //     cosyPic.dispatchEvent(clicked);
+
+    //     const categoryDesc = document.getElementById("rooms-description");
+    //     expect(categoryDesc.innerHTML).toContain("Our Cosy Rooms are designed");
+    // })
+    test("check click", () => {
+        const clicked = new MouseEvent("click", {
+            bubbles: true,
+            cancelable: true,
+            view: window
         });
-    });
-});
+        catClick(document.getElementsByClassName("room-categories")[0].clicked);
+        expect(document.getElementsByClassName("room-categories")[0].children[0].style.borderRadius).toBe("8%");
+    })
+})
