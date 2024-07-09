@@ -12,6 +12,9 @@ beforeEach(() => {
     document.close();
 });
 
+// I spent a lot of time on the interweb, looking for solution how to test this function. I found answers after posting on Reddit.
+    // I had to learn how to properly bind the element, so the function can use "this".
+
 describe("Rooms.html tests", () => {
     // test("checking if document has loaded", () => {
     //     expect(document.getElementsByTagName("h1").length).toBe(1);
@@ -53,11 +56,12 @@ describe("Rooms.html tests", () => {
     //     const categoryDesc = document.getElementById("rooms-description");
     //     expect(categoryDesc.innerHTML).toContain("Our Cosy Rooms are designed");
     // })
+
+    
     test("check click", () => {
         const categories = document.getElementsByClassName("room-categories");
-        catClick.bind(categories[0]);
+        catClick.bind(categories[0])();
         const categoryDesc = document.getElementById("rooms-description");
         expect(categoryDesc.innerHTML).toContain("Our Cosy Rooms are designed");
-        // expect(document.getElementsByClassName("room-categories")[0].children[0].style.borderRadius).toBe("8%");
     })
 })

@@ -20,6 +20,10 @@ function catMOut(event) {
 // and display more information about it.
 
 function catClick(event) {
+    
+    for (let category in categories) { // this loop was only moved inside the function for testing purposes, as initially this declaration was inside the loop at the bottom of this cfile
+        categories[category].whichOne = category;
+    }
 
     let insPictures = rooms[this.whichOne].pictures.slice();
     let insNumbers = rooms[this.whichOne].numbers.slice();
@@ -36,18 +40,13 @@ function catClick(event) {
     </div>
     `;
     });
-    // for (let i = 0; i < insPictures.length; i++) {
-    //     picturesHTML += `
-    // <div class="pics-in-div col-12 col-md-5">
-    //     <img src="${insPictures[i]}">
-    // </div>
-    // `;
-    // }
 
     picturesHTML += `</div>`;
 
+    let roomsPictures = document.getElementById('rooms-picture'); // I had to move this line inside the function purely for testing purposes, as Jest did not see it
     roomsPictures.innerHTML = picturesHTML;
 
+    let roomsDescription = document.getElementById('rooms-description'); // I had to move this line inside the function purely for testing purposes, as Jest did not see it
     let descriptionHTML = `${insDescription}<br><hr><br>
     <h4><u>Available extras</u></h4><br><hr style="width:50%;text-align:center;">
     <ul class = "extras-center">
@@ -454,8 +453,6 @@ let roomsSetupNum = '';
 
 let roomsSetup = document.getElementById('rooms-setup');
 let categories = document.getElementsByClassName('room-categories');
-let roomsPictures = document.getElementById('rooms-picture');
-let roomsDescription = document.getElementById('rooms-description');
 let roomCategoryLabels = document.getElementsByClassName('over-image');
 
 // This variable is used to tranfer code to the roomsSetup innerHTML to take the user to the next "page".
@@ -474,7 +471,6 @@ let whichRoom = '';
 // This for loop iterates through the divs that are in the container with the class of "room-categories"
 
 for (let i = 0; i < categories.length; i++) {
-    categories[i].whichOne = i;
     categories[i].addEventListener('mouseover', catMIn);
     categories[i].addEventListener('mouseleave', catMOut);
     categories[i].addEventListener('click', catClick);
