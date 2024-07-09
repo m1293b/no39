@@ -480,4 +480,4 @@ for (let i = 0; i < categories.length; i++) {
     categories[i].addEventListener('click', catClick);
 }
 
-module.exports = catClick, rooms;
+module.exports = catClick;

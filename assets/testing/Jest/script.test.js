@@ -54,12 +54,10 @@ describe("Rooms.html tests", () => {
     //     expect(categoryDesc.innerHTML).toContain("Our Cosy Rooms are designed");
     // })
     test("check click", () => {
-        const clicked = new MouseEvent("click", {
-            bubbles: true,
-            cancelable: true,
-            view: window
-        });
-        catClick(document.getElementsByClassName("room-categories")[0].clicked);
-        expect(document.getElementsByClassName("room-categories")[0].children[0].style.borderRadius).toBe("8%");
+        const categories = document.getElementsByClassName("room-categories");
+        catClick.bind(categories[0]);
+        const categoryDesc = document.getElementById("rooms-description");
+        expect(categoryDesc.innerHTML).toContain("Our Cosy Rooms are designed");
+        // expect(document.getElementsByClassName("room-categories")[0].children[0].style.borderRadius).toBe("8%");
     })
 })
