@@ -20,34 +20,40 @@ function catMOut(event) {
 // and display more information about it.
 
 function catClick(event) {
-    
-    for (let category in categories) { // this loop was only moved inside the function for testing purposes, as initially this declaration was inside the loop at the bottom of this cfile
-        categories[category].whichOne = category;
-    }
+    let radios = document.getElementsByClassName("radios");
+    console.log(radios);
+    radios[this.whichOne].checked = true;
+    for (let radio of radios){
+        if (radio.checked == true){
+            radio.style.visibility = "visible";
+        } else {
+            radio.style.visibility = "hidden";
+        }
+    }; //radio => radio.checked ? radio.style.visibility = "visible" : radio.style.visibility = "hidden"
 
-    let insPictures = rooms[this.whichOne].pictures.slice();
-    let insNumbers = rooms[this.whichOne].numbers.slice();
-    let insFeatures = rooms[this.whichOne].features.slice();
-    let insDescription = rooms[this.whichOne].description;
-    let insPriceFrom = rooms[this.whichOne].priceFrom;
+let insPictures = rooms[this.whichOne].pictures.slice();
+let insNumbers = rooms[this.whichOne].numbers.slice();
+let insFeatures = rooms[this.whichOne].features.slice();
+let insDescription = rooms[this.whichOne].description;
+let insPriceFrom = rooms[this.whichOne].priceFrom;
 
-    let picturesHTML = `<div class="row justify-content-center" id="pics">`;
+let picturesHTML = `<div class="row justify-content-center" id="pics">`;
 
-    insPictures.map(pictures => {
-        picturesHTML += `
+insPictures.map(pictures => {
+    picturesHTML += `
     <div class="pics-in-div col-12 col-md-5">
         <img src="${pictures}">
     </div>
     `;
-    });
+});
 
-    picturesHTML += `</div>`;
+picturesHTML += `</div>`;
 
-    let roomsPictures = document.getElementById('rooms-picture'); // I had to move this line inside the function purely for testing purposes, as Jest did not see it
-    roomsPictures.innerHTML = picturesHTML;
+let roomsPictures = document.getElementById('rooms-picture'); // I had to move this line inside the function purely for testing purposes, as Jest did not see it
+roomsPictures.innerHTML = picturesHTML;
 
-    let roomsDescription = document.getElementById('rooms-description'); // I had to move this line inside the function purely for testing purposes, as Jest did not see it
-    let descriptionHTML = `${insDescription}<br><hr><br>
+let roomsDescription = document.getElementById('rooms-description'); // I had to move this line inside the function purely for testing purposes, as Jest did not see it
+let descriptionHTML = `${insDescription}<br><hr><br>
     <h4><u>Available extras</u></h4><br><hr style="width:50%;text-align:center;">
     <ul class = "extras-center">
         <li><u><b>${rooms[this.whichOne].upsells[0].item}</b></u></li>
@@ -63,16 +69,16 @@ function catClick(event) {
     <br><hr style="width:50%;text-align:center;">
     <br>
     <p><i>* select extras on the next page</i></p><br>
-    <button type="button" class="btn btn-success mb-3" id="select-room" style="width:50%;text-align:center;" onclick="nextPage()";>Select Room</button>
+    <button type="button" class="btn btn-success mb-3" id="select-room" style="width:50%;text-align:center;">Select Room</button>
     
     `
-    roomsDescription.innerHTML = descriptionHTML;
-    const rndOrdNum = rooms[this.whichOne].numbers[Math.floor(Math.random() * 4)] + ':' + Math.floor((Math.random() * 10000) * 11);
-    roomsSetupNum = rooms[this.whichOne].code + ":" + rndOrdNum;
+roomsDescription.innerHTML = descriptionHTML;
+const rndOrdNum = rooms[this.whichOne].numbers[Math.floor(Math.random() * 4)] + ':' + Math.floor((Math.random() * 10000) * 11);
+roomsSetupNum = rooms[this.whichOne].code + ":" + rndOrdNum;
 
-    whichRoom = rooms[this.whichOne].code;
+whichRoom = rooms[this.whichOne].code;
 
-    roomsExtras = `
+roomsExtras = `
     <div class="row mt-2">
         <div class="col p-4 bg-light rounded">
             <ul class = "extras-center">
@@ -94,7 +100,7 @@ function catClick(event) {
         <div class="col p-4 bg-light rounded" id="setup-confirmation"><i>This is where the user sees the booking confirmation.</i></div>
     </div>
     `
-    document.getElementById('select-room').addEventListener('click', nextPageExtras);
+document.getElementById('select-room').addEventListener('click', nextPageExtras);
 };
 
 // This function controls what happens when the user selects the room category by clicking on the button at the bottom of the page.
@@ -157,7 +163,6 @@ function addExtra1(event) {
     } else {
 
         roomsSetupNum = roomsSetupNum.replace(/:1e/g, "");
-        console.log(roomsSetupNum);
         this.style.backgroundColor = "green";
         this.textContent = "Add";
         document.getElementById('setup-confirmation').innerHTML = `
@@ -183,7 +188,6 @@ function addExtra1(event) {
 function addExtra2(event) {
     if (secondExtra === false) {
         roomsSetupNum += ':2e';
-        console.log(roomsSetupNum);
         document.getElementById('setup-confirmation').innerHTML = `
         <br><h4>Your package reference number</h4>
 
@@ -240,6 +244,7 @@ function nextPageDetails(event) {
 
 let rooms = [
     cosy = {
+        whichOne: 0,
         code: 'co',
         pictures: [
             "./assets/images/cosy_rooms/pexels-heyho-6527066.jpg",
@@ -291,6 +296,7 @@ let rooms = [
         ],
     },
     excellent = {
+        whichOne: 1,
         code: 'ex',
         pictures: [
             "./assets/images/excellent_rooms/pexels-heyho-6032203.jpg",
@@ -343,6 +349,7 @@ let rooms = [
         ],
     },
     family = {
+        whichOne: 2,
         code: 'fa',
         pictures: [
             "./assets/images/family_rooms/pexels-athenea-codjambassis-rossitto-472760075-26571204.jpg",
@@ -393,6 +400,7 @@ let rooms = [
         ],
     },
     superior = {
+        whichOne: 3,
         code: 'su',
         pictures: [
             "./assets/images/superior_suites/pexels-heyho-6032425.jpg",
