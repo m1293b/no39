@@ -244,7 +244,6 @@ function nextPageDetails(event) {
 
 let rooms = [
     cosy = {
-        whichOne: 0,
         code: 'co',
         pictures: [
             "./assets/images/cosy_rooms/pexels-heyho-6527066.jpg",
@@ -296,7 +295,6 @@ let rooms = [
         ],
     },
     excellent = {
-        whichOne: 1,
         code: 'ex',
         pictures: [
             "./assets/images/excellent_rooms/pexels-heyho-6032203.jpg",
@@ -349,7 +347,6 @@ let rooms = [
         ],
     },
     family = {
-        whichOne: 2,
         code: 'fa',
         pictures: [
             "./assets/images/family_rooms/pexels-athenea-codjambassis-rossitto-472760075-26571204.jpg",
@@ -400,7 +397,6 @@ let rooms = [
         ],
     },
     superior = {
-        whichOne: 3,
         code: 'su',
         pictures: [
             "./assets/images/superior_suites/pexels-heyho-6032425.jpg",
@@ -479,6 +475,7 @@ let whichRoom = '';
 // This for loop iterates through the divs that are in the container with the class of "room-categories"
 
 for (let i = 0; i < categories.length; i++) {
+    categories[i].whichOne = i;
     categories[i].addEventListener('mouseover', catMIn);
     categories[i].addEventListener('mouseleave', catMOut);
     categories[i].addEventListener('click', catClick);
