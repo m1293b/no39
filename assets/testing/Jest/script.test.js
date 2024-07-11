@@ -57,7 +57,7 @@ describe("Rooms.html tests", () => {
     // })
 
     
-    test("check click", () => {
+    test("checking if catClick function works as intended", () => {
         const categories = document.getElementsByClassName("room-categories");
         catClick.bind(categories[0])();
         const categoryDesc = document.getElementById("rooms-description");

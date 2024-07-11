@@ -5,7 +5,7 @@ function catMIn(event) {
     this.children[0].style.border = "thin solid #222831";
     this.children[0].style.cursor = "pointer";
     this.children[1].style.visibility = "visible";
-};
+}
 
 // This function will be executed when the cursor leaves one of the divs that contains a picture of a room in that specific category.
 
@@ -14,29 +14,31 @@ function catMOut(event) {
     this.children[0].style.border = "thin solid white";
     this.children[0].style.cursor = "default";
     this.children[1].style.visibility = "hidden";
-};
+}
 
 // This functions changes the innerHTML of the two column divs inside the container to showcase pictures of the selected room category,
 // and display more information about it.
 
 function catClick(event) {
 
+    let radio;
     // Setting this boolean to true, so the "select-room" button can be clicked on without an alert popping up.
     isCatSelected = true;
 
     // Enabling the "select-room" button as a category has been just selected.
     document.getElementById("select-room").disabled = false;
 
-    // 
+    // checking the correct radio button as the user selected the room category
     radios[this.whichOne].checked = true;
 
-    for (let radio of radios) {
-        if (radio.checked == true) {
+    // I found this the best way to loop through and get the values of the object, but JSLint does not like it for some reason..
+    for (radio of radios) {
+        if (radio.checked === true) {
             radio.style.visibility = "visible";
         } else {
             radio.style.visibility = "hidden";
         }
-    }; //radio => radio.checked ? radio.style.visibility = "visible" : radio.style.visibility = "hidden"
+    };
 
     let insPictures = rooms[this.whichOne].pictures.slice();
     let insNumbers = rooms[this.whichOne].numbers.slice();
@@ -46,7 +48,7 @@ function catClick(event) {
 
     let picturesHTML = `<div class="row justify-content-center" id="pics">`;
 
-    insPictures.map(pictures => {
+    insPictures.map((pictures) => {
         picturesHTML += `
     <div class="pics-in-div col-12 col-md-5">
         <img src="${pictures}">
@@ -76,7 +78,7 @@ function catClick(event) {
     <br><hr style="width:50%;text-align:center;">
     <br>
     <p><i>* select extras on the next page</i></p><br>    
-    `
+    `;
     roomsDescription.innerHTML = descriptionHTML;
     const rndOrdNum = rooms[this.whichOne].numbers[Math.floor(Math.random() * 4)] + ':' + Math.floor((Math.random() * 10000) * 11);
     roomsSetupNum = rooms[this.whichOne].code + ":" + rndOrdNum;
@@ -104,15 +106,15 @@ function catClick(event) {
     <div class="row mt-2">
         <div class="col p-4 bg-light rounded" id="setup-confirmation"><i>This is where the user sees the booking confirmation.</i></div>
     </div>
-    `
+    `;
 
-};
+}
 
 // This function controls what happens when the user selects the room category by clicking on the button at the bottom of the page.
 
 function nextPageExtras(event) {
 
-    if (isCatSelected == false) {
+    if (isCatSelected === false) {
         alert("You have to select a room category by clicking on one of the pictures below.");
         document.getElementById("select-room").disabled = true;
     } else {
@@ -141,9 +143,9 @@ function nextPageExtras(event) {
     <br>
     <hr style="width:50%;text-align:center;">
     <button type="button" class="btn btn-secondary mb-3" id="next-page-details" ;text-align:center; onclick="nextPageDetails(this);">Finalise booking</button>
-    `
+    `;
     }
-};
+}
 
 
 // The functions below control what happens when the user clicks on one of the buttons to add an extra service to their booking.
@@ -192,8 +194,8 @@ function addExtra1(event) {
     <button type="button" class="btn btn-secondary mb-3" id="next-page-details" ;text-align:center; onclick="nextPageDetails(this);">Finalise booking</button>
     `;
         firstExtra = false;
-    };
-};
+    }
+}
 
 function addExtra2(event) {
     if (secondExtra === false) {
@@ -239,14 +241,14 @@ function addExtra2(event) {
     <button type="button" class="btn btn-secondary mb-3" id="next-page-details" ;text-align:center; onclick="nextPageDetails(this);">Finalise booking</button>
     `;
         secondExtra = false;
-    };
-};
+    }
+}
 
 // This function takes the user to the hotel.html page where they will be able to provide further information that is required to make a booking.
 
 function nextPageDetails(event) {
     window.location.href = "./hotel.html";
-};
+}
 
 // The room categories setup starts here. These objects contain the room numbers, amenities, description of the rooms and the service it comes with,
 // and the starting price.
@@ -260,7 +262,7 @@ let rooms = [
             "./assets/images/cosy_rooms/pexels-jonathanborba-3144580.jpg",
             "./assets/images/cosy_rooms/pexels-pixabay-164595.jpg",
             "./assets/images/cosy_rooms/pexels-pixabay-271618.jpg",
-            "./assets/images/cosy_rooms/pexels-pixabay-271624.jpg",],
+            "./assets/images/cosy_rooms/pexels-pixabay-271624.jpg"],
         numbers: ["1", "2", "3", "4"],
         features: [
             'King bed',
@@ -295,14 +297,14 @@ let rooms = [
             {
                 item: '24/7 Room Service',
                 price: '£10',
-                description: "Order anything, anytime.",
+                description: "Order anything, anytime."
             },
             {
                 item: 'Tech Kits',
                 price: '£8',
-                description: "Chargers, adapters, and HDMI cables for connecting devices to the room’s TV.",
-            },
-        ],
+                description: "Chargers, adapters, and HDMI cables for connecting devices to the room’s TV."
+            }
+        ]
     },
     excellent = {
         code: 'ex',
@@ -311,7 +313,7 @@ let rooms = [
             "./assets/images/excellent_rooms/pexels-heyho-6933760.jpg",
             "./assets/images/excellent_rooms/pexels-heyho-6284232.jpg",
             "./assets/images/excellent_rooms/pexels-heyho-6316054.jpg",
-            "./assets/images/excellent_rooms/pexels-vika-glitter-392079-3315291.jpg",],
+            "./assets/images/excellent_rooms/pexels-vika-glitter-392079-3315291.jpg"],
         numbers: ["5", "6", "7", "8"],
         features: ['Super King bed',
             'Walk-in shower',
@@ -347,14 +349,14 @@ let rooms = [
             {
                 item: 'Meeting Room Rentals',
                 price: 'Customised discounted rates',
-                description: "Discounted rates for on-site meeting room bookings.",
+                description: "Discounted rates for on-site meeting room bookings."
             },
             {
                 item: 'Airport Transfers',
                 price: '£80',
-                description: "Luxury car services for airport pick-ups and drop-offs.",
-            },
-        ],
+                description: "Luxury car services for airport pick-ups and drop-offs."
+            }
+        ]
     },
     family = {
         code: 'fa',
@@ -397,14 +399,14 @@ let rooms = [
             {
                 item: 'Local Experience Packages',
                 price: '£95',
-                description: "Tickets to nearby attractions, theme parks, or family-friendly tours.",
+                description: "Tickets to nearby attractions, theme parks, or family-friendly tours."
             },
             {
                 item: 'Kids Club',
                 price: '£20 per child',
-                description: "Access to the hotel's kids club or supervised play area with organized activities.",
-            },
-        ],
+                description: "Access to the hotel's kids club or supervised play area with organized activities."
+            }
+        ]
     },
     superior = {
         code: 'su',
@@ -413,7 +415,7 @@ let rooms = [
             "./assets/images/superior_suites/pexels-heyho-6585757.jpg",
             "./assets/images/superior_suites/pexels-heyho-6032424.jpg",
             "./assets/images/superior_suites/pexels-jvdm-1457847.jpg",
-            "./assets/images/superior_suites/pexels-heyho-6587902.jpg",],
+            "./assets/images/superior_suites/pexels-heyho-6587902.jpg"],
         numbers: ["12", "14", "15", "16"],
         features: ['Emperor bed',
             'Roll-top bath',
@@ -454,10 +456,10 @@ let rooms = [
                 item: 'Private Dining Experience',
                 price: '£180',
                 description: 'Romantic in-room dining with a personalized menu curated by the hotel’s chef.'
-            },
-        ],
+            }
+        ]
     }
-]
+];
 
 // Next, a variable is getting declared, which will be used to store all the information about the experience the user is choosing while going through this page
 
@@ -465,9 +467,24 @@ let roomsSetupNum = '';
 
 // These variables will be used to acces specific elements or set of elements on the first "page".
 
-let roomsSetup = document.getElementById('rooms-setup');
-let categories = document.getElementsByClassName('room-categories');
-let radios = document.getElementsByClassName("radios");
+window.addEventListener("DOMContentLoaded", () => {
+
+    let i;
+    let categories = document.getElementsByClassName('room-categories');
+
+    // I am adding an EventListener to the Select button, so the nextPageExtras function can check if a room category has been "selected" or not.
+
+    document.getElementById('select-room').addEventListener('click', nextPageExtras);
+
+    // This for loop iterates through the divs that are in the container with the class of "room-categories"
+
+    for (i = 0; i < categories.length; i++) {
+        categories[i].whichOne = i;
+        categories[i].addEventListener('mouseover', catMIn);
+        categories[i].addEventListener('mouseleave', catMOut);
+        categories[i].addEventListener('click', catClick);
+    }
+});
 
 // This variable is used to tranfer code to the roomsSetup innerHTML to take the user to the next "page".
 
@@ -486,17 +503,9 @@ let whichRoom = '';
 
 let isCatSelected = false;
 
-// This for loop iterates through the divs that are in the container with the class of "room-categories"
+// I am not sure why, but this had to be declared outside the window.onload function, so Jest could pass the test
 
-for (let i = 0; i < categories.length; i++) {
-    categories[i].whichOne = i;
-    categories[i].addEventListener('mouseover', catMIn);
-    categories[i].addEventListener('mouseleave', catMOut);
-    categories[i].addEventListener('click', catClick);
-}
-
-// I am adding an EventListener to the Select button, so the nextPageExtras function can check if a room category has been "selected" or not.
-
-document.getElementById('select-room').addEventListener('click', nextPageExtras);
+let radios = document.getElementsByClassName("radios");
+let roomsSetup = document.getElementById('rooms-setup');
 
 module.exports = catClick;
