@@ -2,7 +2,6 @@
  * @jest-environment jsdom
  */
 const catClick = require("../../js/script.js");
-const rooms = require("../../js/script.js");
 
 beforeEach(() => {
     let fs = require("fs");
