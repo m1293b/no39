@@ -133,9 +133,17 @@
 
 ## Testing with validators
 
+  ## JSLint
+
+  ![A screenshot of the initial JSLint results.](./assets/testing/JSLint/jslint_initial_test_project_2.png "A screenshot of the initial JSLint results.")
+
+  - On this second screenshot, we can see that JSLint had issues with how I declared variables inside the Array. I am unsure what JSLint did not like. I corrected everything I could, except the for (radio of radios) loop, as I found that the best way to get the values of the object. I hope that is fine.
+
+  ![A screenshot of the JSLint final results.](./assets/testing/JSLint/jslint_final_test_project_2.png "A screenshot of the JSLint final results.")
+
   ## Lighthouse
       
-  ![A screenshot of the Lighthouse results for the mobile version](./assets/testing/Lighthouse/lighthouse_mobile_project_2.png "Lighthouse test for the mobile version of the site.")
+  ![A screenshot of the Lighthouse results for the mobile version](./assets/testing/Lighthouse/lighthouse_mobile_project_2.png "Lighthouse test for the mobile version of the site.")  
   ![A screenshot of the Lighthouse results for the desktop version](./assets/testing/Lighthouse/lighthouse_desktop_project_2.png "Lighthouse test for the desktop version of the website.")
   
   ## W3C HTML
@@ -230,3 +238,4 @@
    
   - Official site like W3School and Bootstrap help to create a great lyaout that functions well.
   - StackOverflow helped me to see how others solved the issues their code had and I manage to use some of the solutions after customising them to fit my code.
+  <!-- I will include some of the StackOverFlow pages in my next project, that helped me solve the bugs I had.  -->
