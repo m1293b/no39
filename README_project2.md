@@ -193,10 +193,13 @@
   - **Story**: I want the option to reserve a table at the hotel's restaurant so that I can enjoy fine dining without leaving the hotel premises.
   - **Test Result**: Users can reserve a table at the restaurant via the Restaurant's page or request it in the additional notes section during booking.
 
-<!-- To be updated -->
 ## Automated testing
 
-<!-- until here -->
+  I spent a lot of time on the internet, looking for a solution how to test this function. I found the answer after posting on Reddit.
+  I had to learn how to properly bind the element, so the function can use "this".
+
+  - ![A screenshot of the Jest testing.](./assets/testing/Jest/jest_testing.png "A screenshot of the Jest testing.") 
+
 ## Room category selection testing
 
   - The user is able to see which category they are about to select and view more information about once they have hovered over one of the pictures.
