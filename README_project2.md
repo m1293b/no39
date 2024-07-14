@@ -245,3 +245,22 @@
 ## Deployment
 
   - I used GitHub for version control and to deploy my website. I also used Gitpod and its workspace to develope the website. Both of these services are connected to my Virtual Studio Code application on my PC. I have also tried "Code-server" that is hosted in a docker container on my home server, but did not had enough time to configure it properly and it was using way too much RAM so I just used VSCode on my PC.
+
+  ### Deploying with GitHub Pages
+
+  1. **Push your code to the `main` branch** of your GitHub repository:
+      ```sh
+      git add .
+      git commit -m "Deploy website"
+      git push origin main
+      ```
+
+  2. **Enable GitHub Pages**:
+       - Go to your repository on GitHub.
+       - Click on `Settings`.
+       - Scroll down to the `Pages` section.
+       - Under `Source`, select the branch you want to deploy (e.g., `main`) and `/root` folder.
+       - Click `Save`.
+
+  3. **Access your website**:
+       - After a few minutes, your site should be available at `https://<username>.github.io/<repository-name>/`.
