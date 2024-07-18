@@ -26,7 +26,7 @@ function catClick(event) {
     isCatSelected = true;
 
     // Enabling the "select-room" button as a category has been just selected.
-    document.getElementById("select-room").disabled = false;
+    $("#select-room").prop('disabled', false);
 
     // checking the correct radio button as the user selected the room category
     radios[this.whichOne].checked = true;
@@ -116,7 +116,7 @@ function nextPageExtras(event) {
 
     if (isCatSelected === false) {
         alert("You have to select a room category by clicking on one of the pictures below.");
-        document.getElementById("select-room").disabled = true;
+        $("#select-room").prop('disabled', true);
     } else {
         window.scrollTo({ top: 0, behavior: 'smooth' });
 
