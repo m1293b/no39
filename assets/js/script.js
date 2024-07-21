@@ -20,8 +20,7 @@ function catMOut(event) {
 // and display more information about it.
 
 function catClick(event) {
-
-    let radio;
+    
     // Setting this boolean to true, so the "select-room" button can be clicked on without an alert popping up.
     isCatSelected = true;
 
@@ -31,14 +30,13 @@ function catClick(event) {
     // checking the correct radio button as the user selected the room category
     radios[this.whichOne].checked = true;
 
-    // I found this the best way to loop through and get the values of the object, but JSLint does not like it for some reason..
-    for (radio of radios) {
-        if (radio.checked === true) {
-            radio.style.visibility = "visible";
+    Object.values(radios).forEach((element) => {
+        if (element.checked === true) {
+            element.style.visibility = "visible";
         } else {
-            radio.style.visibility = "hidden";
+            element.style.visibility = "hidden";
         }
-    };
+    });
 
     let insPictures = rooms[this.whichOne].pictures.slice();
     let insNumbers = rooms[this.whichOne].numbers.slice();
